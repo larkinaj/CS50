@@ -8,10 +8,10 @@ int main(void)
 
 if (x<y)
 {
-    printf("%i is less than y\n",x);
+    printf("%i is less than %i\n",x,y);
 }
 else
 {
-    printf("%i is NOT less than y\n",x);
+    printf("%i is NOT less than %i\n",x,y);
 }
 }
