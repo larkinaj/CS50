@@ -10,7 +10,7 @@ if (x<y)
 {
     printf("%i is less than %i\n",x,y);
 }
-else if 
+else if (x>y)
 {
     printf("%i is greater than %i\n",x,y);
 }
