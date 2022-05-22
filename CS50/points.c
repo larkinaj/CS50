@@ -9,5 +9,5 @@ int main (void)
     {
         printf("You lost fewer points as me.\n")
     }
-    else if 
+    else if (points >2)
 }
