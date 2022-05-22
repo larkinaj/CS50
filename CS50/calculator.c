@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <cs50.h>
 
-if (x>y)
+int 
+
+if (x<y)
 {
     printf("x is less than y\n")
 }
