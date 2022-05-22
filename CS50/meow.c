@@ -7,6 +7,6 @@ int main (void)
     while (counter < 3)
     {
         printf ("Meow.\n");
-        counter = counter + 1;
+        counter ++;
     }
 }
