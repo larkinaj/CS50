@@ -12,6 +12,6 @@ if (x<y)
 }
 else
 {
-    printf("%i is NOT less than %i\n",x,y);
+    printf("%i is greater than %i\n",x,y);
 }
 }
