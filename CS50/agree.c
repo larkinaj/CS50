@@ -3,7 +3,7 @@
 
 int main (void)
 {
-    get_string("Do you agree? ");
+    string  = get_string("Do you agree? ");
     if (string = "y")
     {
         printf("You have agreed")
