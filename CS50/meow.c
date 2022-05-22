@@ -3,8 +3,10 @@
 
 int main (void)
 {
-    while (true)
+    int counter =0;
+    while (counter < 3)
     {
         printf ("Meow.\n");
+        counter = counter + 1;
     }
 }
