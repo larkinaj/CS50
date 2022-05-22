@@ -8,4 +8,8 @@ int main (void)
     {
         printf("You have agreed.\n");
     }
+    else
+    {
+        printf("You have not agreed")
+    }
 }
