@@ -5,16 +5,12 @@ int main (void)
 {
     int n = get_int("n: ");
 
-    if (n < MINE)
+    if (n % 2 == 0)
     {
         printf("even\n");
     }
-    else if (points > MINE)
-    {
-        printf("You lost more points than me.\n");
-    }
     else
     {
-        printf("You lost the same number as me.\n");
+        printf("odd\n");
     }
 }
