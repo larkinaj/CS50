@@ -4,7 +4,7 @@
 int main (void)
 {
     char agree = get_char("Do you agree? ");
-    if (agree == 'y' || 'n')
+    if (agree == 'y' || agree = 'n')
     {
         printf("You have agreed.\n");
     }
