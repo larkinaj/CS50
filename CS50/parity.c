@@ -5,9 +5,9 @@ int main (void)
 {
     int n = get_int("n: ");
 
-    if (points < MINE)
+    if (n < MINE)
     {
-        printf("You lost fewer points than me.\n");
+        printf("even\n");
     }
     else if (points > MINE)
     {
