@@ -3,13 +3,17 @@
 
 int main (void)
 {
-    char agree = get_char("Do you agree? ");
+    char agree = get_char("Do you agree? (y/n) ");
     if (agree == 'y' || agree == 'Y')
     {
         printf("You have agreed.\n");
     }
-    else
+    else if (agree == 'n' || agree == 'N')
     {
         printf("You have not agreed.\n");
+    }
+    else
+    {
+        printf("You did not enter a valid character.\n");
     }
 }
