@@ -3,6 +3,7 @@
 
 int main (void)
 {
-    float regular = get_float
-    float
+    float regular = get_float("Regular Price: ");
+    float sale = regular * .85;
+    printf("Sale Price: %f\n"), sale);
 }
