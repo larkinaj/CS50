@@ -7,14 +7,14 @@ int main (void)
 {
     float regular = get_float("Regular Price: ");
     int percent_off = get_int("Percent Off: ");
-    float sale = discount(regular, percent);
+    float sale = discount(regular, percent_off);
     printf("Sale Price: %.2f\n", sale);
 }
 
 
 
-float discount(float price)
+float discount(float price, percent_off)
 {
 
-    return price * .85;
+    return price * percent_off;
 }
