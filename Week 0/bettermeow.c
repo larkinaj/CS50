@@ -11,6 +11,7 @@ void meow(int n)
 {
     for (int i = 0; i < n; i++)
     {
+        return i;
         printf("meow\n");
     }
 }
