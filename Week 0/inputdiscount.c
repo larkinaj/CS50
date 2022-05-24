@@ -13,8 +13,8 @@ int main (void)
 
 
 
-float discount(float price, percent_off)
+float discount(float price, int percentage)
 {
 
-    return price * percent_off;
+    return price * percentage;
 }
