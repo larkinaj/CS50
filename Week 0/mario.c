@@ -4,11 +4,11 @@
 int main(void)
 {
     int n;
-    do
-    {
+    //do
+    //{
         n = get_int("Width: ");
-    }
-    while (n < 1);
+    //}
+    //while (n < 1);
 
     for (int i=0; i<n; i++)
     {
