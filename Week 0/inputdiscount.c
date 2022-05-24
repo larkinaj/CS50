@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-float discount(float price, int percent_off);
+float discount(float price, int percentage);
 
 int main (void)
 {
@@ -13,8 +13,8 @@ int main (void)
 
 
 
-float discount(float price, int percent_off)
+float discount(float price, int percentage)
 {
 
-    return price * (100 - percent_off) / 100;
+    return price * (100 - percentage) / 100;
 }
