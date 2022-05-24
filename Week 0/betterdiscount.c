@@ -14,6 +14,6 @@ int main (void)
 
 float discount(float price)
 {
-    float test = price * .85;
-    return test;
+    float sale2 = price * .85;
+    return sale2;
 }
