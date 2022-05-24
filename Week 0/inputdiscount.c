@@ -15,6 +15,6 @@ int main (void)
 
 float discount(float price, int percent_off2)
 {
-
-    return price * (100 - percent_off2) / 100;
+    price = price * (100 - percent_off2) / 100;
+    //return price * (100 - percent_off2) / 100;
 }
