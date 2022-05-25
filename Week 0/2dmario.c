@@ -13,13 +13,12 @@ int main(void)
     for (int i=0; i<n; i++)
     {
         printf("#");
-        printf("\n");
+        for (int c=0; c<n; c++)
+        {
+            printf("\n");
+        }
     }
 }
 
 
 
-//for (int c=0; c<n; c++)
-//    {
-//        printf("\n");
-//    }
