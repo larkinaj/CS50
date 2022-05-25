@@ -13,9 +13,9 @@ int main(void)
     for (int i=0; i<n; i++)
     {
         printf("?");
-        for (int c=0; c<n; i++)
-        {
-            printf("\n");
-        }
+    }
+    for (int c=0; c<n; c++)
+    {
+        printf("\n");
     }
 }
