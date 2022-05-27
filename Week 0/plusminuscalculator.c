@@ -4,8 +4,8 @@
 int main(void)
 {
     int x = get_int("x: ");
+    char operator = get_char("Operator(plus or minus): ");
     int y = get_int("y: ");
-    char operator = get_char("Operator: ");
 
     if (operator == '+')
     {
