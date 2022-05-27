@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    float x = get_int("x: ");
-    float y = get_int("y: ");
+    int x = get_int("x: ");
+    int y = get_int("y: ");
     float z = x / y;
 
 
