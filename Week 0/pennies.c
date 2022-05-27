@@ -3,10 +3,8 @@
 
 int main(void)
 {
-    int x = get_int("x: ");
-    int y = get_int("y: ");
-    float z = (float)x / (float)y;
+    float amount = get_float("Dollar amount: ");
+    int pennies = amount * 100;
 
-
-    printf("%.50f\n", z);
+    printf("Pennies: %i\n", pennies);
 }
