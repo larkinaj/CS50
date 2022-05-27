@@ -7,16 +7,16 @@ int main(void)
     int y = get_int("y: ");
     char operator = get_char("Operator: ");
 
-    if (char == "+")
+    if (operator == '+')
     {
-        printf("%i is less than %i\n",x,y);
+        printf("%i + %i\n",x,y);
     }
-    else if (char == "-")
+    else if (operator == '-')
     {
         printf("%i is greater than %i\n",x,y);
     }
     else
     {
-        printf("Please pick plus or minus");
+        printf("Please pick plus or minus\n");
     }
 }
