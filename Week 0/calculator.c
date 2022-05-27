@@ -9,11 +9,11 @@ int main(void)
 
     if (operator == '+')
     {
-        printf("%i + %i\n",x,y);
+        printf("%i\n",x + y);
     }
     else if (operator == '-')
     {
-        printf("%i is greater than %i\n",x,y);
+        printf("%i\n",x - y);
     }
     else
     {
