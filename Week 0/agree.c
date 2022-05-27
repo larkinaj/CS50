@@ -4,7 +4,7 @@
 int main (void)
 {
     string agree = get_string("Do you agree? (yes/no) ");
-    if (agree == "yes" || agree = "Yes")
+    if strcmp(agree == "yes" || agree = "Yes")
     {
         printf("You have agreed.\n");
     }
