@@ -25,4 +25,4 @@ int main(void)
 
 // for (int n; n > 0; n--)
 
-// blocks = (n - n)
+// rows = 1 = (. + #)
