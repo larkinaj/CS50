@@ -25,4 +25,4 @@ int main(void)
 
 // for (int n; n > 0; n--)
 
-// j = (n - n)
+// blocks = (n - n)
