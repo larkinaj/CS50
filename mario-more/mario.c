@@ -17,7 +17,7 @@ int main(void)
     {
         for (int j = 1; j <= n; j++)
         {
-            printf("%c", blocks);
+            printf("%i %c", blocks);
         }
         printf("\n");
     }
@@ -25,7 +25,7 @@ int main(void)
 
 
 
-int lines(void)
+void lines(void)
 {
-    int test = 
+    int test = j
 }
