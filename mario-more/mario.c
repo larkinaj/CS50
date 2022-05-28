@@ -28,4 +28,6 @@ int main(void)
 // char hashes = '#'
 // char spaces = '.'
 
-// printf("%c%c" hashes, spaces)
+hashup = n 
+
+// printf("%c%c", hashes, spaces)
