@@ -23,12 +23,21 @@ int main(void)
             printf(" ");
         }
 
-        // Hash counter
+        // Left pyramid hashes
         for (int k = 0; k <= i; k++)
         {
             printf("#");
         }
 
-        printf("  \n");
+        // Spaces between pyramids
+        printf("  ");
+
+        //Right pyramid hashes
+        for (int l = 0; l <= i; l++)
+        {
+            printf("#");
+        }
+
+        printf("\n");
     }
 }
