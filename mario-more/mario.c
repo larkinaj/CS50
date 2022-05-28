@@ -25,15 +25,3 @@ int main(void)
     }
 }
 
-
-
-// int dots = n - i
-
-// char hashes = '#'
-// char spaces = '.'
-
-// hashup = n
-
-// printf("%c%c", hashes, spaces)
-
-
