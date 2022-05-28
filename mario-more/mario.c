@@ -25,4 +25,7 @@ int main(void)
 
 // for (int n; n > 0; n--)
 
-// answer = j + )
+// char hashes = '#'
+// char spaces = '.'
+
+// printf("%c%c" hashes, spaces)
