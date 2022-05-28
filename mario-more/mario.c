@@ -26,7 +26,7 @@ int main(void)
 }
 
 
-// rowdots = n - i
+// dots = n - i
 
 
 // char hashes = '#'
