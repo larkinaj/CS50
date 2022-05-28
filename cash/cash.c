@@ -38,6 +38,14 @@ int main(void)
 int get_cents(void)
 {
     // TODO
+    do
+    {
+        get_cents = printf("How much? ")
+    }
+    while
+    {
+        get_cents < 0
+    }
     return 0;
 }
 
