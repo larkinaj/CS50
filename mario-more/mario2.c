@@ -13,11 +13,11 @@ int main(void)
     // Keep asking for height until an input between 1-8 is given
     while (n > 8 || n < 1);
 
-    // Pyramid row counter
+    // Pyramid rows
     for (int i = 0; i < n; i++)
     {
 
-        // Space counter
+        // Left pyramid spaces
         for (int j = n - 1; j > i; j--)
         {
             printf(" ");
@@ -29,7 +29,7 @@ int main(void)
             printf("#");
         }
 
-        // Spaces between pyramids
+        // Space between pyramids
         printf("  ");
 
         //Right pyramid hashes
@@ -38,6 +38,7 @@ int main(void)
             printf("#");
         }
 
+        // Print next row
         printf("\n");
     }
 }
