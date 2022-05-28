@@ -26,4 +26,4 @@ int main(void)
 
 // for (int n; n > 0; n--)
 
-// j = (n - i)
+// j = (n - n)
