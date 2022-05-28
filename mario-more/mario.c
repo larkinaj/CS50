@@ -3,11 +3,10 @@
 
 int main(void)
 {
-    int n = get_int("How tall should the pyramids be?(1-8) ")
+    int n;
     do
     {
-        printf()
+        n = get_int("How tall should the pyramids be? (between 1 and 8): ");
     }
-
-    while (n > 8 || n < 1)
+    while (n > 8 || n < 1);
 }
