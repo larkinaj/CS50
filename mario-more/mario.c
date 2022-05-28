@@ -5,7 +5,7 @@ int main(void)
 {
     int n;
     char blocks = '#';
-    
+
     do
     {
         n = get_int("How tall should the pyramids be? (between 1 and 8): ");
@@ -16,7 +16,7 @@ int main(void)
     {
         for (int j = 1; j <= n; j++)
         {
-            printf("#" * j);
+            printf(blocks);
         }
         printf("\n");
     }
