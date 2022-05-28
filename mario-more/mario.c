@@ -13,11 +13,11 @@ int main(void)
     }
     while (n > 8 || n < 1);
 
-    for (int i = 1; i <= n; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 1; j <= n; j++)
+        for (int j = 0; j < n; j++)
         {
-            printf("%i %c", blocks);
+            printf("%c", blocks);
         }
         printf("\n");
     }
@@ -25,7 +25,3 @@ int main(void)
 
 
 
-void lines(void)
-{
-    int test = j
-}
