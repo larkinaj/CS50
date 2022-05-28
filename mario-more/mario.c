@@ -17,7 +17,7 @@ int main(void)
         for (int j = 1; j <= n; j++)
         {
             blocks = '#';
-            printf("%c" + j, blocks);
+            printf("%c", blocks);
         }
         printf("\n");
     }
