@@ -22,7 +22,6 @@ int main(void)
         }
         for (int k = 1; k <= i; k++)
         {
-            dots = n - i;
             printf("#");
         }
         printf("\n");
