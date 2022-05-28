@@ -9,4 +9,6 @@ int main(void)
         n = get_int("How tall should the pyramids be? (between 1 and 8): ");
     }
     while (n > 8 || n < 1);
+
+    
 }
