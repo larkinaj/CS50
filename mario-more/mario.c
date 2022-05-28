@@ -24,7 +24,7 @@ int main(void)
 }
 
 
-rowhash = i 
+rowdots = n - i
 
 // for (int n; n > 0; n--)
 
