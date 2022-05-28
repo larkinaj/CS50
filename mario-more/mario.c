@@ -4,6 +4,7 @@
 int main(void)
 {
     int n;
+    
     // char blocks = '#';
 
     do
@@ -31,3 +32,5 @@ int main(void)
 // hashup = n
 
 // printf("%c%c", hashes, spaces)
+
+
