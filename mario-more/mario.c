@@ -6,7 +6,7 @@ int main(void)
     int n;
     int dots;
 
-    // char blocks = '#';
+    // char hashes = '#';
 
     do
     {
@@ -26,8 +26,8 @@ int main(void)
 }
 
 
-// dots = n - i
 
+// dots = n - i
 
 // char hashes = '#'
 // char spaces = '.'
