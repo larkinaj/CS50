@@ -4,7 +4,7 @@
 int main(void)
 {
     int n;
-    char blocks = '#';
+    // char blocks = '#';
     int test;
 
     do
@@ -17,7 +17,7 @@ int main(void)
     {
         for (int j = 0; j < n; j++)
         {
-            printf("%c", blocks);
+            printf("#");
         }
         printf("\n");
     }
