@@ -4,7 +4,7 @@
 int main (void)
 {
     int n = get_int("n: ");
-    int dots;
+    int dots = n - 1;
 
     if (n % 2 == 0)
     {
