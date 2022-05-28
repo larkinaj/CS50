@@ -13,9 +13,9 @@ int main(void)
     }
     while (n > 8 || n < 1);
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 0; j <= i; j++)
+        for (int j = 1; j <= i; j++)
         {
             printf("#");
         }
@@ -24,9 +24,8 @@ int main(void)
 }
 
 
-rowdots = n - i
+// rowdots = n - i
 
-// for (int n; n > 0; n--)
 
 // char hashes = '#'
 // char spaces = '.'
