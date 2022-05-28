@@ -24,7 +24,7 @@ int main(void)
 
 
 
-int lines(j)
+int lines(int j)
 {
-    
+    printf()
 }
