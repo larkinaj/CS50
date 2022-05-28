@@ -4,7 +4,7 @@
 int main(void)
 {
     int n;
-    int dots;
+
 
     // char hashes = '#';
 
@@ -18,7 +18,6 @@ int main(void)
     {
         for (int j = 1; j <= i; j++)
         {
-            dots = n - i;
             printf("#");
         }
         printf("\n");
@@ -27,7 +26,7 @@ int main(void)
 
 
 
-// dots = n - i
+// int dots = n - i
 
 // char hashes = '#'
 // char spaces = '.'
