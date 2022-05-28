@@ -5,7 +5,6 @@ int main(void)
 {
     int n;
     // char blocks = '#';
-    int test;
 
     do
     {
