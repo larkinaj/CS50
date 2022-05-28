@@ -7,5 +7,5 @@ int main(void)
     // string name = get_string("What is your name? ");
 
     // Print welcome message
-    printf("Hello, %s!\n", name);
+    printf("Hello, world");
 }
