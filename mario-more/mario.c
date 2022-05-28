@@ -4,7 +4,8 @@
 int main(void)
 {
     int n;
-
+    char blocks = '#';
+    
     do
     {
         n = get_int("How tall should the pyramids be? (between 1 and 8): ");
