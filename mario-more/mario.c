@@ -10,8 +10,8 @@ int main(void)
     }
     while (n > 8 || n < 1);
 
-    for (int i = 0, i < n, i++)
+    for (int i = 0; i < n; i++)
     {
-        printf(int n)
+        printf("#");
     }
 }
