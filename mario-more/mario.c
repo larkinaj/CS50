@@ -21,3 +21,10 @@ int main(void)
         printf("\n");
     }
 }
+
+
+
+int lines(j)
+{
+    
+}
