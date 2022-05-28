@@ -37,7 +37,8 @@ int main(void)
 
 int get_cents(void)
 {
-    printf("How many cents? ");
+    // TODO
+    return 0;
 }
 
 int calculate_quarters(int cents)
