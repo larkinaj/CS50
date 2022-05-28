@@ -4,7 +4,7 @@
 int main(void)
 {
     int n;
-    
+
     // char blocks = '#';
 
     do
@@ -15,6 +15,8 @@ int main(void)
 
     for (int i = 0; i < n; i++)
     {
+        int height = n-1
+        int hashes = (n=n-1);
         for (int j = 0; j <= i; j++)
         {
             printf("#");
