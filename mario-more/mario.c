@@ -4,9 +4,6 @@
 int main(void)
 {
     int n;
-    int dots;
-
-    // char hashes = '#';
 
     do
     {
