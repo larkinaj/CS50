@@ -3,12 +3,12 @@
 
 int main (void)
 {
-    string agree = get_string("Do you agree? (yes/no) ");
-    if strcmp(agree == "yes" || agree = "Yes")
+    char agree = get_char("Do you agree? (yes/no) ");
+    if (agree == 'y' || agree = 'Y')
     {
         printf("You have agreed.\n");
     }
-    else if (agree = "n" || agree = "No")
+    else if (agree = 'n' || agree = 'N')
     {
         printf("You have not agreed.\n");
     }
