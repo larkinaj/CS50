@@ -36,9 +36,9 @@ int main(void)
     printf("Quarters: %i, dimes: %i, nickels: %i, pennies: %i\n", quarters, dimes, nickels, pennies);
 }
 
-int get_card(void)
+int get_cents(void)
 {
-    int cardnumber;
+    int cents;
     do
     {
         cents = get_int("How much change? ");
