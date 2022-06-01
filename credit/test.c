@@ -35,6 +35,6 @@ bool get_amex(long cardinput)
     }
     else
     {
-        bool amex = false
+        bool amex = false;
     }
 }
