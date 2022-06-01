@@ -20,6 +20,8 @@ int main(void)
         printf("falsey");
     }
 
+    printf("%i", length);
+
     //printf("Mod: %li", cardinput);
 
     // long mod = cardinput % 100 / 10;
@@ -55,8 +57,10 @@ bool get_amex(long cardinput)
 
 int get_length(long cardinput)
 {
-    for(int length = 0; cardinput / 10; length++)
+    int length = 0;
+    while(cardinput > 0)
     {
-        printf("%i", length);
+        cardinput = cardinput / 10;
+        length++;
     }
 }
