@@ -41,7 +41,7 @@ int get_cents(void)
     int cents;
     do
     {
-        cents = get_int("How much? ");
+        cents = get_int("How much change? ");
     }
     while (cents < 0);
     return cents;
