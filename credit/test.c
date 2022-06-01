@@ -8,9 +8,9 @@ int main(void)
 {
     long cardinput = get_cardinput();
 
-    bool get_amex(cardinput);
+    bool get_amex(long cardinput);
 
-    if (amex = true)
+    if (bool amex = true)
     {
         printf("truesey")
     }
