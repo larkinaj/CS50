@@ -55,7 +55,7 @@ bool get_amex(long cardinput)
 
 int get_length(long cardinput)
 {
-    for(int length = 0; cardinput == cardinput / 10; length++)
+    for(int length = 0; cardinput / 10; length++)
     {
         printf("%i", length);
     }
