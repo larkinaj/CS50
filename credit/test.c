@@ -13,16 +13,16 @@ int main(void)
 
     if (amex == true)
     {
-        printf("truesey");
+        printf("truesey\n");
     }
     else
     {
-        printf("falsey");
+        printf("falsey\n");
     }
 
     int length = get_length(cardinput);
 
-    printf("%i", length);
+    printf("Length: %i\n", length);
 
     //printf("Mod: %li", cardinput);
 
@@ -65,4 +65,5 @@ int get_length(long cardinput)
         cardinput = cardinput / 10;
         length++;
     }
+    return length;
 }
