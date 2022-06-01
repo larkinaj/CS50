@@ -44,7 +44,7 @@ long get_cardinput(void)
     }
     while (cardinput < 0);
 
-    
+
     return cardinput;
 }
 
@@ -52,7 +52,7 @@ long get_cardinput(void)
 bool get_amex(long cardinput, int length)
 {
     bool amex;
-    if (length == 15 && cardinput % 1000000000000000 / 10000000000000 == 34 || cardinput % 1000000000000000 / 10000000000000 == 37)
+    if (length == 15 && cardinput % 1000000000000000 / 10000000000000 == 34)
     {
         amex = true;
     }

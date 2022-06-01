@@ -2,14 +2,19 @@
 #include <stdio.h>
 
 long get_cardinput(void);
-bool get_amex(long cardinput);
 int get_length(long cardinput);
+bool get_amex(long cardinput, int length);
+
 
 int main(void)
 {
     long cardinput = get_cardinput();
 
-    bool amex = get_amex(cardinput);
+    int length = get_length(cardinput);
+
+    bool amex = get_amex(cardinput, length);
+
+
 
     if (amex == true)
     {
@@ -20,7 +25,7 @@ int main(void)
         printf("falsey\n");
     }
 
-    int length = get_length(cardinput);
+
 
     printf("Length: %i\n", length);
 
@@ -38,14 +43,16 @@ long get_cardinput(void)
         cardinput = get_long("What is the card number? ");
     }
     while (cardinput < 0);
+
+
     return cardinput;
 }
 
 
-bool get_amex(long cardinput)
+bool get_amex(long cardinput, int length)
 {
     bool amex;
-    if (cardinput > 130 && cardinput < 140)
+    if (length == 15 && cardinput % 1000000000000000 / 10000000000000 == 34)
     {
         amex = true;
     }
