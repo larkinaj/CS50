@@ -2,13 +2,23 @@
 #include <stdio.h>
 
 long get_cardinput(void);
+bool get_amex(long cardinput);
 int get_length(long cardinput);
 
 int main(void)
 {
     long cardinput = get_cardinput();
 
-    int get_length(cardinput);
+    bool amex = get_amex(cardinput);
+
+    if (amex == true)
+    {
+        printf("truesey");
+    }
+    else
+    {
+        printf("falsey");
+    }
 
     //printf("Mod: %li", cardinput);
 
@@ -28,11 +38,25 @@ long get_cardinput(void)
 }
 
 
+bool get_amex(long cardinput)
+{
+    bool amex;
+    if (cardinput > 130 && cardinput < 140)
+    {
+        amex = true;
+    }
+    else
+    {
+        amex = false;
+    }
+    return amex;
+}
+
 
 int get_length(long cardinput)
 {
     for(int length = 0; cardinput / 10; length++)
     {
-        printf("%i", length)
+        printf("%i", length);
     }
 }
