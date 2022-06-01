@@ -60,6 +60,14 @@ bool get_amex(long cardinput, int length)
     {
         amex = false;
     }
+    if (length == 15 && cardinput % 1000000000000000 / 10000000000000 == 37)
+    {
+        amex = true;
+    }
+    else
+    {
+        amex = false;
+    }
     return amex;
 }
 
