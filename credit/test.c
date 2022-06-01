@@ -22,4 +22,4 @@ long get_cardinput(void)
     return cardinput;
 }
 
-long get_card
+long get_AMEX
