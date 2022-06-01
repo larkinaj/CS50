@@ -5,7 +5,7 @@ long get_cardinput(void);
 int get_length(long cardinput);
 bool get_amex(long cardinput, int length);
 
-int get_luhn(long cardinput);
+int get_luhn(long cardinput, int length);
 
 
 int main(void)
@@ -16,7 +16,7 @@ int main(void)
 
     bool amex = get_amex(cardinput, length);
 
-    int luhn = get_luhn(cardinput);
+    int luhn = get_luhn(cardinput, length);
 
     if (amex == true)
     {
@@ -77,7 +77,7 @@ int get_length(long cardinput)
     return length;
 }
 
-int get_luhn(long cardinput)
+int get_luhn(long cardinput, int length)
 {
     int luhn = 0;
     return luhn;
