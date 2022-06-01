@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 long get_cardinput(void);
+void get_amex(long cardinput);
 
 int main(void)
 {
