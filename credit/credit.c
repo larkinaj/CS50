@@ -44,7 +44,7 @@ long get_cardinput(void)
     }
     while (cardinput < 0);
 
-    if (length)
+    
     return cardinput;
 }
 
