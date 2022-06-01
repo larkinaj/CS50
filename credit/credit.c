@@ -11,6 +11,8 @@ int main(void)
 
     bool amex = get_amex(cardinput);
 
+    int length = get_length(cardinput);
+
     if (amex == true)
     {
         printf("truesey\n");
@@ -20,7 +22,7 @@ int main(void)
         printf("falsey\n");
     }
 
-    int length = get_length(cardinput);
+
 
     printf("Length: %i\n", length);
 
