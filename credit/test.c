@@ -28,13 +28,14 @@ long get_cardinput(void)
 
 bool get_amex(long cardinput)
 {
-    // bool amex;
+    bool amex;
     if (cardinput > 130 && cardinput < 140)
     {
-        bool amex = true;
+        amex = true;
     }
     else
     {
-        bool amex = false;
+        amex = false;
     }
+    return amex;
 }
