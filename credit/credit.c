@@ -9,9 +9,11 @@ int main(void)
 {
     long cardinput = get_cardinput();
 
+    int length = get_length(cardinput);
+
     bool amex = get_amex(cardinput);
 
-    int length = get_length(cardinput);
+
 
     if (amex == true)
     {
