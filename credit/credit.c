@@ -1,76 +1,69 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_card(void);
-int calculate_quarters(int cents);
-int calculate_dimes(int cents);
-int calculate_nickels(int cents);
-int calculate_pennies(int cents);
+long get_cardinput(void);
+bool get_amex(long cardinput);
+int get_length(long cardinput);
 
 int main(void)
 {
-    // Ask how many cents the customer is owed
-    int cents = get_cents();
+    long cardinput = get_cardinput();
 
-    // Calculate the number of quarters to give the customer
-    int quarters = calculate_quarters(cents);
-    cents = cents - quarters * 25;
+    bool amex = get_amex(cardinput);
 
-    // Calculate the number of dimes to give the customer
-    int dimes = calculate_dimes(cents);
-    cents = cents - dimes * 10;
+    if (amex == true)
+    {
+        printf("truesey\n");
+    }
+    else
+    {
+        printf("falsey\n");
+    }
 
-    // Calculate the number of nickels to give the customer
-    int nickels = calculate_nickels(cents);
-    cents = cents - nickels * 5;
+    int length = get_length(cardinput);
 
-    // Calculate the number of pennies to give the customer
-    int pennies = calculate_pennies(cents);
-    cents = cents - pennies * 1;
+    printf("Length: %i\n", length);
 
-    // Sum coins
-    int coins = quarters + dimes + nickels + pennies;
+    //printf("Mod: %li", cardinput);
 
-    // Print total number of coins to give the customer
-    printf("Total coins: %i\n", coins);
-    printf("Quarters: %i, dimes: %i, nickels: %i, pennies: %i\n", quarters, dimes, nickels, pennies);
+    // long mod = cardinput % 100 / 10;
+    // printf("Mod: %li\n", mod);
 }
 
-int get_cents(void)
+long get_cardinput(void)
 {
-    int cents;
+    long cardinput;
     do
     {
-        cents = get_int("How much change? ");
+        cardinput = get_long("What is the card number? ");
     }
-    while (cents < 0);
-    return cents;
+    while (cardinput < 0);
+    return cardinput;
 }
 
-int calculate_quarters(int cents)
+
+bool get_amex(long cardinput)
 {
-    int quarters;
-    quarters = cents / 25;
-    return quarters;
+    bool amex;
+    if (cardinput > 130 && cardinput < 140)
+    {
+        amex = true;
+    }
+    else
+    {
+        amex = false;
+    }
+    return amex;
 }
 
-int calculate_dimes(int cents)
-{
-    int dimes;
-    dimes = cents / 10;
-    return dimes;
-}
 
-int calculate_nickels(int cents)
+int get_length(long cardinput)
 {
-    int nickels;
-    nickels = cents / 5;
-    return nickels;
-}
-
-int calculate_pennies(int cents)
-{
-    int pennies;
-    pennies = cents / 1;
-    return pennies;
+    int length = 0;
+    while(cardinput > 0)
+    {
+        cardinput = cardinput / 10;
+        length++;
+    }
+    return length;
 }
