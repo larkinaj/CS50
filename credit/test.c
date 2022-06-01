@@ -7,7 +7,7 @@ int main(void)
 {
     long cardinput = get_cardinput();
 
-    long 
+    long
     printf("%li", cardinput);
 
     // long mod = cardinput % 100 / 10;
@@ -28,6 +28,7 @@ long get_cardinput(void)
 
 long get_AMEX(long cardinput)
 {
+    
     if (cardinput > 130 || cardinput < 140)
     {
         return cardinput;
