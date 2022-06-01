@@ -11,7 +11,7 @@ int main(void)
 
     int length = get_length(cardinput);
 
-    bool amex = get_amex(cardinput);
+    bool amex = get_amex(cardinput, length);
 
 
 
