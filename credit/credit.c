@@ -9,7 +9,7 @@ int calculate_pennies(int cents);
 
 int main(void)
 {
-    if (cardnumber = )// Ask how many cents the customer is owed
+    // Ask how many cents the customer is owed
     int cents = get_cents();
 
     // Calculate the number of quarters to give the customer
