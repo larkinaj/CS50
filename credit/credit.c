@@ -3,7 +3,7 @@
 
 long get_cardinput(void);
 int get_length(long cardinput);
-bool get_amex(long cardinput);
+bool get_amex(long cardinput, int length);
 
 
 int main(void)
@@ -47,7 +47,7 @@ long get_cardinput(void)
 }
 
 
-bool get_amex(long cardinput)
+bool get_amex(long cardinput, int length)
 {
     bool amex;
     if (cardinput > 130 && cardinput < 140)
