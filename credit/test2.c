@@ -9,6 +9,6 @@ int main(void)
 {
     long cardinput = get_long("Number? ");
 
-    long mod = cardinput % 10000000000000 / 10000000000000;
+    long mod = cardinput % 100000000000 / 1000000000;
     printf("Mod: %li\n", mod);
 }
