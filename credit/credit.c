@@ -43,6 +43,8 @@ long get_cardinput(void)
         cardinput = get_long("What is the card number? ");
     }
     while (cardinput < 0);
+
+    if (length)
     return cardinput;
 }
 
