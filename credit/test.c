@@ -54,5 +54,5 @@ bool get_amex(long cardinput)
 
 int get_length(long cardinput)
 {
-    int length;
+    for(int length = 0; cardinput / 10; length++)
 }
