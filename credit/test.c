@@ -6,9 +6,8 @@ int get_cardinput(void);
 int main(void)
 {
     long cardinput = get_cardinput();
-    
-    long input = get_long("Number? ");
-    long mod = input % 100 / 10;
+
+    long mod = cardinput % 100 / 10;
     printf("Mod: %li\n", mod);
 }
 
