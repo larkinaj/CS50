@@ -8,7 +8,8 @@ int main(void)
     long cardinput = get_cardinput();
 
 
-    printf("Mod: %li", cardinput);
+    void get_amex();
+    //printf("Mod: %li", cardinput);
 
     // long mod = cardinput % 100 / 10;
     // printf("Mod: %li\n", mod);
@@ -26,16 +27,14 @@ long get_cardinput(void)
 }
 
 
-long get_amex(long cardinput)
+void get_amex(long cardinput)
 {
-    long amex;
     if (cardinput > 130 && cardinput < 140)
     {
-        printf(true);
+        printf("true");
     }
     else
     {
-        printf(false);
+        printf("false");
     }
-    return amex;
 }
