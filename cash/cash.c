@@ -33,7 +33,7 @@ int main(void)
 
     // Print total number of coins to give the customer
     printf("Total coins: %i\n", coins);
-    printf("Quarters: %i\n", coins);
+    printf("Quarters: %i, dimes: %i, nickels: %i, pennies: %i\n", quarters, dimes, nickels, pennies);
 }
 
 int get_cents(void)
