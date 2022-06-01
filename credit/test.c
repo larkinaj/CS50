@@ -31,11 +31,11 @@ long get_amex(long cardinput)
     long amex;
     if (cardinput > 130 && cardinput < 140)
     {
-        amex = cardinput;
+        printf(true);
     }
     else
     {
-        amex = false;
+        printf(false);
     }
     return amex;
 }
