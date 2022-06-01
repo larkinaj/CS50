@@ -26,11 +26,15 @@ long get_cardinput(void)
 }
 
 
-long get_AMEX(long cardinput)
+bool get_amex(long cardinput)
 {
-    
+    bool amex;
     if (cardinput > 130 || cardinput < 140)
     {
-        return cardinput;
+        bool amex = true;
+    }
+    else
+    {
+        bool amex = false
     }
 }
