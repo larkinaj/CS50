@@ -20,6 +20,8 @@ int main(void)
         printf("falsey");
     }
 
+    int length = get_length(cardinput);
+
     printf("%i", length);
 
     //printf("Mod: %li", cardinput);
