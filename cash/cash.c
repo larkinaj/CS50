@@ -51,7 +51,6 @@ int calculate_quarters(int cents)
 {
     int quarters;
     quarters = cents / 25;
-
     return quarters;
 }
 
