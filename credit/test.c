@@ -21,3 +21,5 @@ long get_cardinput(void)
     while (cardinput < 0);
     return cardinput;
 }
+
+long get_card
