@@ -50,7 +50,7 @@ long get_cardinput(void)
 bool get_amex(long cardinput, int length)
 {
     bool amex;
-    if (cardinput > 130 && cardinput < 140)
+    if (length == 15)
     {
         amex = true;
     }
