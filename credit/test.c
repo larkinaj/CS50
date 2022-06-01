@@ -10,7 +10,7 @@ int main(void)
 
     bool get_amex(long cardinput);
 
-    if (bool amex = true)
+    if (bool amex == true)
     {
         printf("truesey")
     }
