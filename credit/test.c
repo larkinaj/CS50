@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    long input = get_long("Number? ");
-    long mod = input % 100;
-    printf("Mod: %li\n", mod);
+    int input = get_long("Number? ");
+    int mod = input % 10;
+    printf("Mod: %i\n", mod);
 }
