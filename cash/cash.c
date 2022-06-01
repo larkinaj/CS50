@@ -51,7 +51,7 @@ int calculate_quarters(int cents)
     int quarters;
     if (cents>25)
     {
-        
+
     }
 
     return quarters;
@@ -60,17 +60,17 @@ int calculate_quarters(int cents)
 int calculate_dimes(int cents)
 {
     // TODO
-    return 0;
+    return dimes;
 }
 
 int calculate_nickels(int cents)
 {
     // TODO
-    return 0;
+    return nickels;
 }
 
 int calculate_pennies(int cents)
 {
     // TODO
-    return 0;
+    return pennies;
 }
