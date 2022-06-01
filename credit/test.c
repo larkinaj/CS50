@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_cardinput(void);
+long get_cardinput(void);
 
 int main(void)
 {
@@ -11,9 +11,9 @@ int main(void)
     printf("Mod: %li\n", mod);
 }
 
-int get_cardinput(void)
+long get_cardinput(void)
 {
-    int cardinput;
+    long cardinput;
     do
     {
         cardinput = get_long("What is the card number? ");
