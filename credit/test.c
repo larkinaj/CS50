@@ -8,7 +8,7 @@ int main(void)
 {
     long cardinput = get_cardinput();
 
-    bool get_amex(long cardinput);
+    bool get_amex(cardinput);
 
     if (bool amex == true)
     {
