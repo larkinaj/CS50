@@ -15,4 +15,5 @@ int main(void)
     }
 
     printf("Average: %.2f\n", (scores[0] + scores[1] + scores[2]) / n);
+
 }
