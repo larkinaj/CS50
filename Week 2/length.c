@@ -21,4 +21,5 @@ int string_length(string s)
     {
         i++;
     }
+    return i
 }
