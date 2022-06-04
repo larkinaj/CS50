@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int get_length(string s);
+int string_length(string s);
 
 int main(void)
 {
@@ -17,9 +17,9 @@ int string_length(string s)
 {
     int i = 0;
 
-    while (name[1] != '\0')
+    while (s[1] != '\0')
     {
         i++;
     }
-    return i
+    return i;
 }
