@@ -16,7 +16,7 @@ int main(void)
         }
         else if (islower(s[i]))
         {
-            printf("%c", s[i]-32);
+            printf("%c", toupper(s[i]));
         }
         else
         {
