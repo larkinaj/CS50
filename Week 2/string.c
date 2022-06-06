@@ -5,8 +5,8 @@
 
 int main(void)
 {
-    string name = get_string("Name: ");
-    int length = strlen(name);
+    string s = get_string("Input: ");
 
-    printf("%i\n", length);
+    printf("Output: ");
+    printf("%c\n", s);
 }
