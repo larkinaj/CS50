@@ -5,6 +5,6 @@
 
 int main(int argc, string argv[])
 {
-    printf("Input: %i%s", argc, argv);
+    printf("Input: %i%c", argc, argv[]);
     printf("\n");
 }
