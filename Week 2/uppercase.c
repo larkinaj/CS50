@@ -9,7 +9,12 @@ int main(void)
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        printf("%c", s[i]+32);
+        if (s[i] > 64 && s[i] < 91)
+        {
+            printf("%c", s[i]+32);
+        }
+        else
+        printf("%c", s[i]);
     }
     printf("\n");
 }
