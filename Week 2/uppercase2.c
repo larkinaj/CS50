@@ -10,11 +10,11 @@ int main(void)
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if (s[i] > 64 && s[i] < 91)
+        if (isupper(s[i]))
         {
             printf("%c", s[i]+32);
         }
-        else if (s[i] > 96 && s[i] < 123)
+        else if (islower(s[i]))
         {
             printf("%c", s[i]-32);
         }
