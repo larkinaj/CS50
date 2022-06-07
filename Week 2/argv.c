@@ -5,6 +5,10 @@
 
 int main(int argc, string argv[])
 {
-    printf("Input: %i%c", argc, argv[]);
-    printf("\n");
+        for (int i = 0, n = strlen(argv); i < n; i++)
+        {
+            printf("Input: %i%c", argc, argv[i]);
+            printf("\n");
+        }
+
 }
