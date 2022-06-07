@@ -28,15 +28,20 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    
+
     int digit;
     digit = atoi(key);
     printf("New int: %i\n", digit);
 }
 
-// int atoi(string key)
-// {
-//     int digit;
-//     digit = atoi(key);
-//     return digit;
-// }
+bool atoi(string key)
+{
+    if (isdigit(key[i]))
+    {
+    }
+           else
+            {
+                printf("Usage: ./caesar key\n");
+                return 1;
+            }
+}
