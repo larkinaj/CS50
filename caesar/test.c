@@ -38,5 +38,6 @@ bool only_digits(string key)
             onlydigits = false;
         }
     }
-    return onlydigits;
+    return 0;
+
 }
