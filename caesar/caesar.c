@@ -27,7 +27,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    printf("New int: %i", atoi(argv[1]))
+    printf("New int: %i", atoi(key))
 }
 
 // int atoi(string key)
