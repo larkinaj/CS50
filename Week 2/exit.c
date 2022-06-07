@@ -3,6 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
+int returnvalue(int main);
+
 int main(int argc, string argv[])
 {
     if (argc != 2)
@@ -18,3 +20,5 @@ int main(int argc, string argv[])
     }
 
 }
+
+int returnvalue(int main);
