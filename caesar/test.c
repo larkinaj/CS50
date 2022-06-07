@@ -37,7 +37,6 @@ bool only_digits(string key)
         else
         {
             onlydigits = false;
-            return 1;
         }
     }
     return onlydigits;
