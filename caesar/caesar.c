@@ -27,10 +27,9 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+}
 
 int only_digits(string key)
 {
-    return 0
-}
-
+    return 0;
 }
