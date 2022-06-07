@@ -5,12 +5,12 @@
 
 int main(int argc, string argv[])
 {
-    string test = argv[1];
+    string key = argv[1];
     if (argc == 2)
     {
-        for (int i = 0; i < strlen(test); i++)
+        for (int i = 0; i < strlen(key); i++)
         {
-            if (isdigit(test[i]))
+            if (isdigit(key[i]))
             {
                 return 0;
             }
