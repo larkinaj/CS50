@@ -7,7 +7,7 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./caesar key\n");
     }
-    else if (isalpha(argv[2]) )
+    else if (isalpha(argv[2]))
     else
     {
         string test = get_string("Plaintext: ");
