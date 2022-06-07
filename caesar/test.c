@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     {
         only_digits(key);
     }
-    else if (argc != 2 || onlydigits == false)
+    else
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -37,6 +37,8 @@ bool only_digits(string key)
         else
         {
             onlydigits = false;
+            printf("Usage: ./caesar key\n");
+            return 1;
         }
     }
     return onlydigits;
