@@ -28,11 +28,13 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string plaintext = get_string("Plaintext: ");
     int digit;
     digit = atoi(key);
     printf("New int: %i\n", digit);
-
-
+    string plaintext = get_string("Plaintext: ");
 }
 
+char rotate(char c, int n)
+{
+    
+}
