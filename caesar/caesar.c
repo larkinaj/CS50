@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-string rotate(string key);
+string rotate(int digit, string plaintext);
 
 int main(int argc, string argv[])
 {
@@ -33,13 +33,13 @@ int main(int argc, string argv[])
     digit = atoi(key);
     printf("New int: %i\n", digit);
     string plaintext = get_string("Plaintext: ");
-    string cipher = rotate(key);
+    string cipher = rotate(digit, plaintext);
     printf("Cipher: %s\n", cipher);
 
 
 }
 
-string rotate(string key)
+string rotate(int digit, string plaintext)
 {
     string cipher = key;
     for (int i = 0, n = strlen(key); i < n; i++)
