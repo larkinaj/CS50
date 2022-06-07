@@ -14,8 +14,6 @@ int main(void)
 
 int count_letters(string input)
 {
-    // int length = strlen(input);
-
     int length;
     for (int i = 0, n = strlen(input); i < n; i++)
     {
@@ -27,8 +25,6 @@ int count_letters(string input)
             {
                 length = length + 0;
             }
-
     }
     return length;
-
 }
