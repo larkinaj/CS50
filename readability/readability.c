@@ -46,5 +46,6 @@ int count_words(string input)
             words = words + 0;
         }
     }
+    words ++;
     return words;
 }
