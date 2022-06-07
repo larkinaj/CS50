@@ -33,6 +33,8 @@ int main(int argc, string argv[])
     int digit;
     digit = atoi(key);
     printf("New int: %i\n", digit);
+
+    
 }
 
 bool only_digits(string key)
