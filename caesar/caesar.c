@@ -31,10 +31,10 @@ int main(int argc, string argv[])
 
     int digit;
     digit = atoi(key);
-    printf("New int: %i\n", digit);
+    // printf("New int: %i\n", digit);
     string plaintext = get_string("Plaintext: ");
     string cipher = rotate(digit, plaintext);
-    printf("Cipher: %s\n", cipher);
+    printf("ciphertext: %s\n", cipher);
 
 
 }
