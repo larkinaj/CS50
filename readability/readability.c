@@ -31,6 +31,7 @@ int main(void)
     }
 }
 
+// Function to count the letters in 
 int count_letters(string input)
 {
     int length = 0;
