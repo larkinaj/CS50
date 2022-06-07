@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int atoi(string key);
+// int atoi(string key);
 
 int main(int argc, string argv[])
 {
@@ -27,11 +27,13 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    int atoi(string key);
+    printf("New int: %i", digit)
 }
 
-int atoi(string key)
-{
-    int digit;
-    digit = atoi(key);
-    return digit;
-}
+// int atoi(string key)
+// {
+//     int digit;
+//     digit = atoi(key);
+//     return digit;
+// }
