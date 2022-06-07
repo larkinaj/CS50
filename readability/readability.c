@@ -18,9 +18,9 @@ int count_letters(string input)
 
 
 
-    if (isalpha(input[i]))
+    if (isalpha(input[c]))
         {
-            length = ;
+            int length = ;
         }
         }
         else
