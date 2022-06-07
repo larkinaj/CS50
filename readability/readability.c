@@ -6,6 +6,7 @@
 int count_letters(string input);
 int count_words(string input);
 int count_sentences(string input);
+float get_grade(int length, int words, int sentences);
 
 int main(void)
 {
@@ -13,9 +14,12 @@ int main(void)
     int length = count_letters(input);
     int words = count_words(input);
     int sentences = count_sentences(input);
+    float index = get_grade(length, words, sentences);
+
     printf("%i letters\n", length);
     printf("%i words\n", words);
     printf("%i Sentences\n", sentences);
+    printf("Grade %f\n", index);
 }
 
 int count_letters(string input)
@@ -70,3 +74,8 @@ int count_sentences(string input)
     return sentences;
 }
 
+float get_grade(int length, int words, int sentences)
+{
+    float index = 0.058 * (length / words * 100) - 0.296 * (sentences / words * 100) - 15.8;
+    return index;
+}
