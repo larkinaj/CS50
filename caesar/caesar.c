@@ -8,7 +8,7 @@ int main(int argc, string argv[])
     string test = argv[1];
     if (argc == 2)
     {
-        for (int i = 0, n = strlen(test); i < n; i++)
+        for (int i = 0; i < strlen(test); i++)
         {
             if (isdigit(test[i]))
             {
