@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+char rotate(char c, int n);
 
 int main(int argc, string argv[])
 {
@@ -32,9 +33,12 @@ int main(int argc, string argv[])
     digit = atoi(key);
     printf("New int: %i\n", digit);
     string plaintext = get_string("Plaintext: ");
+
+
+
 }
 
 char rotate(char c, int n)
 {
-    
+
 }
