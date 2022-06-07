@@ -37,7 +37,6 @@ bool only_digits(string key)
         else
         {
             onlydigits = false;
-            printf("Usage: ./caesar key\n");
             return 1;
         }
     }
