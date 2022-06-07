@@ -18,6 +18,6 @@ int count_letters(string input)
 
     int length = isalpha(input);
 
-    return length
+    return length;
 
 }
