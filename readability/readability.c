@@ -31,7 +31,7 @@ int main(void)
     }
 }
 
-// Function to count the letters in 
+// Function to count the number of letters in the text.
 int count_letters(string input)
 {
     int length = 0;
@@ -49,6 +49,7 @@ int count_letters(string input)
     return length;
 }
 
+// Function to count the number of words in the text.
 int count_words(string input)
 {
     int words = 0;
@@ -67,6 +68,7 @@ int count_words(string input)
     return words;
 }
 
+// Function to count the number of sentences in the text.
 int count_sentences(string input)
 {
     int sentences = 0;
@@ -84,6 +86,7 @@ int count_sentences(string input)
     return sentences;
 }
 
+//Function to calculate the reading level using the Coleman-Liau index.
 float get_index(int length, int words, int sentences)
 {
     float grade = 0.0588 * length / words * 100 - 0.296 * sentences / words * 100 - 15.8;
