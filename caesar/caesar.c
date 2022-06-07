@@ -5,9 +5,10 @@
 
 int main(int argc, string argv[])
 {
+    string test = argv[1];
     if (argc == 2)
     {
-        if (isdigit(argv[1]))
+        if (isdigit(test[1]))
         {
             return 0;
         }
