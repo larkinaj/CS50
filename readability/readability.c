@@ -34,7 +34,7 @@ int count_letters(string input)
 
 int count_words(string input)
 {
-    int words = 0;
+    int words;
     for (int i = 0, n = strlen(input); i < n; i++)
     {
         if (isspace(input[i]))
