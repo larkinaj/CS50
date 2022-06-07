@@ -14,10 +14,18 @@ int main(void)
 
 int count_letters(string input)
 {
-    int n = strlen(input);
+    int length = strlen(input);
 
-    int length = isalpha(char input);
 
-    return length;
+
+    if (isalpha(input[i]))
+        {
+            length = ;
+        }
+        }
+        else
+        {
+            printf("%c", s[i]);
+        }
 
 }
