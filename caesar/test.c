@@ -12,7 +12,7 @@ int main(int argc, string argv[])
     bool onlydigits = only_digits(key);
     if (argc == 2)
     {
-        // string plaintext = get_string("Plaintext: ");
+        only_digits(key);
     }
     else if (argc != 2 || onlydigits == false)
     {
