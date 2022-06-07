@@ -10,7 +10,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    else if (argv[1] == )
+    else if (argv[1] == isalpha(argv[1]))
     else
     {
         return 0;
