@@ -6,7 +6,7 @@ int main(void)
     string input = get_string("Text: ");
 }
 
-in count_letters(string text)
+int count_letters(string text)
 {
-    
+    return 0;
 }
