@@ -17,9 +17,9 @@ int main(void)
     int sentences = count_sentences(input);
     float index = get_grade(length, words, sentences);
 
-    printf("%i letters\n", length);
-    printf("%i words\n", words);
-    printf("%i Sentences\n", sentences);
+    // printf("%i letters\n", length);
+    // printf("%i words\n", words);
+    // printf("%i Sentences\n", sentences);
     printf("Grade %i\n", (int) round(index));
 }
 
