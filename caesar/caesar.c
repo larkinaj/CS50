@@ -1,5 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -8,8 +10,11 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
     }
     else if (isalpha(argv[2]))
-    else
     {
         string test = get_string("Plaintext: ");
+    }
+    else
+    {
+        printf("Usage: ./caesar key\n");
     }
 }
