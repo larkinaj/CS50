@@ -12,7 +12,7 @@ int main(int argc, string argv[])
         {
             if (isdigit(key[i]))
             {
-                return 0;
+                return 1;
             }
             else
             {
