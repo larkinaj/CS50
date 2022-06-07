@@ -5,10 +5,10 @@ int main(int argc, string argv[])
 {
     if (argc == 1)
     {
-        string test = get_string("Plaintext: ");
+        printf("You typed an arg\n");
     }
     else
     {
-        printf("You typed an arg\n");
+        string test = get_string("Plaintext: ");
     }
 }
