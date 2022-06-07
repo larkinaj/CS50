@@ -18,13 +18,13 @@ int count_letters(string input)
     for (int i = 0, n = strlen(input); i < n; i++)
     {
         if (isalpha(input[i]))
-            {
-                length ++;
-            }
-            else
-            {
-                length = length + 0;
-            }
+        {
+            length ++;
+        }
+        else
+        {
+            length = length + 0;
+        }
     }
     return length;
 }
