@@ -20,7 +20,7 @@ int main(void)
     printf("%i letters\n", length);
     printf("%i words\n", words);
     printf("%i Sentences\n", sentences);
-    printf("Grade %f\n", index);
+    printf("Grade %i\n", (int) round(index));
 }
 
 int count_letters(string input)
