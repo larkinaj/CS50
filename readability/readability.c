@@ -4,12 +4,15 @@
 #include <string.h>
 
 int count_letters(string input);
+int count_words(string input);
 
 int main(void)
 {
     string input = get_string("Text: ");
     int length = count_letters(input);
+    int words = count_words(input);
     printf("%i letters\n", length);
+    printf("%i words\n", words);
 }
 
 int count_letters(string input)
@@ -27,4 +30,14 @@ int count_letters(string input)
         }
     }
     return length;
+}
+
+int count_words(string input)
+{
+    int words;
+    for (int i = 0, n = strlen(input); i < n; i++)
+    {
+        
+    }
+    return words;
 }
