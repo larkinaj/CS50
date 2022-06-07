@@ -10,9 +10,9 @@ int main(int argc, string argv[])
 {
     string key = argv[1];
     bool onlydigits = only_digits(key);
-    if (argc == 2)
+    if (argc == 2 && onlydigits == true)
     {
-        only_digits(key);
+        string plaintext = get_string("Plaintext: ");
     }
     else
     {
@@ -27,12 +27,11 @@ int main(int argc, string argv[])
 
 bool only_digits(string key)
 {
-    bool onlydigits;
+    bool onlydigits = true;
     for (int i = 0; i < strlen(key); i++)
     {
         if (isdigit(key[i]))
         {
-            onlydigits = true;
         }
         else
         {
