@@ -76,6 +76,8 @@ int count_sentences(string input)
 
 float get_grade(int length, int words, int sentences)
 {
-    float index = 0.0588 * (length / words * 100) - 0.296 * (sentences / words * 100) - 15.8;
+
+    float index = length / words * 100;
+    // float index = 0.0588 * (length / words * 100) - 0.296 * (sentences / words * 100) - 15.8;
     return index;
 }
