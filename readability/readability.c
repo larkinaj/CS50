@@ -3,5 +3,5 @@
 
 int main(void)
 {
-    
+    String input = get_string("Text: ");
 }
