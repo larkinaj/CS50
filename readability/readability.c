@@ -25,7 +25,7 @@ int count_letters(string input)
             }
             else
             {
-                length = 0;
+                length = length + 0;
             }
 
     }
