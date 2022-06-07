@@ -16,7 +16,7 @@ int count_letters(string input)
 {
     int n = strlen(input);
 
-    int length = isalpha(input);
+    int length = isalpha(char input);
 
     return length;
 
