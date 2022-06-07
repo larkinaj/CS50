@@ -15,6 +15,7 @@ int main(void)
 int count_letters(string input)
 {
     int length = strlen(input);
+    
     return length;
 
 }
