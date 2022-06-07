@@ -12,7 +12,6 @@ int main(int argc, string argv[])
         {
             if (isdigit(key[i]))
             {
-                
             }
             else
             {
