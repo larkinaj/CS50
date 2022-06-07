@@ -9,7 +9,7 @@ int main(int argc, string argv[])
 {
     if (argc != 2)
     {
-        printf("Missing command-line argument.");
+        printf("Missing command-line argument.\n");
         return 1;
     }
     else
@@ -21,3 +21,6 @@ int main(int argc, string argv[])
 }
 
 int returnvalue(int main)
+{
+    return 0;
+}
