@@ -31,6 +31,7 @@ int main(int argc, string argv[])
 
 int only_digits(string key)
 {
-    int digit = atoi(key);
+    int digit;
+    digit = atoi(string key);
     return digit;
 }
