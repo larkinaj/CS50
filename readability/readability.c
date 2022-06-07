@@ -15,7 +15,7 @@ int main(void)
 int count_letters(string input)
 {
     int length;
-    for (int length = 0, n = strlen(input); length < n; length++)
+    for (length = 0, n = strlen(input); length < n; length++)
     {
         printf("%c", toupper(input[n]));
     }
