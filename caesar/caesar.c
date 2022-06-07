@@ -10,6 +10,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    else if (argv[1] = 0)
     else
     {
         return 0;
