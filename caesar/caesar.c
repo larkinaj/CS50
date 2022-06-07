@@ -41,20 +41,20 @@ int main(int argc, string argv[])
 
 string rotate(int digit, string plaintext)
 {
-    string cipher = key;
-    for (int i = 0, n = strlen(key); i < n; i++)
+    string cipher = plaintext;
+    for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        if (isalpha(key[i]))
+        if (isalpha(plaintext[i]))
         {
-            cipher[i] = key[i] + 32;
+            cipher[i] = plaintext[i] + 32;
         }
-        else if (key[i] > 96 && key[i] < 123)
+        else if (plaintext[i] > 96 && plaintext[i] < 123)
         {
-            cipher[i] = key[i] - 32;
+            cipher[i] = plaintext[i] - 32;
         }
         else
         {
-            cipher[i] = key[i];
+            cipher[i] = plaintext[i];
         }
     }
     return cipher;
