@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <string.h>
 
+int only_digits(string key);
+
 int main(int argc, string argv[])
 {
     string key = argv[1];
@@ -25,4 +27,10 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+
+int only_digits(string key)
+{
+    return 0
+}
+
 }
