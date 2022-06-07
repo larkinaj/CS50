@@ -1,18 +1,20 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 int count_letters(string input);
 
 int main(void)
 {
-    int
     string input = get_string("Text: ");
+    int length = count_letters(input);
 }
 
 int count_letters(string input)
 {
-    int length = 0;
-    for (int length = 0, n = strlen(input), >)
-    return length;
+    for (int length = 0, n = strlen(input); length < n; length++)
+    {
+        return length;
+    }
 }
