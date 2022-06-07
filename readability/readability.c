@@ -17,6 +17,7 @@ int main(void)
     int sentences = count_sentences(input);
     float grade = get_index(length, words, sentences);
 
+    // Conditional statement to determine whether the reading level is less than 1 or greater than 15.
     if (grade < 0.5)
     {
         printf("Before Grade 1\n");
@@ -74,7 +75,7 @@ int count_sentences(string input)
     int sentences = 0;
     for (int i = 0, n = strlen(input); i < n; i++)
     {
-        if (input[i] == '.' || input[i] == '!'|| input[i] == '?')
+        if (input[i] == '.' || input[i] == '!' || input[i] == '?')
         {
             sentences ++;
         }
