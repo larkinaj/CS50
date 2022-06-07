@@ -14,8 +14,10 @@ int main(void)
 
 int count_letters(string input)
 {
-    int length = strlen(input);
+    int n = strlen(input);
 
-    for int i = 0, n = strlen(input); i >
+    int length = isalpha(input);
+
+    return length
 
 }
