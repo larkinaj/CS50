@@ -34,14 +34,16 @@ int main(int argc, string argv[])
     printf("New int: %i\n", digit);
 }
 
-bool atoi(string key)
+bool only_digits(string key)
 {
+    bool onlydigits;
     if (isdigit(key[i]))
     {
+        onlydigits = true
     }
-           else
-            {
-                printf("Usage: ./caesar key\n");
-                return 1;
-            }
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
 }
