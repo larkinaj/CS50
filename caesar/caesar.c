@@ -4,11 +4,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-// int atoi(string key);
+bool only_digits(string key);
 
 int main(int argc, string argv[])
 {
     string key = argv[1];
+    bool onlydigits = only_digits(key);
     if (argc == 2)
     {
         for (int i = 0; i < strlen(key); i++)
@@ -37,13 +38,16 @@ int main(int argc, string argv[])
 bool only_digits(string key)
 {
     bool onlydigits;
-    if (isdigit(key[i]))
+    for (int i = 0; i < strlen(key); i++)
     {
-        onlydigits = true
+        if (isdigit(key[i]))
+        {
+            onlydigits = true;
+        }
+        else
+        {
+            onlydigits = false;
+        }
     }
-    else
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
+    return onlydigits;
 }
