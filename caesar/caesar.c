@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-char rotate(string key);
+string rotate(string key);
 
 int main(int argc, string argv[])
 {
@@ -33,27 +33,29 @@ int main(int argc, string argv[])
     digit = atoi(key);
     printf("New int: %i\n", digit);
     string plaintext = get_string("Plaintext: ");
-
+    string cipher = rotate(key);
+    printf("Cipher: %s\n", cipher);
 
 
 }
 
-char rotate(string key)
+string rotate(string key)
 {
+    string cipher = key;
     for (int i = 0, n = strlen(key); i < n; i++)
     {
         if (key[i] > 64 && key[i] < 91)
         {
-            printf("%c", key[i]+32);
+            cipher[i] = key[i] + 32;
         }
         else if (key[i] > 96 && key[i] < 123)
         {
-            printf("%c", key[i]-32);
+            cipher[i] = key[i] - 32;
         }
         else
         {
-            printf("%c", key[i]);
+            cipher[i] = key[i];
         }
     }
-    return 0;
+    return cipher;
 }
