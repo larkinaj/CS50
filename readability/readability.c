@@ -21,7 +21,7 @@ int count_letters(string input)
     {
         if (isalpha(input[i]))
             {
-                length = strlen(input);
+                length ++;
             }
             else
             {
