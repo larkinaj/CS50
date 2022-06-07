@@ -7,3 +7,6 @@ int main(void)
 }
 
 in count_letters(string text)
+{
+    
+}
