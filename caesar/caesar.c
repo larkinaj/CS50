@@ -5,7 +5,7 @@ int main(int argc, string argv[])
 {
     if (argc == 1)
     {
-        printf("You need to add an argument\n");
+        string test = get_string("Plaintext: ");
     }
     else
     {
