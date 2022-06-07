@@ -7,8 +7,9 @@ int main(int argc, string argv[])
 {
     if (argc != 2)
     {
-        printf("Missing command-line argument. Return code: %i\n", main);
+        printf("Missing command-line argument.");
         return 1;
+        printf("Return code: %i\n", main);
     }
     else
     {
