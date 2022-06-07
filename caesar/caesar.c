@@ -44,7 +44,7 @@ string rotate(string key)
     string cipher = key;
     for (int i = 0, n = strlen(key); i < n; i++)
     {
-        if (key[i] > 64 && key[i] < 91)
+        if (isalpha(key[i]))
         {
             cipher[i] = key[i] + 32;
         }
