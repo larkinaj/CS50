@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-char rotate(char c, int n);
+char rotate(string key);
 
 int main(int argc, string argv[])
 {
@@ -44,11 +44,11 @@ char rotate(string key)
     {
         if (key[i] > 64 && key[i] < 91)
         {
-            printf("%c", s[i]+32);
+            printf("%c", key[i]+32);
         }
         else if (key[i] > 96 && key[i] < 123)
         {
-            printf("%c", s[i]-32);
+            printf("%c", key[i]-32);
         }
         else
         {
