@@ -11,7 +11,6 @@ int main(int argc, string argv[])
     {
         printf("Missing command-line argument.");
         return 1;
-        printf("Return code: %i\n", main);
     }
     else
     {
