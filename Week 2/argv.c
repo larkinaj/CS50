@@ -6,7 +6,7 @@
 int main(int argc, string argv[])
 {
 
-    printf("Output: %s", argv[argc]);
+    printf("Output: %s", argv[0]);
     printf("\n");
 
 }
