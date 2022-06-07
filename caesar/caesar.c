@@ -48,7 +48,7 @@ string rotate(int digit, string plaintext)
         {
             if (isupper(plaintext[i]))
             {
-                cipher[i] = plaintext[i] + digit;
+                cipher[i] = (plaintext[i] + digit) % 26;
             }
         }
         else
