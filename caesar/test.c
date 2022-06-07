@@ -10,9 +10,9 @@ int main(int argc, string argv[])
 {
     string key = argv[1];
     bool onlydigits = only_digits(key);
-    if (argc == 2 && onlydigits == true)
+    if (argc == 2)
     {
-        string plaintext = get_string("Plaintext: ");
+        // string plaintext = get_string("Plaintext: ");
     }
     else if (argc != 2 || onlydigits == false)
     {
