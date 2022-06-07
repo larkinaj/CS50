@@ -20,4 +20,4 @@ int main(int argc, string argv[])
 
 }
 
-int returnvalue(int main);
+int returnvalue(int main)
