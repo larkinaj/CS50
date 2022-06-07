@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     {
         string plaintext = get_string("Plaintext: ");
     }
-    else
+    else if (argc != 2 || onlydigits == false)
     {
         printf("Usage: ./caesar key\n");
         return 1;
