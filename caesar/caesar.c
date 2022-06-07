@@ -3,10 +3,11 @@
 
 int main(int argc, string argv[])
 {
-    if (argc == 1)
+    if (argc < 2 || argc > 2)
     {
-        printf("You typed an arg\n");
+        printf("Usage: ./caesar key\n");
     }
+    else if ()
     else
     {
         string test = get_string("Plaintext: ");
