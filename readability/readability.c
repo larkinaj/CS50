@@ -20,7 +20,18 @@ int main(void)
     // printf("%i letters\n", length);
     // printf("%i words\n", words);
     // printf("%i Sentences\n", sentences);
-    printf("Grade %i\n", (int) round(index));
+    if (index < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else if (index > 15)
+    {
+        printf("Grade 16+\n");
+    }
+    else
+    {
+        printf("Grade %i\n", (int) round(index));
+    }
 }
 
 int count_letters(string input)
