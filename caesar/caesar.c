@@ -46,7 +46,7 @@ string rotate(int digit, string plaintext)
     {
         if (isalpha(plaintext[i]))
         {
-            cipher[i] = plaintext[i] + 32;
+            cipher[i] = plaintext[i] + digit;
         }
         else if (plaintext[i] > 96 && plaintext[i] < 123)
         {
