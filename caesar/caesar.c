@@ -40,5 +40,20 @@ int main(int argc, string argv[])
 
 char rotate(char c, int n)
 {
-
+    for (int i = 0, n = strlen(key); i < n; i++)
+    {
+        if (key[i] > 64 && key[i] < 91)
+        {
+            printf("%c", s[i]+32);
+        }
+        else if (key[i] > 96 && key[i] < 123)
+        {
+            printf("%c", s[i]-32);
+        }
+        else
+        {
+            printf("%c", key[i]);
+        }
+    }
+    return 0;
 }
