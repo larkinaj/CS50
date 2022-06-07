@@ -12,7 +12,7 @@ int main(int argc, string argv[])
         {
             if (isdigit(key[i]))
             {
-                string plaintext = get_string("Plaintext: ");
+                return 0;
             }
             else
             {
@@ -27,8 +27,4 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if (isdigit(argv[1]))
-    {
-    return 0;
-    }
 }
