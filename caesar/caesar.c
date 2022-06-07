@@ -8,13 +8,10 @@ int main(int argc, string argv[])
     if (argc < 2 || argc > 2)
     {
         printf("Usage: ./caesar key\n");
-    }
-    else if (isalpha(argv[1]))
-    {
-        string test = get_string("Plaintext: ");
+        return 1;
     }
     else
     {
-        printf("Usage: ./caesar key\n");
+        return 0;
     }
 }
