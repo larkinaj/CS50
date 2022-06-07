@@ -8,14 +8,17 @@ int main(int argc, string argv[])
     string test = argv[1];
     if (argc == 2)
     {
-        if (isdigit(test[1]))
+        for (int i = 0, n = strlen(test); i < n; i++)
         {
-            return 0;
-        }
-        else
-        {
-            printf("Usage: ./caesar key\n");
-            return 1;
+            if (isdigit(test[i]))
+            {
+                return 0;
+            }
+            else
+            {
+                printf("Usage: ./caesar key\n");
+                return 1;
+            }
         }
     }
     else
