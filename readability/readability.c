@@ -78,6 +78,6 @@ float get_grade(int length, int words, int sentences)
 {
 
     float index = 0;
-    index = 0.0588 * (length / words * 100) - 0.296 * (sentences / words * 100) - 15.8;
+    index = 0.0588 * length / words * 100 - 0.296 * sentences / words * 100 - 15.8;
     return index;
 }
