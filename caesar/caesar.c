@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int only_digits(string key);
+int atoi(string key);
 
 int main(int argc, string argv[])
 {
@@ -29,9 +29,9 @@ int main(int argc, string argv[])
     }
 }
 
-int only_digits(string key)
+int atoi(string key)
 {
     int digit;
-    digit = atoi(string key);
+    digit = atoi(key);
     return digit;
 }
