@@ -12,16 +12,17 @@
             document.addEventListener('DOMContentLoaded', function(){
 
                 let correct = document.querySelector('#harvard');
-                let incorrect = document.querySelector('#yale', '#princeton');
+                let incorrect = document.querySelector('#yale'||'#princeton');
 
                 correct.addEventListener('click', function()
                 {
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#feedback').innerHTML = 'Correct!';
                 });
+
                 incorrect.addEventListener('click', function()
                 {
-                    correct.style.backgroundColor = 'red';
+                    incorrect.style.backgroundColor = 'red';
                     document.querySelector('#feedback').innerHTML = 'Incorrect!';
                 });
 
