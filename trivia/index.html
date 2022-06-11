@@ -7,10 +7,11 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            let body = document.querySelector('body');
-            document.querySelector('#yale').addEventListener('click', function()
+            let correct = document.querySelector('harvard');
+            correct.addEventListener('click', function()
             {
-                body.style.backgroundColor = 'red';
+                correct.style.backgroundColor = 'green';
+                document.querySelector('feedback').innerHTML = 'Correct!';
             });
 
         </script>
@@ -32,7 +33,7 @@
                 <button id="stanford">Stanford</button>
 
                 <p id="feedback"></p>
-                
+
             </div>
             <div class="section">
                 <h2>Part 2: Free Response</h2>
@@ -43,5 +44,15 @@
                 <button type="submit">Check Answer</button>
             </div>
         </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            let correct = document.querySelector('harvard');
+            correct.addEventListener('click', function()
+            {
+                correct.style.backgroundColor = 'green';
+                document.querySelector('feedback').innerHTML = 'Correct!';
+            });
+
+        </script>
     </body>
 </html>
