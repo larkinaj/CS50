@@ -7,7 +7,7 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            let correct = document.querySelector('harvard');
+            let correct = document.querySelector('#harvard');
             correct.addEventListener('click', function()
             {
                 correct.style.backgroundColor = 'green';
@@ -33,6 +33,16 @@
                 <button id="stanford">Stanford</button>
 
                 <p id="feedback"></p>
+
+                <script>
+                    // TODO: Add code to check answers to questions
+                    let correct = document.querySelector('#harvard');
+                    correct.addEventListener('click', function()
+                    {
+                        correct.style.backgroundColor = 'green';
+                        document.querySelector('feedback').innerHTML = 'Correct!';
+                    });
+                </script>
 
             </div>
             <div class="section">
