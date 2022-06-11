@@ -11,8 +11,8 @@
 
             document.addEventListener('DOMContentLoaded', function(){
 
-                let correct = document.querySelector('#harvard');
-                let incorrect = document.querySelector('#yale'||'#princeton');
+                let correct = document.querySelector('correct');
+                let incorrect = document.querySelector('incorrect');
 
                 correct.addEventListener('click', function()
                 {
@@ -39,11 +39,11 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <h3>What is the best College in the United States?</h3>
-                <button id="yale">Yale</button>
-                <button id="princeton">Princeton</button>
-                <button id="mit">MIT</button>
-                <button id="harvard">Harvard</button>
-                <button id="stanford">Stanford</button>
+                <button class="incorrect">Yale</button>
+                <button class="incorrect">Princeton</button>
+                <button class="incorrect">MIT</button>
+                <button class="correct">Harvard</button>
+                <button class="incorrect">Stanford</button>
 
                 <p id="feedback"></p>
 
