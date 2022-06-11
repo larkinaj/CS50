@@ -5,15 +5,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
+
         <script>
             // TODO: Add code to check answers to questions
-            let correct = document.querySelector('#harvard');
-            correct.addEventListener('click', function()
-            {
-                correct.style.backgroundColor = 'green';
-                document.querySelector('#feedback').innerHTML = 'Correct!';
+            document.addEventListener('DOMContentLoaded', function(){
+                let correct = document.querySelector('#harvard');
+                correct.addEventListener('click', function()
+                {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback').innerHTML = 'Correct!';
+                });
             });
-
         </script>
     </head>
     <body>
@@ -33,19 +35,6 @@
                 <button id="stanford">Stanford</button>
 
                 <p id="feedback"></p>
-
-                <script>
-                    // TODO: Add code to check answers to questions
-                    document.addEventListener('DOMContentLoaded', function(){
-
-                    let correct = document.querySelector('#harvard');
-                    correct.addEventListener('click', function()
-                    {
-                        correct.style.backgroundColor = 'green';
-                        document.querySelector('#feedback').innerHTML = 'Correct!';
-                    });
-                });
-                </script>
 
             </div>
             <div class="section">
