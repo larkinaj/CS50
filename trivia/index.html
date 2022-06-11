@@ -7,11 +7,11 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            function greet()
+            let body = document.querySelector('body');
+            document.querySelector('#yale').addEventListener('click', function()
             {
-                let name = document.querySelector('#name').value;
-                alert('Hello, ' + name);
-            }
+                body.style.backgroundColor = 'red';
+            });
 
         </script>
     </head>
