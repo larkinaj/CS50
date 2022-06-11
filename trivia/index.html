@@ -36,12 +36,15 @@
 
                 <script>
                     // TODO: Add code to check answers to questions
+                    document.addEventListener('DOMContentLoaded', function(){
+
                     let correct = document.querySelector('#harvard');
                     correct.addEventListener('click', function()
                     {
                         correct.style.backgroundColor = 'green';
                         document.querySelector('#feedback').innerHTML = 'Correct!';
                     });
+                }
                 </script>
 
             </div>
