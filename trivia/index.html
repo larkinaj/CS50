@@ -16,8 +16,7 @@
 
                 correct.addEventListener('click', function()
                 {
-                    correct.style.backgroundColor = '#d9edff';
-                    incorrect.style.backgroundColor = '#d9edff';
+                    document.querySelector('.incorrect').style.backgroundColor = '#d9edff';
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#feedback1').innerHTML = 'Correct!';
                 });
