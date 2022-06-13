@@ -28,10 +28,17 @@
                     document.querySelector('#feedback1').innerHTML = 'Incorrect!';
                 });
                 }
-                let input = document.querySelector('input')
+                let input = document.querySelector('input');
                 document.querySelector('#check').addEventListener('click', function()
                 {
-                    ter
+                    if (input === "Harvard")
+                    {
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    }
+                    else
+                    {
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                    }
                 }
 
             });
