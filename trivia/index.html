@@ -17,13 +17,13 @@
                 correct.addEventListener('click', function()
                 {
                     correct.style.backgroundColor = 'green';
-                    document.querySelector('#feedback').innerHTML = 'Correct!';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
                 });
 
-                incorrect.addEventListener('click', function()
+                test.addEventListener('click', function()
                 {
-                    incorrect.style.backgroundColor = 'red';
-                    document.querySelector('#feedback').innerHTML = 'Incorrect!';
+                    test.style.backgroundColor = 'red';
+                    document.querySelector('#feedback1').innerHTML = 'Incorrect!';
                 });
 
             });
@@ -40,12 +40,13 @@
                 <hr>
                 <h3>What is the best College in the United States?</h3>
                 <button class="incorrect">Yale</button>
-                <button class="incorrect">Princeton</button>
+                <button id="test">Princeton</button>
                 <button class="incorrect">MIT</button>
                 <button class="correct">Harvard</button>
                 <button class="incorrect">Stanford</button>
 
-                <p id="feedback"></p>
+                <p id="feedback1"></p>
+                <p id="feedback2"></p>
 
             </div>
             <div class="section">
