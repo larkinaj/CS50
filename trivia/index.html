@@ -20,11 +20,11 @@
                     document.querySelector('#feedback1').innerHTML = 'Correct!';
                 });
 
-                for(let i = 0,i < incorrect[i], i++)
+                for(let i = 0; i < incorrect.length; i++)
                 {
                 incorrect[i].addEventListener('click', function()
                 {
-                    incorrect.style.backgroundColor = 'red';
+                    incorrect[i].style.backgroundColor = 'red';
                     document.querySelector('#feedback1').innerHTML = 'Incorrect!';
                 });
                 }
