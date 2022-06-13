@@ -23,11 +23,11 @@
 
                 for(let i = 0; i < incorrect.length; i++)
                 {
-                incorrect[i].addEventListener('click', function()
-                {
-                    incorrect[i].style.backgroundColor = 'red';
-                    document.querySelector('#feedback1').innerHTML = 'Incorrect!';
-                });
+                    incorrect[i].addEventListener('click', function()
+                    {
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                    });
                 }
 
                 let input = document.querySelector('input');
