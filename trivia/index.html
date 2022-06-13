@@ -25,10 +25,6 @@
                 {
                 incorrect[i].addEventListener('click', function()
                 {
-                    if (document.querySelector('.incorrect') != incorrect[i])
-                    {
-                        document.querySelector('.incorrect').style.backgroundColor = '#d9edff';
-                    }
                     incorrect[i].style.backgroundColor = 'red';
                     document.querySelector('#feedback1').innerHTML = 'Incorrect!';
                 });
