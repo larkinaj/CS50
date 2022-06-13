@@ -29,15 +29,6 @@
                 });
                 }
 
-                    document.querySelector('input').keypress( function(event){
-   //is this "Enter"?
-   if (event.keyCode == '13') {
-     //finding the button inside the same <div> and clicking on it
-        document.querySelector('#check').find('button').click();
-     //we don't need a default action
-     event.preventDefault();
-   }
-});
                 let input = document.querySelector('input');
                 document.querySelector('#check').addEventListener('click', function()
                 {
