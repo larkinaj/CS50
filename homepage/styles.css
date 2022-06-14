@@ -48,12 +48,12 @@ button
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
-    background image: url(https://cdn.mos.cms.futurecdn.net/3FnczamRyWU6MvRMEXWaGD-970-80.jpg);
+    background-image: url(https://media.timeout.com/images/105240237/750/422/image.jpg);
 }
 
 .card1
 {
-    background image: url(https://imageio.forbes.com/specials-images/imageserve/5df7fb014e2917000783339f/China-is-projected-to-surpass-the-U-S--as-the-world-s-largest-economy-in-the-next/960x0.jpg);
+    background-image: url(https://imageio.forbes.com/specials-images/imageserve/5df7fb014e2917000783339f/China-is-projected-to-surpass-the-U-S--as-the-world-s-largest-economy-in-the-next/960x0.jpg);
 }
 .card2
 {
@@ -61,7 +61,7 @@ button
 }
 .card3
 {
-    background image: url(https://imageio.forbes.com/specials-images/imageserve/5df7fb014e2917000783339f/China-is-projected-to-surpass-the-U-S--as-the-world-s-largest-economy-in-the-next/960x0.jpg);
+    background image: url(https://media.timeout.com/images/105240237/750/422/image.jpg);
 }
 .card4
 {
