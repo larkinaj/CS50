@@ -10,6 +10,8 @@
 .row
 {
     display: flex;
+    height: 88%;
+    align-items: center;
 }
 
 h1
