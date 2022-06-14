@@ -14,6 +14,11 @@
     align-items: center;
 }
 
+.col
+{
+    flex-basis: 50%;
+}
+
 h1
 {
     color: #fff;
