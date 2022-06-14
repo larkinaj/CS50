@@ -54,16 +54,19 @@ button
 .card1
 {
     background-image: url(https://imageio.forbes.com/specials-images/imageserve/5df7fb014e2917000783339f/China-is-projected-to-surpass-the-U-S--as-the-world-s-largest-economy-in-the-next/960x0.jpg);
+    background-position: center;
 }
 .card2
 {
-    background image: url(https://cdn.mos.cms.futurecdn.net/3FnczamRyWU6MvRMEXWaGD-970-80.jpg);
+    background-image: url(https://cdn.mos.cms.futurecdn.net/3FnczamRyWU6MvRMEXWaGD-970-80.jpg);
+    background-position: center;
 }
 .card3
 {
-    background image: url(https://media.timeout.com/images/105240237/750/422/image.jpg);
+    background-image: url(https://media.timeout.com/images/105240237/750/422/image.jpg);
+    background-position: center;
 }
 .card4
 {
-    background image: url(https://imageio.forbes.com/specials-images/imageserve/5df7fb014e2917000783339f/China-is-projected-to-surpass-the-U-S--as-the-world-s-largest-economy-in-the-next/960x0.jpg);
+    background-image: url(https://imageio.forbes.com/specials-images/imageserve/5df7fb014e2917000783339f/China-is-projected-to-surpass-the-U-S--as-the-world-s-largest-economy-in-the-next/960x0.jpg);
 }
