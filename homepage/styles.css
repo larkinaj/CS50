@@ -2,7 +2,7 @@
 {
     width: 100%;
     height: 100vh;
-    background-image: url(https://newsroom.aaa.com/wp-content/uploads/2021/06/Plane-taking-off-twilight-1024x684.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) url(https://newsroom.aaa.com/wp-content/uploads/2021/06/Plane-taking-off-twilight-1024x684.jpg);
     background-position: center;
     background-size: cover;
 }
