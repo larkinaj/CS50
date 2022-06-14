@@ -28,6 +28,11 @@ h1
     font-size: 100px;
 }
 
+h5
+{
+    color: #fff;
+}
+
 p
 {
     color: #fff;
@@ -75,7 +80,7 @@ button
 }
 .card3
 {
-    background-image: url(https://media.timeout.com/images/105240237/750/422/image.jpg);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVrReLtjpJy4kSXvzQlwAi-rNOTIeA8ORszA&usqp=CAU);
     background-position: center;
     background-size: cover;
 }
