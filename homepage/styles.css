@@ -14,13 +14,26 @@
 
 h1
 {
-    color: "white";
+    color: #fff;
     font-size: 100px;
 }
 
 p
 {
-    color: 'white';
+    color: #fff;
     font-size: 11px;
     line-height: 15px;
+}
+
+button
+{
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30;
 }
