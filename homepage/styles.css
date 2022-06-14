@@ -7,11 +7,20 @@
     background-size: cover;
 }
 
-li
-{
-    display: inline
-}
 .row
 {
     display: flex;
+}
+
+h1
+{
+    color: "white";
+    font-size: 100px;
+}
+
+p
+{
+    color: 'white';
+    font-size: 11px;
+    line-height: 15px;
 }
