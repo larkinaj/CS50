@@ -5,14 +5,17 @@
         <title>Counter</title>
         <script>
 
-            function hello() {
-                alert('Hello, world!');
+            let counter = 0;
+
+            function count() {
+                counter = counter + 1;
+                alert(counter);
             }
 
         </script>
     </head>
     <body>
         <h1>Hello!</h1>
-        <button onclick="hello()">Click Here!!!</button>
+        <button onclick="count()">Count</button>
     </body>
 </html>
