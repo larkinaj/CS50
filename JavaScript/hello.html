@@ -6,8 +6,9 @@
         <script>
 
             function hello() {
-                if (document.querySelector('h1').innerHTML == "Goodbye!"){
-                    document.querySelector('h1').innerHTML = "Hello!";
+                let heading = document.querySelector('h1')
+                if (heading.innerHTML == "Goodbye!"){
+                    heading.innerHTML = "Hello!";
                 }
                 else if (document.querySelector('h1').innerHTML == "Hello!"){
                     document.querySelector('h1').innerHTML = "Goodbye!";
