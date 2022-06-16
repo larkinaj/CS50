@@ -7,9 +7,8 @@
 
             document.addEventListener('DOMContentLoaded', function() {
 
-                var name = document.querySelector('#name').value;
                 document.querySelector('form').onsubmit = function() {
-
+                    const name = document.querySelector('#name').value;
                     alert(`Your name is ${name}`);
                 }
 
