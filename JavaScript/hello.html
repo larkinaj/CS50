@@ -5,16 +5,19 @@
         <title>Hello</title>
         <script>
 
-            function hello() {
-                let heading = document.querySelector('h1');
+            document.addEventListener('DOMContentLoaded', function(){
 
-                if (heading.innerHTML == "Goodbye!"){
+                function hello() {
+                    let heading = document.querySelector('h1');
+
+                    if (heading.innerHTML == "Goodbye!"){
                     heading.innerHTML = "Hello!";
-                }
-                else if (heading.innerHTML == "Hello!"){
+                    }
+                    else if (heading.innerHTML == "Hello!"){
                     heading.innerHTML = "Goodbye!";
+                    }
                 }
-            }
+            });
 
         </script>
     </head>
