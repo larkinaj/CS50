@@ -5,23 +5,21 @@
         <title>Hello</title>
         <script>
 
-                function hello() {
-                    let heading = document.querySelector('h1');
-
-                    if (heading.innerHTML == "Goodbye!"){
-                    heading.innerHTML = "Hello!";
-                    }
-                    else if (heading.innerHTML == "Hello!"){
-                    heading.innerHTML = "Goodbye!";
-                    }
+            document.addEventListener('DOMContentLoaded', function() {
+                let name = document.querySelector(#name).value;
+                document.querySelector('form').onsubmit = function() {
+                    alert(`Your name is ${name}`);
                 }
+
+            });
 
         </script>
     </head>
     <body>
         <h1>Hello!</h1>
         <form>
-            <input autofocus id="Type name here..." type="text">
+            <input autofocus id="name" placeholder="Type name here..." type="text">
+            <input type="submit">
         </form>
     </body>
 </html>
