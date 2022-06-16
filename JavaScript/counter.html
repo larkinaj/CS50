@@ -5,18 +5,19 @@
         <title>Counter</title>
         <script>
 
-            let counter = 0;
+            document.addEventListener('DOMContentLoaded', function(){
 
-            function count() {
-                counter = counter + 1;
-                document.querySelector('h1').innerHTML = counter ;
+                let counter = 0;
+                function count() {
+                    counter = counter + 1;
+                    document.querySelector('h1').innerHTML = counter ;
 
-                if (counter % 10 === 0) {
+                    if (counter % 10 === 0) {
                     alert(`The counter is now ${counter}`)
+                    }
                 }
-           }
-
-           document.querySelector('button').onclick = counter;
+                document.querySelector('button').onclick = count;
+            });
 
         </script>
     </head>
