@@ -9,8 +9,13 @@
 
                 document.querySelector('form').onsubmit = function() {
                     const task = document.querySelector('#task').value;
-                    alert(task);
-                    
+                    console.log(task);
+                    const li = document.createElement('li');
+                    li.innerHTML = task;
+
+                    document.querySelector('#tasks').append(li);
+
+                    document.querySelector('#task').value = '';
 
                     return false;
                 }
