@@ -5,11 +5,9 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
 
-                document.querySelectorAll('select').forEach(function(button) {
-                    button.onclick = function() {
-                        document.querySelector('#hello').style.color = button.dataset.color;
-                    };
-                });
+                document.querySelectorAll('select').onchange = function() {
+                    document.querySelector('#hello').style.color = this.color;
+                };
 
             });
         </script>
