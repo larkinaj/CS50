@@ -10,6 +10,8 @@
                 document.querySelector('form').onsubmit = function() {
                     const task = document.querySelector('#task').value;
                     alert(task);
+
+                    return false;
                 }
 
             });
