@@ -6,7 +6,7 @@
             document.addEventListener('DOMContentLoaded', function() {
 
                 document.querySelectorAll('select').onchange = function() {
-                    document.querySelector('#hello').style.color = this.color;
+                    document.querySelector('#hello').style.color = this.value;
                 };
 
             });
