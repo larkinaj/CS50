@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Tasks</title>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                document.querySelector('form').onsubmit = function() {
+                    const name = document.querySelector('#name').value;
+                    alert(`Your name is ${name}`);
+                }
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <h1>Tasks</h1>
+        <ul id="tasks">
+        </ul>
+        <form>
+            <input id="task" placeholder="Type new task here..." type="text">
+            <input type="submit">
+        </form>
+    </body>
+</html>
