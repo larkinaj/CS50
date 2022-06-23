@@ -5,8 +5,8 @@
         <title>Currency Exchange</title>
         <script>
             document.addEventListener('DOMContentLoaded', function(){
-                fetch();
-                document.querySelector('button').onclick = count;
+                fetch('https://api.exchangeratesapi.io/latest?base=USD');
+                .then()
             });
 
         </script>
