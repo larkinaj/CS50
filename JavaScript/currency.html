@@ -6,7 +6,9 @@
         <script>
             document.addEventListener('DOMContentLoaded', function(){
                 fetch('https://api.exchangeratesapi.io/latest?base=USD');
-                .then()
+                .then(response => {
+                    return response.json()
+                })
             });
 
         </script>
