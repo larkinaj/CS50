@@ -22,4 +22,3 @@ void draw(int n)
         printf("\n");
     }
 }
-
