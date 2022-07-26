@@ -16,6 +16,6 @@ int main(void)
 void draw(int n)
 {
     if (n == height) {
-
+        printf()
     }
 }
