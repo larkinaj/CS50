@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void draw(int n);
+int draw(int n);
 
 int main(void)
 {
@@ -13,9 +13,12 @@ int main(void)
 
 }
 
-void draw(int n)
+int draw(int n)
 {
     if (n == height) {
-        printf()
+        return 0;
+    }
+    for (int i = 0; i < n; i++) {
+        
     }
 }
