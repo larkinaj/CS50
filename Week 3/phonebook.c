@@ -6,6 +6,12 @@
 
 int main(void)
 {
+    typedef struct {
+        string name;
+        string number;
+    }
+    person;
+
     string names[] = {"Carter", "David"};
     string numbers[] = {"+1-617-495-1000", "+1-949-468-2750"};
 
@@ -17,4 +23,4 @@ int main(void)
     }
     printf("Not found\n");
     return 1;
-}  
+}
