@@ -1,17 +1,24 @@
+#include <ctype.h>
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
+void draw(int n);
 
 int main(void)
 {
-    string names[] = {"Bill", "Charlie", "Fred", "George", "Ginny", "Percy", "Ron"};
+    int height = get_int("Height: ");
 
-    for (int i = 0; i < 7; i++) {
-        if (strcmp(names[i], "Ron") == 0) {
-            printf("Found\n");
-            return 0;
+    draw(height);
+
+}
+
+void draw(int n)
+{
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i + 1; j++) {
+            printf("#");
         }
+        printf("\n");
     }
-    printf("Not found\n");
-    return 1;
 }
