@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
+void draw(int n);
 
 int main(void)
 {
@@ -15,15 +16,9 @@ int main(void)
 void draw(int n)
 {
     for (int i = 0; i < n; i++) {
-        
+        for (int j = 0; j < i + 1; j++) {
+            printf("#\n");
+        }
     }
 }
 
-    for (int i = 1; i <= 7; i++) {
-        if (strcmp(names[i], "Ron") == 0) {
-            printf("Found\n");
-            return 0;
-        }
-    }
-    printf("Not found\n");
-    return 1;
