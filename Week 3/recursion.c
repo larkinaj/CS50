@@ -15,10 +15,12 @@ int main(void)
 
 int draw(int n)
 {
-    if (n == height) {
+    int newHeight = n;
+    if (n == newHeight) {
         return 0;
     }
     for (int i = 0; i < n; i++) {
-        
+        printf("#\n");
     }
+    draw(n);
 }
