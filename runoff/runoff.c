@@ -78,9 +78,9 @@ int main(int argc, string argv[])
                 printf("Invalid vote.\n");
                 return 4;
             }
-            
+            printf("Preferences: %i\n", preferences[i][j]);
         }
-        printf("Preferences: %i\n", preferences[][]);
+
         printf("\n");
     }
 
