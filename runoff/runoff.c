@@ -146,7 +146,7 @@ void tabulate(void)
                 if (preferences[i][0] == j) {
                     candidates[j].votes += 1;
                 }
-                printf("Candidate: %s and votes: %i and elim: %d\n",candidates[j].name, candidates[j].votes, candidates[i].eliminated);
+                printf("Candidate: %s and votes: %i and elim: %d\n",candidates[j].name, candidates[j].votes, candidates[j].eliminated);
         }
     }
     return;
