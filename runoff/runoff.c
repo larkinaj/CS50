@@ -24,6 +24,7 @@ candidate candidates[MAX_CANDIDATES];
 // Numbers of voters and candidates
 int voter_count;
 int candidate_count;
+int votingRound = 0;
 
 // Function prototypes
 bool vote(int voter, int rank, string name);
@@ -87,9 +88,7 @@ int main(int argc, string argv[])
     while (true)
     {
         // Calculate votes given remaining candidates
-        int votingRound = 0;
         tabulate();
-        votingRound ++;
         for (int i = 0; i < candidate_count; i++) {
             printf("Candidate: %s and votes: %i\n",candidates[i].name, candidates[i].votes);
         }
@@ -126,6 +125,7 @@ int main(int argc, string argv[])
         {
             candidates[i].votes = 0;
         }
+        votingRound ++;
     }
     return 0;
 }
@@ -164,7 +164,7 @@ void tabulate(void)
                 // printf("Candidate: %s and votes: %i and elim: %d\n",candidates[j].name, candidates[j].votes, candidates[j].eliminated);
         }
     }
-    votingRound ++;
+    // votingRound ++;
     return;
 }
 
