@@ -199,7 +199,6 @@ void eliminate(int min)
     {
         if (candidates[i].votes == min) {
             candidates[i].eliminated = true;
-            printf("canditate %s votes: %i and elim: %d\n", candidates[i].name, candidates[i].votes, candidates[i].eliminated);
         }
     }
     return;
