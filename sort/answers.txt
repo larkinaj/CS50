@@ -8,4 +8,4 @@ How do you know?: sort2 was consistently the fastest program to sort all the tex
 
 sort3 uses: Selection sort
 
-How do you know?: sort3 was the 2nd slowest program for the random and reversed text files and was the slowest program to sort the already sorted text files. This aligns with the fact that both the upper bound and lower bound running time for selection sort is Ω(n^2).
+How do you know?: sort3 was the 2nd fastest program for the random and reversed text files and was the slowest program to sort the already sorted text files. This aligns with the fact that both the upper bound and lower bound running time for selection sort is Ω(n^2).
