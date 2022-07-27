@@ -13,16 +13,30 @@ int main(void)
 
 }
 
-void draw(int n)
+// void draw(int n)
+// {
+//     if (n <= 0) {
+//         return;
+//     }
+
+//     draw(n - 1);
+
+//     for (int i = 0; i < n; i++) {
+//         printf("#");
+//     }
+//     printf("\n");
+// }
+
+
+void draw(int n, int newHeight = 1)
 {
-    if (n <= 0) {
-        return;
-    }
+  if (n == newHeight) {
+      return;
+  }
+  for (int i = 0; i < newHeight; i++) {
+      printf("#");
+  }
+  newHeight ++;
 
-    draw(n - 1);
-
-    for (int i = 0; i < n; i++) {
-        printf("#");
-    }
-    printf("\n");
+  draw(n, newHeight);
 }
