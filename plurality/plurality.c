@@ -80,6 +80,7 @@ bool vote(string name)
 void print_winner(void)
 {
     int mostVotes = 0;
+    printf("Candidate count: %i", candidate_count);
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes > mostVotes) {
@@ -92,6 +93,7 @@ void print_winner(void)
         if (candidates[i].votes == mostVotes) {
             printf("%s\n", candidates[i].name);
         }
+        printf("Current candidate: %s", candidates[i].name);
     }
     return;
 }
