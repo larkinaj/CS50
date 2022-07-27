@@ -146,6 +146,7 @@ void tabulate(void)
             if (preferences[i][j+1] == j) {
                 candidates[j].votes += 1;
             }
+            printf("%i", candidates[j].votes);
         }
     }
     return;
