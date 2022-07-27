@@ -30,7 +30,7 @@ int main(void)
 
 void draw(int n, int newHeight)
 {
-  if (n == newHeight) {
+  if (n < newHeight) {
       return;
   }
   for (int i = 0; i < newHeight; i++) {
