@@ -1,6 +1,6 @@
 sort1 uses: Bubble sort
 
-How do you know?: TODO
+How do you know?: sort1 was the slowest program to sort all of the files EXCEPT for the text files that were already sorted. sort1 was actually the fastest to sort these already sorted files. This speed aligns with the fact that The lower bound for running time of bubble sort is Ω(n). While the lower bound for Selection sort is Ω(n^2).
 
 sort2 uses: Merge sort
 
