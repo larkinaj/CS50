@@ -23,5 +23,6 @@ void draw(int n)
         printf("#");
         newHeight ++;
     }
+    printf("\n");
     draw(newHeight);
 }
