@@ -28,16 +28,16 @@ int main(void)
 // }
 
 
-void draw(int n, int newHeight)
+void draw(int n, int currentRow)
 {
-  if (n < newHeight) {
+  if (n < currentRow) {
       return;
   }
-  for (int i = 0; i < newHeight; i++) {
+  for (int i = 0; i < currentRow; i++) {
       printf("#");
   }
   printf("\n");
-  newHeight ++;
+  currentRow ++;
 
-  draw(n, newHeight);
+  draw(n, currentRow);
 }
