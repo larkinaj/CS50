@@ -15,7 +15,7 @@ int main(void)
 
 void draw(int n)
 {
-    int newHeight = n - n + 1;
+    int newHeight = 1;
     if (n == newHeight) {
         printf("done");
     }
