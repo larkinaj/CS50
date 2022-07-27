@@ -17,7 +17,7 @@ void draw(int n)
 {
     int newHeight = 1;
     if (n == newHeight) {
-        printf("done");
+        return;
     }
     for (int i = 0; i < newHeight; i++) {
         printf("#");
