@@ -99,7 +99,7 @@ int main(int argc, string argv[])
         // Eliminate last-place candidates
         int min = find_min();
         bool tie = is_tie(min);
-        printf("bool: %d\n", tie);
+        printf("bool: %d (1==true, 0==false\n", tie);
         // If tie, everyone wins
         if (tie)
         {
