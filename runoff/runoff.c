@@ -89,6 +89,7 @@ int main(int argc, string argv[])
     {
         // Calculate votes given remaining candidates
         tabulate();
+        votingRound ++;
         for (int i = 0; i < candidate_count; i++) {
             printf("Candidate: %s and votes: %i\n",candidates[i].name, candidates[i].votes);
         }
@@ -125,7 +126,6 @@ int main(int argc, string argv[])
         {
             candidates[i].votes = 0;
         }
-        votingRound ++;
     }
     return 0;
 }
