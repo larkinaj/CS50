@@ -99,7 +99,7 @@ int main(int argc, string argv[])
         // Eliminate last-place candidates
         int min = find_min();
         bool tie = is_tie(min);
-        printf("bool: %d (1==true, 0==false\n", tie);
+        printf("bool tie: %d (1==true, 0==false\n", tie);
         // If tie, everyone wins
         if (tie)
         {
@@ -146,7 +146,7 @@ void tabulate(void)
                 if (preferences[i][0] == j) {
                     candidates[j].votes += 1;
                 }
-                printf("Candidate: %s and votes: %i\n",candidates[j].name, candidates[j].votes);
+                printf("Candidate: %s and votes: %i and elim: %d\n",candidates[j].name, candidates[j].votes, candidates[i].eliminated);
         }
     }
     return;
