@@ -24,7 +24,6 @@ candidate candidates[MAX_CANDIDATES];
 // Numbers of voters and candidates
 int voter_count;
 int candidate_count;
-int votingRound = 0;
 
 // Function prototypes
 bool vote(int voter, int rank, string name);
@@ -125,7 +124,6 @@ int main(int argc, string argv[])
         {
             candidates[i].votes = 0;
         }
-        votingRound ++;
     }
     return 0;
 }
