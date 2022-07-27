@@ -194,10 +194,12 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
+    printf("min votes: %i\n", min);
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == min) {
             candidates[i].eliminated = true;
+            printf("canditate %s votes: %i and elim: %d\n", candidates[i].name, candidates[i].votes, candidates[i].eliminated);
         }
     }
     return;
