@@ -90,7 +90,7 @@ int main(int argc, string argv[])
         // Calculate votes given remaining candidates
         tabulate();
         for (int i = 0; i < candidate_count; i++) {
-            printf("Candidate: %s and votes: %i\n",candidates[i].name, candidates[i].votes);
+            printf("Candidate: %s and votes: %i and elim: %d\n",candidates[i].name, candidates[i].votes, candidates[i].eliminated);
         }
 
         // Check if election has been won
