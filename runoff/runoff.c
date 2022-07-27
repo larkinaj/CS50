@@ -146,24 +146,27 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // int votingRound = 0;
-    // for (int i = 0; i < candidate_count; i++)
-    // {
-    //     if (candidates[i].eliminated) {
-    //         votingRound++;
-    //         break;
-    //     }
-    // }
-    printf("voting round: %i\n", votingRound);
 
     for (int i = 0; i < voter_count; i++) {
         for (int j = 0; j < candidate_count; j++) {
-                if (preferences[i][votingRound] == j && !candidates[j].eliminated) {
-                    candidates[j].votes += 1;
-                }
+            if (!candidates[preferences[i][j]].eliminated) {
+                candidates[preferences[i][j]].votes ++;
+                break;
+            }
         }
     }
     return;
+
+    // printf("voting round: %i\n", votingRound);
+
+    // for (int i = 0; i < voter_count; i++) {
+    //     for (int j = 0; j < candidate_count; j++) {
+    //         if (preferences[i][votingRound] == j && !candidates[j].eliminated) {
+    //             candidates[j].votes += 1;
+    //         }
+    //     }
+    // }
+    // return;
 }
 
 // Print the winner of the election, if there is one
