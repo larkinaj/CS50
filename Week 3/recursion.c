@@ -20,7 +20,7 @@ void draw(int n)
         printf("done");
     }
     for (int i = 0; i < newHeight; i++) {
-        printf("#\n");
+        printf("#");
         newHeight ++;
     }
     draw(newHeight);
