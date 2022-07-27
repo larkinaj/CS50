@@ -37,7 +37,6 @@ void draw(int n, int currentRow)
       printf("#");
   }
   printf("\n");
-  currentRow ++;
 
-  draw(n, currentRow);
+  draw(n, currentRow + 1);
 }
