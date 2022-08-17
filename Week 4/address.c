@@ -8,6 +8,6 @@ int main(void)
     string *x = &s;
     char *p = &s[0];
 
-    printf("Address of %s is: %p\n" , s, x);
+    printf("Address of %s is: %p\n" , s, s);
     printf("Address of the first char in s is: %p\n",p);
 }
