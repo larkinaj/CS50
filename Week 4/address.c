@@ -7,7 +7,6 @@ int main(void)
 {
     int n = 50;
     int *p = &n;
-    int 
 
     printf("Address of %i is %p\n" , n, p);
     printf("%i\n",*p);
