@@ -11,4 +11,5 @@ int main(void)
     printf("%i\n" , *(numbers+3));
     printf("%i\n" , *(numbers+4));
     printf("%i\n" , *(numbers+5));
+    printf("%i\n" , *(numbers+6));
 }
