@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    string i = get_string("i: ");
-    string j = get_string("j: ");
+    char *i = get_string("i: ");
+    char *j = get_string("j: ");
 
     if (i == j) {
         printf("Same\n");
