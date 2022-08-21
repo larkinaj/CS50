@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "typeinfo": "c",
-        "tuple": "c"
+        "tuple": "c",
+        "stdio.h": "c"
     },
     "gitdoc.enabled": true
 }
