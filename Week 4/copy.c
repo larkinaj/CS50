@@ -5,11 +5,21 @@
 
 int main(void)
 {
-    string s = get_string("s: ");
-    string t = s;
+    // string s = get_string("s: ");
+    // string t = s;
 
-    t[0] = toupper(t[0]);
+    // t[0] = toupper(t[0]);
 
-    printf("s: %s\n", s);
-    printf("t: %s\n", t);
+    // printf("s: %s\n", s);
+    // printf("t: %s\n", t);
+
+    int i = 5;
+    int j = i;
+
+    j = j + 1;
+
+    printf("i: %i\n", i);
+    printf("j: %i\n", j);
+
+
 }
