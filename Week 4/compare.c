@@ -4,10 +4,24 @@
 
 int main(void)
 {
-    // char *s = get_string("s: ");
-    // char *t = get_string("t: ");
-    int s = 5;
-    int t = 5;
+    char *s = get_string("s: ");
+    char *t = get_string("t: ");
+
+    if (strcmp(s, t) == 0) {
+        printf("Same\n");
+    }
+    else {
+        printf("Different\n");
+    }
+
+    printf("%s\n", s);
+    printf("%s\n", t);
+
+    //the below code will check the point values of two ints that are of equal value
+    //int s = 5;
+    //int t = 5;
+    //printf("%p\n", &s);
+    //printf("%p\n", &t);
 
     //the below code doesnt work because != and == will only
     //compare the base addresses of those strings. Not the contents of the strings themselves.
@@ -17,17 +31,4 @@ int main(void)
     // else {
     //     printf("Different\n");
     // }
-
-
-    // if (strcmp(s, t) == 0) {
-    //     printf("Same\n");
-    // }
-    // else {
-    //     printf("Different\n");
-    // }
-
-    // printf("%s\n", s);
-    // printf("%s\n", t);
-    printf("%p\n", &s);
-    printf("%p\n", &t);
 }
