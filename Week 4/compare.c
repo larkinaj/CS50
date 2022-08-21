@@ -4,9 +4,10 @@
 
 int main(void)
 {
-    char *s = get_string("s: ");
-    char *t = get_string("t: ");
-
+    // char *s = get_string("s: ");
+    // char *t = get_string("t: ");
+    int s = 5;
+    int t = 5;
 
     //the below code doesnt work because != and == will only
     //compare the base addresses of those strings. Not the contents of the strings themselves.
@@ -18,15 +19,15 @@ int main(void)
     // }
 
 
-    if (strcmp(s, t) == 0) {
-        printf("Same\n");
-    }
-    else {
-        printf("Different\n");
-    }
+    // if (strcmp(s, t) == 0) {
+    //     printf("Same\n");
+    // }
+    // else {
+    //     printf("Different\n");
+    // }
 
-    printf("%s\n", s);
-    printf("%s\n", t);
+    // printf("%s\n", s);
+    // printf("%s\n", t);
     printf("%p\n", s);
     printf("%p\n", t);
 }
