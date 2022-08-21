@@ -28,6 +28,6 @@ int main(void)
 
     // printf("%s\n", s);
     // printf("%s\n", t);
-    printf("%x\n", &s);
-    printf("%x\n", &t);
+    printf("%p\n", &s);
+    printf("%p\n", &t);
 }
