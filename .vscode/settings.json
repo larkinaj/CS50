@@ -2,5 +2,6 @@
     "files.associations": {
         "typeinfo": "c",
         "tuple": "c"
-    }
+    },
+    "gitdoc.enabled": true
 }
