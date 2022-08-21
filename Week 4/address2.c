@@ -10,5 +10,5 @@ int main(void)
     printf("%c\n" , s[1]);
     printf("%c\n" , s[2]);
     printf("%c\n" , s[3]);
-
+    printf("%s\n" , s);
 }
