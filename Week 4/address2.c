@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    string s = "HI!";
+    char *s = "HI!"; // "char *s =" is THE SAME THING as "string s ="
 
     printf("%c\n" , s[0]);
     printf("%c\n" , s[1]);
