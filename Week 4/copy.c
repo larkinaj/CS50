@@ -17,7 +17,7 @@
 int main(void)
 {
     char *s = get_string("Enter s: ");
-    char *t = malloc();
+    char *t = malloc(strlen(s) + 1);
 
     t[0] = toupper(t[0]);
 
