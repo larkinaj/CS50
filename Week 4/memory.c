@@ -10,7 +10,6 @@ int main(void)
     x[3] = 33;
 
 
-    printf("s: %s\n", s);
-    printf("t: %s\n", t);
-    free(t);
+    // printf("x: %i\n", x);
+    // free(t);
 }
