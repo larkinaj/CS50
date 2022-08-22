@@ -18,7 +18,8 @@
 int main(void)
 {
     char *s = get_string("Enter s: ");
-    char *t = malloc(strlen(s) + 1);
+    //char *t = malloc(strlen(s) + 1);
+    char t[2];
 
     // // for (int i = 0; i < strlen(s) + 1; i++) {
     // //     t[i] = s[i];
@@ -32,5 +33,5 @@ int main(void)
 
     printf("s: %s\n", s);
     printf("t: %s\n", t);
-    free(t);
+    //free(t);
 }
