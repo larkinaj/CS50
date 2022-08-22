@@ -26,8 +26,8 @@ int main(void)
 
     // strcpy(t,s);
 //string test1 = "sdfdsfs";
-char test2[] = "test";
-printf("%c\n", test2[5]);
+char test2[5] = "test";
+printf("%c\n", test2[4]);
     // t[0] = toupper(t[0]);
 
     // printf("s: %s\n", s);
