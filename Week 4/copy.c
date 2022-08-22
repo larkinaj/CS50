@@ -18,8 +18,7 @@
 int main(void)
 {
     char *s = get_string("Enter s: ");
-    //char *t = malloc(strlen(s) + 1);
-    string t = "1234";
+    char *t = malloc(strlen(s) + 1);
 
     // for (int i = 0; i < strlen(s) + 1; i++) {
     //     t[i] = s[i];
