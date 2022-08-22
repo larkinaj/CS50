@@ -19,6 +19,12 @@ int main(void)
     char *s = get_string("Enter s: ");
     char *t = malloc(strlen(s) + 1);
 
+    // for (int i = 0; i < strlen(s) + 1; i++) {
+    //     t[i] = s[i];
+    // }
+
+    strcopy(t,s);
+
     t[0] = toupper(t[0]);
 
     printf("s: %s\n", s);
