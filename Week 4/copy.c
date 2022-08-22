@@ -12,4 +12,4 @@ int main(void)
 
     printf("s: %s\n", s);
     printf("t: %s\n", t);
-}
+}W
