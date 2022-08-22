@@ -5,16 +5,10 @@ int main(void)
 {
 
     int *x = malloc(3 * sizeof(int));
+    x[1] = 72;
+    x[2] = 73;
+    x[3] = 33;
 
-    // for (int i = 0; i < strlen(s) + 1; i++) {
-    //     t[i] = s[i];
-    // }
-
-    strcpy(t,s);
-
-    if (strlen(t) > 0) {
-        t[0] = toupper(t[0]);
-    }
 
     printf("s: %s\n", s);
     printf("t: %s\n", t);
