@@ -18,13 +18,14 @@
 int main(void)
 {
     char *s = get_string("Enter s: ");
-    char *t = malloc(strlen(s) + 1);
+    //char *t = malloc(strlen(s) + 1);
+    string t = "1234";
 
-    for (int i = 0; i < strlen(s) + 1; i++) {
-        t[i] = s[i];
-    }
+    // for (int i = 0; i < strlen(s) + 1; i++) {
+    //     t[i] = s[i];
+    // }
 
-    //strcpy(t,s);
+    strcpy(t,s);
 
     t[0] = toupper(t[0]);
 
