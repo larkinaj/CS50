@@ -11,5 +11,5 @@ int main(void)
 
 
     // printf("x: %i\n", x);
-    // free(t);
+    free(x);
 }
