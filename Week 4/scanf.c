@@ -19,5 +19,6 @@ int main(void)
     printf("s: ");
     scanf("%s", s);
     printf("s: %s\n", s);
+    free(s);
 }
 
