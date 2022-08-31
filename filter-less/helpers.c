@@ -88,29 +88,64 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width / 2; j++) {
 
-            float upperRed = image[i - 1][j - 1].rgbtRed + image[i - 1][j].rgbtRed + image[i - 1][j + 1].rgbtRed;
-            float leftMid = image[i][j - 1].rgbtRed;
-            float rightMid = image[i][j + 1].rgbtRed;
-            float lowerRed = image[i + 1][j - 1].rgbtRed + image[i + 1][j].rgbtRed + image[i + 1][j + 1].rgbtRed;
+            float upperLeftRed = image[i - 1][j - 1].rgbtRed;
+            float upperMidRed = image[i - 1][j].rgbtRed;
+            float upperRightRed = image[i - 1][j + 1].rgbtRed;
+            float leftRed = image[i][j - 1].rgbtRed;
+            float rightRed = image[i][j + 1].rgbtRed;
+            float lowerLeftRed = image[i + 1][j - 1].rgbtRed;
+            float lowerMidRed = image[i + 1][j].rgbtRed;
+            float lowerRightRed = image[i + 1][j + 1].rgbtRed;
+
+            float upperLeftGreen = image[i - 1][j - 1].rgbtGreen;
+            float upperMidGreen = image[i - 1][j].rgbtGreen;
+            float upperRightGreen = image[i - 1][j + 1].rgbtGreen;
+            float leftGreen = image[i][j - 1].rgbtGreen;
+            float rightGreen = image[i][j + 1].rgbtGreen;
+            float lowerLeftGreen = image[i + 1][j - 1].rgbtGreen;
+            float lowerMidGreen = image[i + 1][j].rgbtGreen;
+            float lowerRightGreen = image[i + 1][j + 1].rgbtGreen;
+
+            float upperLeftBlue = image[i - 1][j - 1].rgbtBlue;
+            float upperMidBlue = image[i - 1][j].rgbtBlue;
+            float upperRightBlue = image[i - 1][j + 1].rgbtBlue;
+            float leftBlue = image[i][j - 1].rgbtBlue;
+            float rightBlue = image[i][j + 1].rgbtBlue;
+            float lowerLeftBlue = image[i + 1][j - 1].rgbtBlue;
+            float lowerMidBlue = image[i + 1][j].rgbtBlue;
+            float lowerRightBlue = image[i + 1][j + 1].rgbtBlue;
 
             if (i == 0 && j == 0) {
-                
+                image[i][j].rgbtRed = round((upperLeftRed + upperMidRed + upperRightRed + leftRed + rightRed + lowerLeftRed + lowerMidRed + lowerRightRed) / 9);
+                image[i][j].rgbtGreen = round((upperLeftGreen + upperMidGreen + upperRightGreen + leftGreen + rightGreen + lowerLeftGreen + lowerMidGreen + lowerRightGreen) / 9);
+                image[i][j].rgbtBlue = round((upperLeftBlue + upperMidBlue + upperRightBlue + leftBlue + rightBlue + lowerLeftBlue + lowerMidBlue + lowerRightBlue) / 9);
             }
+            else if (i == 0 && j == width - 1) {
 
-            image[i][width - 1 - j].rgbtRed = leftRed;
-            image[i][j].rgbtRed = rightRed;
+            }
+            else if (i == height - 1 && j == 0) {
 
-            float upperGreen = image[i - 1][j - 1].rgbtGreen + image[i - 1][j].rgbtGreen + image[i - 1][j + 1].rgbtGreen;
-            float middleGreen = image[i][j - 1].rgbtGreen + image[i][j + 1].rgbtGreen;
-            float lowerGreen = image[i + 1][j - 1].rgbtGreen + image[i + 1][j].rgbtGreen + image[i + 1][j + 1].rgbtGreen;
-            image[i][width - 1 - j].rgbtGreen = leftGreen;
-            image[i][j].rgbtGreen = rightGreen;
+            }
+            else if (i == height - 1 && j == width - 1) {
 
-            float upperBlue = image[i - 1][j - 1].rgbtBlue + image[i - 1][j].rgbtBlue + image[i - 1][j + 1].rgbtBlue;
-            float middleBlue = image[i][j - 1].rgbtBlue + image[i][j + 1].rgbtBlue;
-            float lowerBlue = image[i + 1][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue + image[i + 1][j + 1].rgbtBlue;
-            image[i][width - 1 - j].rgbtBlue = leftBlue;
-            image[i][j].rgbtBlue = rightBlue;
+            }
+            else if (i == 0) {
+
+            }
+            else if (i == height - 1) {
+
+            }
+            else if (j == 0) {
+
+            }
+            else if (j == width - 1) {
+
+            }
+            else {
+                image[i][j].rgbtRed = round((rightRed + lowerRightRed + lowerMidRed) / sizeof(RGBTRIPLE));
+                image[i][j].rgbtGreen = round((rightGreen + lowerRightGreen + lowerMidGreen) / sizeof(RGBTRIPLE));
+                image[i][j].rgbtBlue = round((rightGreen + lowerRightGreen + lowerMidGreen) / sizeof(RGBTRIPLE));
+            }
         }
 
     }

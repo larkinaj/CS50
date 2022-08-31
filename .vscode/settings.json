@@ -3,7 +3,8 @@
         "typeinfo": "c",
         "tuple": "c",
         "stdio.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "cmath": "c"
     },
     "gitdoc.enabled": true
 }
