@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +11,7 @@ int main(int argc, char *argv[])
     }
     FILE *file = fopen(argv[1], "r");
     typedef uint8_t BYTE;
-
+    int images = 0;
     while (fread(&file, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
 
