@@ -90,9 +90,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
             if (i == 0 && j == 0) {
-                image[i][j].rgbtRed = round((image[i][j + 1].rgbtRed + lowerRightRed + lowerMidRed) / sizeof(RGBTRIPLE));
-                image[i][j].rgbtGreen = round((rightGreen + lowerRightGreen + lowerMidGreen) / sizeof(RGBTRIPLE));
-                image[i][j].rgbtBlue = round((rightBlue + lowerRightBlue + lowerMidBlue) / sizeof(RGBTRIPLE));
+                image[i][j].rgbtRed = round((image[i][j + 1].rgbtRed + image[i + 1][j + 1].rgbtRed + image[i + 1][j].rgbtRed) / sizeof(RGBTRIPLE));
+                image[i][j].rgbtGreen = round((image[i][j + 1].rgbtGreen + image[i + 1][j + 1].rgbtGreen + image[i + 1][j].rgbtGreen) / sizeof(RGBTRIPLE));
+                image[i][j].rgbtBlue = round((image[i][j + 1].rgbtBlue + image[i + 1][j + 1].rgbtBlue + image[i + 1][j].rgbtBlue) / sizeof(RGBTRIPLE));
             }
             else if (i == 0 && j == width - 1) {
 
