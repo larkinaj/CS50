@@ -13,9 +13,10 @@
 int main(void)
 {
 
-    char *s = malloc(4);
+    // char *s = malloc(4);
+    char *s;
     printf("s: ");
-    scanf("%s", s);
+    scanf("%s", &s);
     printf("s: %s\n", s);
     free(s);
 }
