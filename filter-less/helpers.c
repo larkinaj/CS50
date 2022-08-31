@@ -86,7 +86,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // nested for loop to iterate through each pixel of the image
     for (int i = 0; i < height; i++) {
-        for (int j = 0; j < width / 2; j++) {
+        for (int j = 0; j < width; j++) {
 
             float upperLeftRed = image[i - 1][j - 1].rgbtRed;
             float upperMidRed = image[i - 1][j].rgbtRed;
