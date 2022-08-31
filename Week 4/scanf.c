@@ -25,6 +25,6 @@ int main()
 {
     int a;
     scanf("This is the value %d", &a);
-    printf("Input value read : a = %d", a);
+    printf("Input value read : a = %d\n", a);
     return 0;
 }
