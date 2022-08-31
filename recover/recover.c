@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *file = fopen(argv[1], "r");
+    typedef uint8_t BYTE;
 
     while (fread(&file, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
