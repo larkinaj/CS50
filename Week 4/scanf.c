@@ -10,13 +10,21 @@
 // }
 
 
-int main(void)
+// int main(void)
+// {
+
+//     char *s = malloc(4);
+//     printf("s: ");
+//     scanf("%s", s);
+//     printf("s: %s\n", s);
+//     free(s);
+// }
+
+
+int main()
 {
-
-    char *s = malloc(4);
-    printf("s: ");
-    scanf("%s", s);
-    printf("s: %s\n", s);
-    free(s);
+    int a;
+    scanf("This is the value %d", &a);
+    printf("Input value read : a = %d", a);
+    return 0;
 }
-
