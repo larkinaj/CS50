@@ -92,6 +92,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             float middleRed = image[i][j - 1].rgbtRed + image[i][j + 1].rgbtRed;
             float lowerRed = image[i + 1][j - 1].rgbtRed + image[i + 1][j].rgbtRed + image[i + 1][j + 1].rgbtRed;
 
+            if (i == 0 && j == 0) {
+                
+            }
+
             image[i][width - 1 - j].rgbtRed = leftRed;
             image[i][j].rgbtRed = rightRed;
 
