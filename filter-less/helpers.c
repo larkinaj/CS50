@@ -84,5 +84,26 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // nested for loop to iterate through each pixel of the image
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width / 2; j++) {
+
+            int leftRed = image[i][j].rgbtRed;
+            int rightRed = image[i][width - 1 - j].rgbtRed;
+            image[i][width - 1 - j].rgbtRed = leftRed;
+            image[i][j].rgbtRed = rightRed;
+
+            int leftGreen = image[i][j].rgbtGreen;
+            int rightGreen = image[i][width - 1 - j].rgbtGreen;
+            image[i][width - 1 - j].rgbtGreen = leftGreen;
+            image[i][j].rgbtGreen = rightGreen;
+
+            int leftBlue = image[i][j].rgbtBlue;
+            int rightBlue = image[i][width - 1 - j].rgbtBlue;
+            image[i][width - 1 - j].rgbtBlue = leftBlue;
+            image[i][j].rgbtBlue = rightBlue;
+        }
+
+    }
     return;
 }
