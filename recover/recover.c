@@ -12,9 +12,10 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     typedef uint8_t BYTE;
     int images = 0;
-    while (fread(&file, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    unsigned char buffer[512];
+    while (fread(buffer, sizeof(char), sizeof(buffer), file))
     {
-
+        
 
     }
 }
