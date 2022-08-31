@@ -87,45 +87,49 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // nested for loop to iterate through each pixel of the image
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
+            float currRed = image[i][j].rgbtRed;
+            float currGreen = image[i][j].rgbtGreen;
+            float currBlue = image[i][j].rgbtBlue;
+
             if (i == 0 && j == 0) {
-                image[i][j].rgbtRed = round((image[i][j + 1].rgbtRed + image[i + 1][j + 1].rgbtRed + image[i + 1][j].rgbtRed) / 3);
-                image[i][j].rgbtGreen = round((image[i][j + 1].rgbtGreen + image[i + 1][j + 1].rgbtGreen + image[i + 1][j].rgbtGreen) / 3);
-                image[i][j].rgbtBlue = round((image[i][j + 1].rgbtBlue + image[i + 1][j + 1].rgbtBlue + image[i + 1][j].rgbtBlue) / 3);
+                image[i][j].rgbtRed = round((currRed + image[i][j + 1].rgbtRed + image[i + 1][j + 1].rgbtRed + image[i + 1][j].rgbtRed) / 4);
+                image[i][j].rgbtGreen = round((currGreen + image[i][j + 1].rgbtGreen + image[i + 1][j + 1].rgbtGreen + image[i + 1][j].rgbtGreen) / 4);
+                image[i][j].rgbtBlue = round((currBlue + image[i][j + 1].rgbtBlue + image[i + 1][j + 1].rgbtBlue + image[i + 1][j].rgbtBlue) / 4);
             }
             else if (i == 0 && j == width - 1) {
-                image[i][j].rgbtRed = round((image[i][j - 1].rgbtRed + image[i + 1][j - 1].rgbtRed + image[i + 1][j].rgbtRed) / 3);
-                image[i][j].rgbtGreen = round((image[i][j - 1].rgbtGreen + image[i + 1][j - 1].rgbtGreen + image[i + 1][j].rgbtGreen) / 3);
-                image[i][j].rgbtBlue = round((image[i][j - 1].rgbtBlue + image[i + 1][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue) / 3);
+                image[i][j].rgbtRed = round((currRed + image[i][j - 1].rgbtRed + image[i + 1][j - 1].rgbtRed + image[i + 1][j].rgbtRed) / 4);
+                image[i][j].rgbtGreen = round((currGreen + image[i][j - 1].rgbtGreen + image[i + 1][j - 1].rgbtGreen + image[i + 1][j].rgbtGreen) / 4);
+                image[i][j].rgbtBlue = round((currBlue + image[i][j - 1].rgbtBlue + image[i + 1][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue) / 4);
             }
             else if (i == height - 1 && j == 0) {
-                image[i][j].rgbtRed = round((image[i][j + 1].rgbtRed + image[i - 1][j + 1].rgbtRed + image[i - 1][j].rgbtRed) / 3);
-                image[i][j].rgbtGreen = round((image[i][j + 1].rgbtGreen + image[i - 1][j + 1].rgbtGreen + image[i - 1][j].rgbtGreen) / 3);
-                image[i][j].rgbtBlue = round((image[i][j + 1].rgbtBlue + image[i - 1][j + 1].rgbtBlue + image[i - 1][j].rgbtBlue) / 3);
+                image[i][j].rgbtRed = round((currRed + image[i][j + 1].rgbtRed + image[i - 1][j + 1].rgbtRed + image[i - 1][j].rgbtRed) / 4);
+                image[i][j].rgbtGreen = round((currGreen + image[i][j + 1].rgbtGreen + image[i - 1][j + 1].rgbtGreen + image[i - 1][j].rgbtGreen) / 4);
+                image[i][j].rgbtBlue = round((currBlue + image[i][j + 1].rgbtBlue + image[i - 1][j + 1].rgbtBlue + image[i - 1][j].rgbtBlue) / 4);
             }
             else if (i == height - 1 && j == width - 1) {
-                image[i][j].rgbtRed = round((image[i][j - 1].rgbtRed + image[i - 1][j - 1].rgbtRed + image[i - 1][j].rgbtRed) / 3);
-                image[i][j].rgbtGreen = round((image[i][j - 1].rgbtGreen + image[i - 1][j - 1].rgbtGreen + image[i - 1][j].rgbtGreen) / 3);
-                image[i][j].rgbtBlue = round((image[i][j - 1].rgbtBlue + image[i - 1][j - 1].rgbtBlue + image[i - 1][j].rgbtBlue) / 3);
+                image[i][j].rgbtRed = round((currRed + image[i][j - 1].rgbtRed + image[i - 1][j - 1].rgbtRed + image[i - 1][j].rgbtRed) / 4);
+                image[i][j].rgbtGreen = round((currGreen + image[i][j - 1].rgbtGreen + image[i - 1][j - 1].rgbtGreen + image[i - 1][j].rgbtGreen) / 4);
+                image[i][j].rgbtBlue = round((currBlue + image[i][j - 1].rgbtBlue + image[i - 1][j - 1].rgbtBlue + image[i - 1][j].rgbtBlue) / 4);
             }
             else if (i == 0) {
-                image[i][j].rgbtRed = round((image[i][j + 1].rgbtRed + image[i + 1][j + 1].rgbtRed + image[i + 1][j].rgbtRed + image[i + 1][j - 1].rgbtRed + image[i][j - 1].rgbtRed) / 5);
-                image[i][j].rgbtGreen = round((image[i][j + 1].rgbtGreen + image[i + 1][j + 1].rgbtGreen + image[i + 1][j].rgbtGreen + image[i + 1][j - 1].rgbtGreen + image[i][j - 1].rgbtGreen) / 5);
-                image[i][j].rgbtBlue = round((image[i][j + 1].rgbtBlue + image[i + 1][j + 1].rgbtBlue + image[i + 1][j].rgbtBlue + image[i + 1][j - 1].rgbtBlue + image[i][j - 1].rgbtBlue) / 5);
+                image[i][j].rgbtRed = round((currRed + image[i][j + 1].rgbtRed + image[i + 1][j + 1].rgbtRed + image[i + 1][j].rgbtRed + image[i + 1][j - 1].rgbtRed + image[i][j - 1].rgbtRed) / 6);
+                image[i][j].rgbtGreen = round((currGreen + image[i][j + 1].rgbtGreen + image[i + 1][j + 1].rgbtGreen + image[i + 1][j].rgbtGreen + image[i + 1][j - 1].rgbtGreen + image[i][j - 1].rgbtGreen) / 6);
+                image[i][j].rgbtBlue = round((currBlue + image[i][j + 1].rgbtBlue + image[i + 1][j + 1].rgbtBlue + image[i + 1][j].rgbtBlue + image[i + 1][j - 1].rgbtBlue + image[i][j - 1].rgbtBlue) / 6);
             }
             else if (i == height - 1) {
-                image[i][j].rgbtRed = round((image[i][j - 1].rgbtRed + image[i - 1][j - 1].rgbtRed + image[i - 1][j].rgbtRed + image[i - 1][j + 1].rgbtRed + image[i][j + 1].rgbtRed) / 5);
-                image[i][j].rgbtGreen = round((image[i][j - 1].rgbtGreen + image[i - 1][j - 1].rgbtGreen + image[i - 1][j].rgbtGreen + image[i - 1][j + 1].rgbtGreen + image[i][j + 1].rgbtGreen) / 5);
-                image[i][j].rgbtBlue = round((image[i][j - 1].rgbtBlue + image[i - 1][j - 1].rgbtBlue + image[i - 1][j].rgbtBlue + image[i - 1][j + 1].rgbtBlue + image[i][j + 1].rgbtBlue) / 5);
+                image[i][j].rgbtRed = round((currRed + image[i][j - 1].rgbtRed + image[i - 1][j - 1].rgbtRed + image[i - 1][j].rgbtRed + image[i - 1][j + 1].rgbtRed + image[i][j + 1].rgbtRed) / 6);
+                image[i][j].rgbtGreen = round((currGreen + image[i][j - 1].rgbtGreen + image[i - 1][j - 1].rgbtGreen + image[i - 1][j].rgbtGreen + image[i - 1][j + 1].rgbtGreen + image[i][j + 1].rgbtGreen) / 6);
+                image[i][j].rgbtBlue = round((currBlue + image[i][j - 1].rgbtBlue + image[i - 1][j - 1].rgbtBlue + image[i - 1][j].rgbtBlue + image[i - 1][j + 1].rgbtBlue + image[i][j + 1].rgbtBlue) / 6);
             }
             else if (j == 0) {
-                image[i][j].rgbtRed = round((image[i - 1][j].rgbtRed + image[i - 1][j + 1].rgbtRed + image[i][j + 1].rgbtRed + image[i + 1][j + 1].rgbtRed + image[i + 1][j].rgbtRed) / 5);
-                image[i][j].rgbtGreen = round((image[i - 1][j].rgbtGreen + image[i - 1][j + 1].rgbtGreen + image[i][j + 1].rgbtGreen + image[i + 1][j + 1].rgbtGreen + image[i + 1][j].rgbtGreen) / 5);
-                image[i][j].rgbtBlue = round((image[i - 1][j].rgbtBlue + image[i - 1][j + 1].rgbtBlue + image[i][j + 1].rgbtBlue + image[i + 1][j + 1].rgbtBlue + image[i + 1][j].rgbtBlue) / 5);
+                image[i][j].rgbtRed = round((currRed + image[i - 1][j].rgbtRed + image[i - 1][j + 1].rgbtRed + image[i][j + 1].rgbtRed + image[i + 1][j + 1].rgbtRed + image[i + 1][j].rgbtRed) / 6);
+                image[i][j].rgbtGreen = round((currGreen + image[i - 1][j].rgbtGreen + image[i - 1][j + 1].rgbtGreen + image[i][j + 1].rgbtGreen + image[i + 1][j + 1].rgbtGreen + image[i + 1][j].rgbtGreen) / 6);
+                image[i][j].rgbtBlue = round((currBlue + image[i - 1][j].rgbtBlue + image[i - 1][j + 1].rgbtBlue + image[i][j + 1].rgbtBlue + image[i + 1][j + 1].rgbtBlue + image[i + 1][j].rgbtBlue) / 6);
             }
             else if (j == width - 1) {
-                image[i][j].rgbtRed = round((image[i - 1][j].rgbtRed + image[i - 1][j - 1].rgbtRed + image[i][j - 1].rgbtRed + image[i + 1][j - 1].rgbtRed + image[i + 1][j].rgbtRed) / 5);
-                image[i][j].rgbtGreen = round((image[i - 1][j].rgbtGreen + image[i - 1][j - 1].rgbtGreen + image[i][j - 1].rgbtGreen + image[i + 1][j - 1].rgbtGreen + image[i + 1][j].rgbtGreen) / 5);
-                image[i][j].rgbtBlue = round((image[i - 1][j].rgbtBlue + image[i - 1][j - 1].rgbtBlue + image[i][j - 1].rgbtBlue + image[i + 1][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue) / 5);
+                image[i][j].rgbtRed = round((currRed + image[i - 1][j].rgbtRed + image[i - 1][j - 1].rgbtRed + image[i][j - 1].rgbtRed + image[i + 1][j - 1].rgbtRed + image[i + 1][j].rgbtRed) / 6);
+                image[i][j].rgbtGreen = round((currGreen + image[i - 1][j].rgbtGreen + image[i - 1][j - 1].rgbtGreen + image[i][j - 1].rgbtGreen + image[i + 1][j - 1].rgbtGreen + image[i + 1][j].rgbtGreen) / 6);
+                image[i][j].rgbtBlue = round((currBlue + image[i - 1][j].rgbtBlue + image[i - 1][j - 1].rgbtBlue + image[i][j - 1].rgbtBlue + image[i + 1][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue) / 6);
             }
             else {
                 float upperLeftRed = image[i - 1][j - 1].rgbtRed;
@@ -155,9 +159,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 float lowerMidBlue = image[i + 1][j].rgbtBlue;
                 float lowerRightBlue = image[i + 1][j + 1].rgbtBlue;
 
-                image[i][j].rgbtRed = round((upperLeftRed + upperMidRed + upperRightRed + leftRed + rightRed + lowerLeftRed + lowerMidRed + lowerRightRed) / 8);
-                image[i][j].rgbtGreen = round((upperLeftGreen + upperMidGreen + upperRightGreen + leftGreen + rightGreen + lowerLeftGreen + lowerMidGreen + lowerRightGreen) / 8);
-                image[i][j].rgbtBlue = round((upperLeftBlue + upperMidBlue + upperRightBlue + leftBlue + rightBlue + lowerLeftBlue + lowerMidBlue + lowerRightBlue) / 8);
+                image[i][j].rgbtRed = round((currRed + upperLeftRed + upperMidRed + upperRightRed + leftRed + rightRed + lowerLeftRed + lowerMidRed + lowerRightRed) / 9);
+                image[i][j].rgbtGreen = round((currGreen + upperLeftGreen + upperMidGreen + upperRightGreen + leftGreen + rightGreen + lowerLeftGreen + lowerMidGreen + lowerRightGreen) / 9);
+                image[i][j].rgbtBlue = round((currBlue + upperLeftBlue + upperMidBlue + upperRightBlue + leftBlue + rightBlue + lowerLeftBlue + lowerMidBlue + lowerRightBlue) / 9);
             }
         }
     }
