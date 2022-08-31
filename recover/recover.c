@@ -27,7 +27,13 @@ int main(int argc, char *argv[])
 
             images ++;
         }
+        if (output != NULL)
+        {
+            fwrite(buffer, sizeof(char), 512, output);
+        }
     }
+
+
     free(filename);
     fclose(output);
     fclose(file);
