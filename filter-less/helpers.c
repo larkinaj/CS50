@@ -59,7 +59,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     // nested for loop to iterate through each pixel of the image
     for (int i = 0; i < height; i++) {
-        for (int j = 0; j < width; j++) {
+        for (int j = 0; j < width / 2; j++) {
 
             int leftRed = image[i][j].rgbtRed;
             int rightRed = image[i][width - 1 - j].rgbtRed;
