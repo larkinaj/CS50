@@ -60,18 +60,21 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // nested for loop to iterate through each pixel of the image
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
-            int red = image[i][j].rgbtRed;
-            int green = image[i][j].rgbtGreen;
-            int blue = image[i][j].rgbtBlue;
 
-            int redCopy = image[i][j].rgbtRed;
-            image[i][width - 1 - j].rgbtRed = redCopy;
+            int leftRed = image[i][j].rgbtRed;
+            int rightRed = image[i][width - 1 - j].rgbtRed;
+            image[i][width - 1 - j].rgbtRed = leftRed;
+            image[i][j].rgbtRed = rightRed;
 
-            int greenCopy = image[i][j].rgbtGreen;
-            image[i][width - 1 - j].rgbtGreen = greenCopy;
+            int leftGreen = image[i][j].rgbtGreen;
+            int rightGreen = image[i][width - 1 - j].rgbtGreen;
+            image[i][width - 1 - j].rgbtGreen = leftGreen;
+            image[i][j].rgbtGreen = rightGreen;
 
-            int blueCopy = image[i][j].rgbtBlue;
-            image[i][width - 1 - j].rgbtBlue = blueCopy;
+            int leftBlue = image[i][j].rgbtBlue;
+            int rightBlue = image[i][width - 1 - j].rgbtBlue;
+            image[i][width - 1 - j].rgbtBlue = leftBlue;
+            image[i][j].rgbtBlue = rightBlue;
         }
 
     }
