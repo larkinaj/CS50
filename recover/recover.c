@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+typedef uint8_t BYTE;
+
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -10,12 +12,23 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *file = fopen(argv[1], "r");
-    typedef uint8_t BYTE;
+
     int images = 0;
     unsigned char buffer[512];
     while (fread(buffer, sizeof(char), sizeof(buffer), file))
     {
-        
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        {
+            sprintf(filename, "%03i.jpg", images);
 
+            output = fopen(filename, "w");
+
+            images ++;
+        }
     }
+    free(filename);
+    fclose(output_file);
+    fclose(input_file);
+
+    return 0;
 }
