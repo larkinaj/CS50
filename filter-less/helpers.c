@@ -88,18 +88,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width / 2; j++) {
 
-            int leftRed = image[i][j].rgbtRed;
-            int rightRed = image[i][width - 1 - j].rgbtRed;
+            int upperRed = image[i - 1][j - 1].rgbtRed + image[i - 1][j].rgbtRed + image[i - 1][j + 1].rgbtRed;
+            int middleRed = image[i][j - 1].rgbtRed + image[i][j + 1].rgbtRed;
+            int lowerRed = image[i + 1][j - 1].rgbtRed + image[i + 1][j].rgbtRed + image[i + 1][j + 1].rgbtRed;
+
             image[i][width - 1 - j].rgbtRed = leftRed;
             image[i][j].rgbtRed = rightRed;
 
-            int leftGreen = image[i][j].rgbtGreen;
-            int rightGreen = image[i][width - 1 - j].rgbtGreen;
+            int upperGreen = image[i - 1][j - 1].rgbtGreen + image[i - 1][j].rgbtGreen + image[i - 1][j + 1].rgbtGreen;
+            int middleGreen = image[i][j - 1].rgbtGreen + image[i][j + 1].rgbtGreen;
+            int lowerGreen = image[i + 1][j - 1].rgbtGreen + image[i + 1][j].rgbtGreen + image[i + 1][j + 1].rgbtGreen;
             image[i][width - 1 - j].rgbtGreen = leftGreen;
             image[i][j].rgbtGreen = rightGreen;
 
-            int leftBlue = image[i][j].rgbtBlue;
-            int rightBlue = image[i][width - 1 - j].rgbtBlue;
+            int upperBlue = image[i - 1][j - 1].rgbtBlue + image[i - 1][j].rgbtBlue + image[i - 1][j + 1].rgbtBlue;
+            int middleBlue = image[i][j - 1].rgbtBlue + image[i][j + 1].rgbtBlue;
+            int lowerBlue = image[i + 1][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue + image[i + 1][j + 1].rgbtBlue;
             image[i][width - 1 - j].rgbtBlue = leftBlue;
             image[i][j].rgbtBlue = rightBlue;
         }
