@@ -16,14 +16,9 @@ int main(void)
     list[1] = 2;
     list[2] = 3;
 
-    int *tmp = malloc(4 * sizeof(int));
+    int *tmp = realloc(list, 4 * sizeof(int));
 
-    for (int i = 0; i < 3; i++)
-    {
-        tmp[i] = list[i];
-    }
     tmp[3] = 4;
-    free(list);
 
     list = tmp;
 
@@ -32,5 +27,5 @@ int main(void)
         printf("%i\n", list[i]);
     }
 
-    free(tmp);
+    free(list);
 }
