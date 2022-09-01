@@ -24,7 +24,7 @@ int main(void)
 
 
 
-    for (int i = 0; i < sizeof(list); i++)
+    for (int i = 0; i < sizeof(list)/sizeof(list[0]); i++)
     {
         printf("%i\n", list[i]);
     }
