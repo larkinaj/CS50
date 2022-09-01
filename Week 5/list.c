@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 
 int main(void)
@@ -20,4 +21,9 @@ int main(void)
     list[1] = 2;
     list[2] = 3;
 
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%i\n", list[i]);
+    }
+    free(list);
 }
