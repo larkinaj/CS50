@@ -49,5 +49,29 @@ int main(void)
     list = n;
 
     // add a number to list
-    
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        free(list);
+        return 1;
+    }
+    n->number = 2;
+    n->next = NULL;
+    list ->next = n;
+
+    // add a number to list
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        free(list);
+        free(list->next);
+        return 1;
+    }
+    n->number = 3;
+    n->next = NULL;
+    list ->next = n;
+
+
+    // printf("%n",list);
+
 }
