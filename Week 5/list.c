@@ -34,7 +34,7 @@ node;
 int main(void)
 {
     // list of size 0
-    node *list = NULL
+    node *list = NULL;
 
     // add a number to list
     node *n = malloc(sizeof(node));
@@ -48,4 +48,6 @@ int main(void)
     // Update list to point to new node
     list = n;
 
+    // add a number to list
+    
 }
