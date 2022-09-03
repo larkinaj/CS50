@@ -32,11 +32,12 @@ typedef struct node
 node;
 
 void free_tree(node *root);
+void print_tree(node *root);
 
 int main(void)
 {
     // list of size 0
-    node *list = NULL;
+    node *tree = NULL;
 
     // add a number to list
     node *n = malloc(sizeof(node));
@@ -44,21 +45,22 @@ int main(void)
     {
         return 1;
     }
-    n->number = 1;
-    n->next = NULL;
+    n->number = 2;
+    n->left = NULL;
+    n->right = NULL;
 
     // Update list to point to new node
-    list = n;
+    tree = n;
 
     // add a number to list
     n = malloc(sizeof(node));
     if (n == NULL)
     {
-        free(list);
         return 1;
     }
-    n->number = 2;
-    n->next = NULL;
+    n->number = 1;
+    n->left = NULL;
+    n->right = NULL;
     list ->next = n;
 
     // add a number to list
