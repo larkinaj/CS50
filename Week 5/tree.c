@@ -70,21 +70,37 @@ int main(void)
         return 1;
     }
     n->number = 3;
-    n->next = NULL;
-    list ->next->next = n;
+    n->left = NULL;
+    n->right = NULL;
+    tree ->right = n;
 
     // print numbers
-    for (node *tmp = list; tmp != NULL; tmp = tmp->next)
-    {
-        printf("%i\n", tmp->number);
-    }
+    print_tree(tree);
 
     //free list
-    while (list != NULL)
-    {
-        node *tmp = list -> next;
-        free(list);
-        list = tmp;
-    }
-    return 0;
+    free_tree(tree);
 }
+
+void free_tree(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    free_tree(root->left);
+    free_tree(root->right);
+    free(root);
+}
+
+void print_tree(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    print_tree(root->left);
+    printf("%i\n", root->number);
+    print_tree(root->right);
+}
+
+
