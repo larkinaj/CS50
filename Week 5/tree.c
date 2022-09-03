@@ -61,14 +61,12 @@ int main(void)
     n->number = 1;
     n->left = NULL;
     n->right = NULL;
-    list ->next = n;
+    tree ->left = n;
 
     // add a number to list
     n = malloc(sizeof(node));
     if (n == NULL)
     {
-        free(list->next);
-        free(list);
         return 1;
     }
     n->number = 3;
