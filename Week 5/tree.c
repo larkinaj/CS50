@@ -26,9 +26,12 @@
 typedef struct node
 {
     int number;
-    struct node *next;
+    struct node *left;
+    struct node *right;
 }
 node;
+
+void free_tree(node *root);
 
 int main(void)
 {
