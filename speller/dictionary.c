@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <strings.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table

@@ -4,7 +4,8 @@
         "tuple": "c",
         "stdio.h": "c",
         "stdlib.h": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "string.h": "c"
     },
     "gitdoc.enabled": true
 }
