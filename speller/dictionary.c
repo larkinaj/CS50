@@ -41,10 +41,10 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *file = open(dictionary, "r");
+    FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
-        printf("Unable to open %s\n, dictionary");
+        printf("Unable to open %s\n", dictionary);
         return false;
     }
     char word[LENGTH + 1];
