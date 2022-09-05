@@ -27,6 +27,17 @@ unsigned int hash_value;
 bool check(const char *word)
 {
     // TODO
+    hash_value = hash(word);
+    node *cursor = table[hash_value];
+
+    while (cursor != 0)
+    {
+        if (strcasecmp(word, cursor->word) == 0)
+        {
+            return true;
+        }
+        cursor = cursor->next;
+    }
     return false;
 }
 
@@ -34,7 +45,13 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    // return toupper(word[0]) - 'A';
+    unsigned long total = 0;
+    for (int i = 0; i < strlen(word); i++)
+    {
+        total += tolower(word[i]);
+    }
+    return total % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -70,6 +87,10 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    if (word_count > 0)
+    {
+        return word_count;
+    }
     return 0;
 }
 
