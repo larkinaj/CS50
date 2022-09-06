@@ -1,5 +1,3 @@
-from cs50 import get_string
+answer = input("What is your name? ")
 
-answer = get_string("What is your name? ")
-
-print("Hello, " + answer)
+print("Hello, " + answer + "!")
