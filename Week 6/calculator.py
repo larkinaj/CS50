@@ -9,4 +9,15 @@ try:
 except:
     print("That is not an int")
     exit()
-print(x + y)
+operator = input("operator: ")
+
+if operator == "-":
+    print(x - y)
+elif operator == "+":
+    print(x + y)
+elif operator == "/":
+    print(x / y)
+elif operator == "*":
+    print(x * y)
+else:
+    print("operator can only be one of the following: +, -, /, *")
