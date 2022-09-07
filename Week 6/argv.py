@@ -6,5 +6,5 @@ from sys import argv
 #     print("hello, world")
 
 
-for arg in argv:
+for arg in argv[1:]:
     print(arg)
