@@ -5,4 +5,4 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 print("Hello " + sys.argv[1])
-# exit(0)
+sys.exit(0)
