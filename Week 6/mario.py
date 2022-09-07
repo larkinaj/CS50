@@ -1,11 +1,14 @@
 from cs50 import get_int
 
-while True:
-    n = int(input("Height: "))
-    if n > 0:
-        break
 
-# n = get_int("Height: ")
+def main():
+    for i in range(n):
+        print("#")
 
-for i in range(n):
-    print("#")
+def height():
+    while True:
+        n = int(input("Height: "))
+        if n > 0:
+            return n
+
+main()
