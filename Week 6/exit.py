@@ -1,5 +1,8 @@
-from sys import argv, exit
+import sys
 
-if len(argv) != 2:
+if len(sys.argv) != 2:
     print("Missing command line arg")
     sys.exit(1)
+
+print("Hello " + sys.argv[1])
+# exit(0)
