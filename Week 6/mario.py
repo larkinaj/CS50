@@ -1,7 +1,11 @@
 from cs50 import get_int
 
-# n = int(input("Height: "))
-n = get_int("Height: ")
+while True:
+    n = int(input("Height: "))
+    if n > 0 || n != :
+        break
+
+# n = get_int("Height: ")
 
 for i in range(n):
     print("#")
