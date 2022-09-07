@@ -17,7 +17,11 @@
 
 
 
+# for i in range(3):
+#     print("?", end = "")
+# print()
+# prints everything in one line instead of creating a new line each time
+
+
 for i in range(3):
     print("?" * 3)
-
-# print("?" * 4)
