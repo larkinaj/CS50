@@ -2,6 +2,7 @@ from cs50 import get_int
 
 
 def main():
+    heights = height()
     for i in range(n):
         print("#")
 
