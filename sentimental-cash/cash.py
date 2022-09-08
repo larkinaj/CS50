@@ -45,7 +45,6 @@ def getCents():
 
 def calcQuarters(cents):
     quarters = cents * 100 // 25
-    print(quarters)
     return quarters
 
 def calcDimes(cents):
