@@ -37,7 +37,7 @@ def main():
                 matches[i] = "match"
     print(matches)
     for i in range(1, len(matches)):
-        if matches[i] !=
+        if matches[i] == "match"
     return
 
 
