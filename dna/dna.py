@@ -38,11 +38,12 @@ def main():
                 matches[i] = "match"
             if matches[len(row) - 1] == "match":
                 print(row[0])
-                return row[0]
-    print(matches)
+                return
+    # print(matches)
     # if "unmatch" not in matches:
     #     print("we have a match!!!!!!!!!!")
-
+    print("No match")
+    return
 
 def longest_match(sequence, subsequence):
     # Returns length of longest run of subsequence in sequence."""
