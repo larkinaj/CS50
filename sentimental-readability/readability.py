@@ -22,7 +22,7 @@ def main():
 def count_letters(input):
     length = 0
     for i in range(len(input)):
-        if input[i].isalpha() == true:
+        if input[i].isalpha() == True:
             length =+ 1
     return length
 
