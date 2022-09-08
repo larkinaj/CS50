@@ -36,8 +36,6 @@ def main():
             if int(row[i]) == strList[i]:
                 matches[i] = "match"
     print(matches)
-    for i in range(1, len(matches)):
-        if matches[i] == "match"
     return
 
 
