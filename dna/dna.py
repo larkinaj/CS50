@@ -37,7 +37,8 @@ def main():
             if int(row[i]) == strList[i]:
                 matches[i] = "match"
     print(matches)
-    if "unmatch" is not in 
+    if "unmatch" not in matches:
+        print("we have a match!!!!!!!!!!")
     return
 
 
