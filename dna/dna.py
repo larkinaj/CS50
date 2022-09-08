@@ -15,16 +15,15 @@ def main():
     firstRow = next(csv_reader)
     firstRow.pop(0)
 
-    # for row in csv_reader:
-    #     print(row)
-
     # Read DNA sequence file into a variable
     dna = open(sys.argv[2], "r").read()
     # dna = dna.read()
 
     # todo: Find longest match of each STR in DNA sequence
-    longestMatch = longest_match(dna, firstRow[0])
-    print(longestMatch)
+    STRs = []
+    for i in firstRow:
+        STRs[i] = longest_match(dna, firstRow[i])
+    print(STRs)
 
     # todo: Check database for matching profiles
     # for row in csv_reader:
