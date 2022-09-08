@@ -13,11 +13,11 @@ def main():
     elif grade > 15.4:
         print("Grade 16+")
     else:
-        print(f"Grade: {int(grade)}:)
+        print(f"Grade: {int(grade)}")
 
 # Function to count the number of letters in the text.
 def count_letters(input):
-    int length = 0
+    length = 0
     for (int i = 0, n = strlen(input); i < n; i++)
     {
         if (isalpha(input[i]))
