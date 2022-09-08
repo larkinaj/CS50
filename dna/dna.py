@@ -20,10 +20,12 @@ def main():
 
     # Find longest match of each STR in DNA sequence
     strList = []
+    matches = []
     for i in range(len(firstRow)):
+        matches.append("unmatch")
         strList.append(longest_match(dna, firstRow[i]))
 
-    print(strList)
+    print(matches)
 
     # todo: Check database for matching profiles
     for row in csv_reader:
@@ -32,9 +34,10 @@ def main():
             print(f"str: {strList[i]}")
             print(f"row: {row[i]}")
             if int(row[i]) == strList[i]:
-                print("YESdfsfdsfs")
-
-
+                matches[i] = "match"
+    print(matches)
+    for i in range(1, len(matches)):
+        if matches[i] !=
     return
 
 
