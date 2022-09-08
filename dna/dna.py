@@ -26,22 +26,22 @@ def main():
             matches.append("unmatch")
         strList.append(longest_match(dna, firstRow[i]))
 
-    print(matches)
+    # print(strList)
 
     # todo: Check database for matching profiles
     for row in csv_reader:
         for i in range(1, len(row)):
-            print(i)
-            print(f"str: {strList[i]}")
-            print(f"row: {row[i]}")
+            # print(i)
+            # print(f"str: {strList[i]}")
+            # print(f"row: {row[i]}")
             if int(row[i]) == strList[i]:
                 matches[i] = "match"
             if matches[len(row) - 1] == "match":
                 print(row[0])
+                return row[0]
     print(matches)
-    if "unmatch" not in matches:
-        print("we have a match!!!!!!!!!!")
-    return
+    # if "unmatch" not in matches:
+    #     print("we have a match!!!!!!!!!!")
 
 
 def longest_match(sequence, subsequence):
