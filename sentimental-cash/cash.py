@@ -3,6 +3,9 @@
 
 def main():
     cents = getCents()
+
+
+    
     for i in range(height):
         print("#")
 
