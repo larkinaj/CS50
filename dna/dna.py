@@ -28,8 +28,9 @@ def main():
     # todo: Check database for matching profiles
     for row in csv_reader:
         for i in range(1, len(row)):
-            print(i)
-            if row[i] == firstRow[i]:
+            print(strList[i])
+            print(row[i])
+            if row[i] == strList[i]:
                 print("YES")
 
 
