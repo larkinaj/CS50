@@ -39,7 +39,7 @@ def main():
             if "unmatch" not in matches:
                 print(row[0])
                 return
-            else:
+            if matches[len(matches) - 1] == "unmatch":
                 for i in range(len(firstRow)):
                     if i != 0:
                         matches[i] = "unmatch"
