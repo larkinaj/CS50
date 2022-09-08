@@ -9,11 +9,11 @@ def main():
 
     # Conditional statement to determine whether the reading level is less than 1 or greater than 15.
     if grade < 0.5:
-        printf("Before Grade 1\n")
+        printf("Before Grade 1")
     elif grade > 15.4:
-        print("Grade 16+\n")
+        print("Grade 16+")
     else:
-        print("Grade %i\n", (int) round(grade))
+        print(f"Grade: {int(grade)}:)
 
 # Function to count the number of letters in the text.
 def count_letters(input):
