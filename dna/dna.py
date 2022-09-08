@@ -13,7 +13,7 @@ def main():
     database = open(sys.argv[1], "r")
     csv_reader = csv.reader(database)
     firstRow = next(csv_reader)
-    print(firstRow)
+
     # for row in csv_reader:
     #     print(row)
 
@@ -22,10 +22,12 @@ def main():
     # dna = dna.read()
 
     # todo: Find longest match of each STR in DNA sequence
-    longestMatch = longest_match(dna, "AGATC")
+    longestMatch = longest_match(dna, firstRow[1])
     print(longestMatch)
 
     # todo: Check database for matching profiles
+    for row in csv_reader:
+        print(row)
 
     return
 
