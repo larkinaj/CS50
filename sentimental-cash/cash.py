@@ -21,7 +21,7 @@ def main():
     cents = round(cents - pennies * .01, 2)
 
     # Sum coins
-    coins = quarters + dimes + nickels + pennies
+    Int(coins = quarters + dimes + nickels + pennies)
 
     # Print total number of coins to give the customer
     print(f"Total coins: {coins}")
