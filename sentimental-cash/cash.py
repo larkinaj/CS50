@@ -25,7 +25,7 @@ def main():
 
     # Print total number of coins to give the customer
     print(f"Total coins: {coins}")
-    print(f"Quarters: " + quarters + ", dimes: " + dimes + ", nickels: " + nickels + ", pennies: " + pennies)
+    print(f"Quarters: {quarters}, dimes: {dimes}, nickels: {nickels}, pennies: {pennies}")
 
 
 
