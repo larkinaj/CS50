@@ -7,6 +7,7 @@ def main():
     # Calculate the number of quarters to give the customer
     quarters = calcQuarters(cents)
     print(cents)
+    print(quarters * .25)
     cents = cents - quarters * .25
 
     # Calculate the number of dimes to give the customer
