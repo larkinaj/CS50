@@ -19,46 +19,31 @@ def main():
 def count_letters(input):
     length = 0
     for i in range(len(input)):
-    {
         if isalpha(input[i]):
-            length ++
-    }
+            length =+ 1
     return length
 
 # Function to count the number of words in the text.
 def count_words(input):
-    int words = 0
-    for (int i = 0, n = strlen(input); i < n; i++)
-    {
-        if (isspace(input[i]))
-        {
-            words ++
-        }
-        else
-        {
-            words = words + 0
-        }
-    }
-    words ++
+    words = 0
+    for i in range(len(input)):
+        if input[i] == " ":
+            words += 1
+    words += 1
     return words
 
 # Function to count the number of sentences in the text.
 def count_sentences(input):
-    int sentences = 0
-    for (int i = 0, n = strlen(input); i < n; i++)
-    {
-        if (input[i] == '.' || input[i] == '!' || input[i] == '?')
-        {
-            sentences ++
-        }
-        else
-        {
-            sentences = sentences + 0
-        }
-    }
+    sentences = 0
+    for i in range(len(input)):
+        if input[i] == '.' or input[i] == '!' or input[i] == '?':
+            sentences += 1
     return sentences
 
 # Function to calculate the reading level using the Coleman-Liau index.
 def get_index(length, words, sentences):
     grade = 0.0588 * length / words * 100 - 0.296 * sentences / words * 100 - 15.8
     return grade
+
+
+main()
