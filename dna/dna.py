@@ -17,14 +17,13 @@ def main():
 
     # Read DNA sequence file into a variable
     dna = open(sys.argv[2], "r").read()
-    # dna = dna.read()
 
     # todo: Find longest match of each STR in DNA sequence
-    STRs = []
+    strList = []
     for i in range(len(firstRow)):
-        STRs.append(longest_match(dna, firstRow[i]))
+        strList.append(longest_match(dna, firstRow[i]))
 
-    print(STRs)
+    print(strList)
 
     # todo: Check database for matching profiles
     # for row in csv_reader:
