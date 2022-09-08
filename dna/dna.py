@@ -20,9 +20,10 @@ def main():
 
     # Find longest match of each STR in DNA sequence
     strList = []
-    matches = []
+    matches = ["match"]
     for i in range(len(firstRow)):
-        matches.append("unmatch")
+        if i != 0:
+            matches.append("unmatch")
         strList.append(longest_match(dna, firstRow[i]))
 
     print(matches)
@@ -36,6 +37,7 @@ def main():
             if int(row[i]) == strList[i]:
                 matches[i] = "match"
     print(matches)
+    if mathces
     return
 
 
