@@ -30,6 +30,7 @@ def main():
     # todo: Check database for matching profiles
     for row in csv_reader:
         for i in range(1, len(row)):
+            print(row[0])
             print(i)
             print(f"str: {strList[i]}")
             print(f"row: {row[i]}")
