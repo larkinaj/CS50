@@ -23,12 +23,12 @@ def main():
     # dna = dna.read()
 
     # todo: Find longest match of each STR in DNA sequence
-    longestMatch = longest_match(dna, firstRow[1])
+    longestMatch = longest_match(dna, firstRow[0])
     print(longestMatch)
 
     # todo: Check database for matching profiles
-    for row in csv_reader:
-        print(row)
+    # for row in csv_reader:
+    #     print(row)
 
     return
 
