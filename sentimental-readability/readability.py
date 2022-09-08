@@ -23,8 +23,7 @@ def count_letters(input):
     length = 0
     for i in range(len(input)):
         if input[i].isalpha() == True:
-            print("test")
-            length =+ 1
+            length += 1
     return length
 
 # Function to count the number of words in the text.
