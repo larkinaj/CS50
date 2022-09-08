@@ -29,7 +29,8 @@ def main():
     for row in csv_reader:
         for i in range(1, len(row)):
             if row[i] == firstRow[i]:
-                
+                print("YES")
+
 
     return
 
