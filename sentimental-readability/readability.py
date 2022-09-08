@@ -5,6 +5,9 @@ def main():
     length = count_letters(input)
     words = count_words(input)
     sentences = count_sentences(input)
+    print(length)
+    print(words)
+    print(sentences)
     grade = get_index(length, words, sentences)
 
     # Conditional statement to determine whether the reading level is less than 1 or greater than 15.
