@@ -22,6 +22,7 @@ def main():
     strList = []
     for i in range(len(firstRow)):
         strList.append(longest_match(dna, firstRow[i]))
+        print(firstRow[i])
 
     print(strList)
 
