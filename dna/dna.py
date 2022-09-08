@@ -13,7 +13,6 @@ def main():
     database = open(sys.argv[1], "r")
     csv_reader = csv.reader(database)
     firstRow = next(csv_reader)
-    # firstRow.pop(0)
 
     # Read DNA sequence file into a variable
     dna = open(sys.argv[2], "r").read()
@@ -26,20 +25,20 @@ def main():
             matches.append("unmatch")
         strList.append(longest_match(dna, firstRow[i]))
 
-    print(strList)
+    # print(strList)
 
     # todo: Check database for matching profiles
     for row in csv_reader:
         for i in range(1, len(row)):
-            print(i)
-            print(f"str: {strList[i]}")
-            print(f"row: {row[i]}")
+            # print(i)
+            # print(f"str: {strList[i]}")
+            # print(f"row: {row[i]}")
             if int(row[i]) == strList[i]:
                 matches[i] = "match"
-            if matches[len(row) - 1] == "match":
+            if "unmatch" not in matches:
                 print(row[0])
-                # return
-    print(matches)
+                return
+    # print(matches)
     # if "unmatch" not in matches:
     #     print("we have a match!!!!!!!!!!")
     print("No match")
@@ -81,6 +80,5 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
-
 
 main()
