@@ -4,15 +4,16 @@ import sys
 
 def main():
 
-    # TODO: Check for command-line usage
+    # todo: Check for command-line usage
+    if sys.argv != 
 
-    # TODO: Read database file into a variable
+    # todo: Read database file into a variable
 
-    # TODO: Read DNA sequence file into a variable
+    # todo: Read DNA sequence file into a variable
 
-    # TODO: Find longest match of each STR in DNA sequence
+    # todo: Find longest match of each STR in DNA sequence
 
-    # TODO: Check database for matching profiles
+    # todo: Check database for matching profiles
 
     return
 
