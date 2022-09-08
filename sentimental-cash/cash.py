@@ -21,10 +21,10 @@ def main():
     cents = round(cents - pennies * .01, 2)
 
     # Sum coins
-    Int(coins = quarters + dimes + nickels + pennies)
+    coins = quarters + dimes + nickels + pennies
 
     # Print total number of coins to give the customer
-    print(f"Total coins: {coins}")
+    print(f"Total coins: {int(coins)}")
     print(f"Quarters: {quarters}, dimes: {dimes}, nickels: {nickels}, pennies: {pennies}")
 
 
