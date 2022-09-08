@@ -18,16 +18,10 @@ def main():
 # Function to count the number of letters in the text.
 def count_letters(input):
     length = 0
-    for (int i = 0, n = strlen(input); i < n; i++)
+    for i in range(len(input)):
     {
-        if (isalpha(input[i]))
-        {
+        if isalpha(input[i]):
             length ++
-        }
-        else
-        {
-            length = length + 0
-        }
     }
     return length
 
