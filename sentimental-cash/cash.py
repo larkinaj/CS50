@@ -2,18 +2,18 @@
 
 
 def main():
-    height = get_height()
+    cents = getCents()
     for i in range(height):
         print("#")
 
 def getCents():
     while True:
         try:
-            n = int(input("Height: "))
-            if n > 0:
+            cents = int(input("How much change? "))
+            if cents > 0:
                 break
         except ValueError:
             print("That's not an integer!")
-    return n
+    return cents
 
 main()
