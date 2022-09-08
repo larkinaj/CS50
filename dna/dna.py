@@ -36,7 +36,7 @@ def main():
             # print(f"row: {row[i]}")
             if int(row[i]) == strList[i]:
                 matches[i] = "match"
-            if matches[len(matches) - 1] == "unmatch":
+            if i == len(matches) - 1 and "unmatch" in matches:
                 for i in range(len(firstRow)):
                     if i != 0:
                         matches[i] = "unmatch"
