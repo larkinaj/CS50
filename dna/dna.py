@@ -36,13 +36,14 @@ def main():
             # print(f"row: {row[i]}")
             if int(row[i]) == strList[i]:
                 matches[i] = "match"
-            if "unmatch" not in matches:
-                print(row[0])
-                return
             if matches[len(matches) - 1] == "unmatch":
                 for i in range(len(firstRow)):
                     if i != 0:
                         matches[i] = "unmatch"
+            if "unmatch" not in matches:
+                print(row[0])
+                return
+
     # print(matches)
     # if "unmatch" not in matches:
     #     print("we have a match!!!!!!!!!!")
