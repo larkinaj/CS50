@@ -7,23 +7,22 @@ def main():
     # Calculate the number of quarters to give the customer
     quarters = calcQuarters(cents)
     print(cents)
-    print(quarters * .25)
-    cents = cents - quarters * .25
+    cents = round(cents - quarters * .25, 2)
 
     # Calculate the number of dimes to give the customer
     dimes = calcDimes(cents)
     print(cents)
-    cents = cents - dimes * .10
+    cents = round(cents - dimes * .10, 2)
 
     # Calculate the number of nickels to give the customer
     nickels = calcNickels(cents)
     print(cents)
-    cents = cents - nickels * .5
+    cents = round(cents - nickels * .5, 2)
 
     # Calculate the number of pennies to give the customer
     pennies = calcPennies(cents)
     print(cents)
-    cents = cents - pennies * .01
+    cents = round(cents - pennies * .01, 2)
 
     # Sum coins
     coins = quarters + dimes + nickels + pennies
