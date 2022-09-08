@@ -12,7 +12,8 @@ def main():
     # Read database file into a variable
     database = open(sys.argv[1], "r")
     csv_reader = csv.reader(database)
-    firstRow = next(csv_reader)
+    firstRow = next(csv_reader).pop(0)
+    print(firstRow)
 
     # for row in csv_reader:
     #     print(row)
