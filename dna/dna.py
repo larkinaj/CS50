@@ -28,7 +28,8 @@ def main():
     # todo: Check database for matching profiles
     for row in csv_reader:
         for i in range(1, len(row)):
-            if i == firstRow[i]:
+            if row[i] == firstRow[i]:
+                
 
     return
 
