@@ -31,9 +31,7 @@ def main():
             print(i)
             print(f"str: {strList[i]}")
             print(f"row: {row[i]}")
-            print(type(strList[i]))
-            print(type(row[i]))
-            if row[i] == strList[i]:
+            if int(row[i]) == strList[i]:
                 print("YESdfsfdsfs")
 
 
