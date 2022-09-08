@@ -40,7 +40,7 @@ def getCents():
     return cents
 
 def calcQuarters(cents):
-    quarters = cents / 25
+    quarters = cents * 100 / 25
     print(quarters)
     return quarters
 
