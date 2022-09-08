@@ -9,23 +9,23 @@ def main():
     cents = cents - quarters * 25
 
     # Calculate the number of dimes to give the customer
-    dimes = calculate_dimes(cents)
+    dimes = calcDimes(cents)
     cents = cents - dimes * 10
 
     # Calculate the number of nickels to give the customer
-    nickels = calculate_nickels(cents)
+    nickels = calcNickels(cents)
     cents = cents - nickels * 5
 
     # Calculate the number of pennies to give the customer
-    pennies = calculate_pennies(cents)
+    pennies = calcPennies(cents)
     cents = cents - pennies * 1
 
     # Sum coins
     coins = quarters + dimes + nickels + pennies
 
     # Print total number of coins to give the customer
-    print("Total coins: " + coins)
-    print("Quarters: " + quarters + ", dimes: " + dimes + ", nickels: " + nickels + ", pennies: " + pennies)
+    print(f"Total coins: {coins}")
+    print(f"Quarters: " + quarters + ", dimes: " + dimes + ", nickels: " + nickels + ", pennies: " + pennies)
 
 
 
