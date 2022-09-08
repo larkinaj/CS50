@@ -37,7 +37,7 @@ def main():
             if int(row[i]) == strList[i]:
                 matches[i] = "match"
     print(matches)
-    if mathces
+    if "unmatch" is not in 
     return
 
 
