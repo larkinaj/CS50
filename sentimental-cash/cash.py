@@ -1,1 +1,19 @@
-# TODO
+
+
+
+def main():
+    height = get_height()
+    for i in range(height):
+        print("#")
+
+def getCents():
+    while True:
+        try:
+            n = int(input("Height: "))
+            if n > 0:
+                break
+        except ValueError:
+            print("That's not an integer!")
+    return n
+
+main()
