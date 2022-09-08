@@ -40,20 +40,20 @@ def getCents():
     return cents
 
 def calcQuarters(cents):
-    quarters = cents * 100 / 25
+    quarters = cents * 100 // 25
     print(quarters)
     return quarters
 
 def calcDimes(cents):
-    dimes = cents / 10
+    dimes = cents * 100 // 10
     return dimes
 
 def calcNickels(cents):
-    nickels = cents / 5
+    nickels = cents * 100 // 5
     return nickels
 
 def calcPennies(cents):
-    pennies = cents / 1
+    pennies = cents * 100 // 1
     return pennies
 
 main()
