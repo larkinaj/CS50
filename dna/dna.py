@@ -36,8 +36,12 @@ def main():
                         matches[i] = "unmatch"
             if "unmatch" not in matches:
                 print(row[0])
+                dna.close()
+                csv_reader.close()
                 return
     print("No match")
+    dna.close()
+    csv_reader.close()
     return
 
 def longest_match(sequence, subsequence):
