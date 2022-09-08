@@ -1,11 +1,31 @@
 from cs50 import get_float
 
 def main():
+    # Ask how many cents the customer is owed
     cents = getCents()
 
-    quarters = calcQuarters(cents);
-    cents = cents - quarters * 25;
+    # Calculate the number of quarters to give the customer
+    quarters = calcQuarters(cents)
+    cents = cents - quarters * 25
 
+    # Calculate the number of dimes to give the customer
+    dimes = calculate_dimes(cents)
+    cents = cents - dimes * 10
+
+    # Calculate the number of nickels to give the customer
+    nickels = calculate_nickels(cents)
+    cents = cents - nickels * 5
+
+    # Calculate the number of pennies to give the customer
+    pennies = calculate_pennies(cents)
+    cents = cents - pennies * 1
+
+    # Sum coins
+    coins = quarters + dimes + nickels + pennies
+
+    # Print total number of coins to give the customer
+    print("Total coins: " + coins)
+    print("Quarters: " + quarters + ", dimes: " + dimes + ", nickels: " + nickels + ", pennies: " + pennies)
 
 
 
@@ -22,5 +42,17 @@ def getCents():
 def calcQuarters(cents):
     quarters = cents / 25
     return quarters
+
+def calcDimes(cents):
+    dimes = cents / 10
+    return dimes
+
+def calcNickels(cents):
+    nickels = cents / 5
+    return nickels
+
+def calcPennies(cents):
+    pennies = cents / 1
+    return pennies
 
 main()
