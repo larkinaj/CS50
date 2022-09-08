@@ -17,7 +17,8 @@ def main():
     # dna = dna.read()
 
     # todo: Find longest match of each STR in DNA sequence
-    longestMatch = longest_match(dna, subsequence)
+    longestMatch = longest_match(dna, "AGATC")
+    print(longestMatch)
 
     # todo: Check database for matching profiles
 
