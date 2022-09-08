@@ -1,18 +1,17 @@
-
-
+from cs50 import get_float
 
 def main():
     cents = getCents()
 
 
-    
+
     for i in range(height):
         print("#")
 
 def getCents():
     while True:
         try:
-            cents = int(input("How much change? "))
+            cents = get_float("How much change? ")
             if cents > 0:
                 break
         except ValueError:
