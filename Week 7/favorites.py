@@ -56,7 +56,7 @@ import re
 #             counter += 1
 
 # print(f"Number of people who like the office: {counter}")
-
+ 
 
 title = input("Title: ").strip().upper()
 counter = 0
