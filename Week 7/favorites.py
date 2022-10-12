@@ -1,4 +1,5 @@
 import csv
+import re
 
 # titles = []
 # with open("favorites.csv", "r") as file:
@@ -29,18 +30,29 @@ import csv
 #     print(title, titles[title])
 
 
-titles = {}
+# titles = {}
+# with open("favorites.csv", "r") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         title = row["title"].strip().upper()
+#         if title not in titles:
+#             titles[title] = 1
+#         elif title in titles:
+#             titles[title] + =1
+
+# def get_value(title):
+#     return titles[title]
+
+# for title in sorted(titles, key=lambda title: titles[title], reverse=True):
+#     print(title, titles[title])
+
+
+counter = 0
 with open("favorites.csv", "r") as file:
     reader = csv.DictReader(file)
     for row in reader:
         title = row["title"].strip().upper()
-        if title not in titles:
-            titles[title] = 1
-        elif title in titles:
-            titles[title] + =1
+        if re.search("office", title):
+            counter += 1
 
-def get_value(title):
-    return titles[title]
-
-for title in sorted(titles, key=lambda title: titles[title], reverse=True):
-    print(title, titles[title])
+print(f"Number of people who like the office: {counter}")
