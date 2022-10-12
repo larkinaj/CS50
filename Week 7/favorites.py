@@ -66,5 +66,5 @@ with open("favorites.csv", "r") as file:
     for row in reader:
         if row["title"].strip().upper() == title:
             counter += 1
-            print(row)
 
+print(counter)
