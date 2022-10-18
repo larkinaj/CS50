@@ -1,5 +1,6 @@
 import csv
 import re
+from cs50 import SQL
 
 # titles = []
 # with open("favorites.csv", "r") as file:
@@ -56,15 +57,22 @@ import re
 #             counter += 1
 
 # print(f"Number of people who like the office: {counter}")
- 
 
-title = input("Title: ").strip().upper()
-counter = 0
 
-with open("favorites.csv", "r") as file:
-    reader = csv.DictReader(file)
-    for row in reader:
-        if row["title"].strip().upper() == title:
-            counter += 1
+# title = input("Title: ").strip().upper()
+# counter = 0
 
-print(counter)
+# with open("favorites.csv", "r") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         if row["title"].strip().upper() == title:
+#             counter += 1
+
+# print(counter)
+
+
+db = SQL("sqlite:///favorites.db")
+
+title = imput("Title: ").strip()
+
+db.execute("SELECT COUNT(*) FROM favorites WHERE title LIKE ?", title)
