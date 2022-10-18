@@ -79,4 +79,4 @@ rows = db.execute("SELECT COUNT(*) FROM favorites WHERE title LIKE ?", title)
 
 row = rows[0]
 
-print(row["COUNT(*)"])
+print(rows)
