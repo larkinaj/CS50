@@ -71,15 +71,14 @@ from cs50 import SQL
 # print(counter)
 
 
+
 # db = SQL("sqlite:///favorites.db")
-
 # title = input("Title: ").strip()
-
 # rows = db.execute("SELECT COUNT(*) FROM favorites WHERE title LIKE ?", title)
-
 # row = rows[0]
 
 # print(rows)
+
 
 
 db = SQL("sqlite:///favorites.db")
@@ -88,6 +87,5 @@ title = input("Title: ").strip()
 
 rows = db.execute("SELECT title FROM favorites WHERE title LIKE ?", title)
 
-row = rows[0]
-
-print(rows)
+for row in rows:
+    print(row["title"])
