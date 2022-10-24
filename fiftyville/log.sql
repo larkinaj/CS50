@@ -52,9 +52,10 @@ SELECT flight_id, passport_number, seat FROM passengers WHERE passport_number IN
 -- Used to find all the flights that the passengers from the previous query are taking.
 SELECT id, origin_airport_id, destination_airport_id, month, day, year, hour, minute FROM flights WHERE id IN(SELECT flight_id FROM passengers WHERE passport_number IN (SELECT passport_number FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 25) AND id IN (SELECT person_id  FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street")) AND phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2021 AND duration <= 60)));
 
---Used to check the 
-SELECT id, abbreviation, full_name, city FROM airports WHERE id = 7
+--Used to check the airport location of the airports from the previous query.
+SELECT id, abbreviation, full_name, city FROM airports WHERE id = 7 OR id = 8;
 
+-- The earliest flight out of Fiftyville is flight id 36 and Bruce was the only person to have bought tickets for that flight so the thief is Bruce!
 
-
-
+-- Use this query to find the accomplice
+SELECT name, phone_number, passport_number FROM people WHERE phone_number = "(375) 555-8161";
