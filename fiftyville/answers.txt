@@ -1,18 +1,18 @@
-The THIEF is:
+The THIEF is: Bruce
 +-------+--------+----------------+-----------------+
 | name  |   id   |  phone_number  | passport_number |
 +-------+--------+----------------+-----------------+
 | Bruce | 686048 | (367) 555-5533 | 5773159633      |
 +-------+--------+----------------+-----------------+
 
-The city the thief ESCAPED TO:
+The city the thief ESCAPED TO: LaGuardia Airport
 +----+--------------+-------------------+---------------+
 | id | abbreviation |     full_name     |     city      |
 +----+--------------+-------------------+---------------+
 | 4  | LGA          | LaGuardia Airport | New York City |
 +----+--------------+-------------------+---------------+
 
-The ACCOMPLICE is:
+The ACCOMPLICE is: Robin
 +-------+--------+----------------+-----------------+
 | name  |   id   |  phone_number  | passport_number |
 +-------+--------+----------------+-----------------+
