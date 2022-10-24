@@ -38,10 +38,11 @@ SELECT id, name, phone_number FROM people WHERE id IN (SELECT person_id  FROM ba
 -- Raymond said the thief called someone for less than a minute as he was leaving the bakery and asked the other person to purchase the earliest flight out of fiftyville. This query checks phones calls that day that were less than a minute.
 SELECT caller, receiver, duration FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2021 AND duration <= 60;
 
--- Used to 
+-- Used to find the names of people that fit the previous query.
 SELECT id, name, phone_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2021 AND duration <= 60);
 
 
+-- Used to create a suspect list that narrows down the suspects to 
 
 
 
