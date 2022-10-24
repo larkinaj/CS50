@@ -57,5 +57,5 @@ SELECT id, abbreviation, full_name, city FROM airports WHERE id = 7 OR id = 8;
 
 -- The earliest flight out of Fiftyville is flight id 36 and Bruce was the only person to have bought tickets for that flight so the thief is Bruce!
 
--- Use this query to find the accomplice
+-- Use this query to find the accomplice. 
 SELECT name, phone_number, passport_number FROM people WHERE phone_number = "(375) 555-8161";
