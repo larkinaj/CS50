@@ -18,6 +18,7 @@ SELECT hour, minute, activity, license_plate FROM bakery_security_logs WHERE mon
 -- Used to check the peoples name of the license plates that left 10 minutes after the theft
 SELECT id, name, license_plate FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 25);
 
+
 -- Used to check the schema of atm_transactions
 .schema atm_trasactions
 
@@ -31,6 +32,11 @@ SELECT person_id, creation_year, account_number FROM bank_accounts WHERE account
 SELECT id, name, phone_number FROM people WHERE id IN (SELECT person_id  FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street"));
 
 
+-- Used to check the schema of phone_calls
+.schema phone_calls
+
+-- Used
+SELECT caller, receiver, duration FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2021 AND duration <= 60;
 
 
 
