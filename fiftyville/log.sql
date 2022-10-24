@@ -42,7 +42,9 @@ SELECT caller, receiver, duration FROM phone_calls WHERE month = 7 AND day = 28 
 SELECT id, name, phone_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2021 AND duration <= 60);
 
 
--- Used to create a suspect list that narrows down the suspects to 
+-- Used to create a suspect list that narrows down the suspects by phone numbers, atm tranactions, and license plates.
+SELECT id, name, passport_number FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 25) AND id IN (SELECT person_id  FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street")) AND phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2021 AND duration <= 60);
+
 
 
 
