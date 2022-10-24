@@ -24,8 +24,11 @@ SELECT id, name, license_plate FROM people WHERE license_plate IN (SELECT licens
 -- Eugene said the thief was withdrawing money at the ATM on Leggett street earlier that morning. This query is used to check the atm transactions that occured on Leggett street that morning.
 SELECT amount, account_number, transaction_type FROM atm_transactions WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street";
 
--- Used to check the names of the people that were at the atm on Leggett street that morning
-SELECT id, name, license_plate FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 25);
+-- Used to check the bank account of the people that used the atm on Leggett street that morning
+SELECT person_id, creation_year, account_number FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street");
+
+-- Used to check the names of the people with the back account from the previous query
+SELECT id, name, phone_number FROM people WHERE id IN (SELECT person_id  FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street"));
 
 
 
