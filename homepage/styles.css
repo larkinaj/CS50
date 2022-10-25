@@ -26,6 +26,11 @@
     flex-basis: 50%;
 }
 
+a[href="#"]
+{
+    color: red;
+}
+
 h1
 {
     color: black;
@@ -126,5 +131,4 @@ button
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* margin: auto; */
 }
