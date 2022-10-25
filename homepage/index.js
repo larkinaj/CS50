@@ -20,6 +20,3 @@ document.getElementsByClassName("card4")[0].onclick = function () {
     console.log("it clicked!")
     window.location.href = "italy.html";
 };
-
-console.log(test)
-console.log(test1)
