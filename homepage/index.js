@@ -1,4 +1,4 @@
-
+Math.floor(Math.random() * 5);
 
 if (window.location.pathname === "/index.html") {
     document.getElementsByClassName("card1")[0].onclick = function () {
