@@ -53,6 +53,16 @@ a[href="https://www.greenandturquoise.com/10-reasons-why-you-should-visit-japan-
     );
     color: black;
 }
+a[href="https://www.autoeurope.com/travel-blog/four-reasons-to-travel-to-italy/"]
+{
+    font-weight: bold;
+    background: linear-gradient(to right,
+    green,
+    white,
+    red
+    );
+    color: black;
+}
 
 h1
 {
