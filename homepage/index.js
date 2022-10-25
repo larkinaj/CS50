@@ -7,8 +7,6 @@ const getInnerText = function(element) {
     return element.innerText
 }
 
-china = document.getElementsByClassName("card1")[0];
-
 document.getElementsByClassName("card1")[0].onclick = function () {
     locationButtons("china");
 };
@@ -26,7 +24,20 @@ document.getElementsByClassName("card4")[0].onclick = function () {
 };
 
 document.getElementsByClassName("nav-link")[0].onclick = function () {
+    locationButtons("index");
+};
+
+document.getElementsByClassName("nav-link")[1].onclick = function () {
     locationButtons("china");
 };
+
+document.getElementsByClassName("nav-link")[2].onclick = function () {
+    locationButtons("india");
+};
+
+document.getElementsByClassName("nav-link")[3].onclick = function () {
+    locationButtons("italy");
+};
+
 console.log(document.getElementsByClassName("nav-link")[0].innerText.toLowerCase())
 console.log(document.getElementsByClassName("nav-link"))
