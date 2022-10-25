@@ -7,6 +7,8 @@ const getInnerText = function(element) {
     return element.innerText
 }
 
+china = document.getElementsByClassName("card1")[0];
+
 document.getElementsByClassName("card1")[0].onclick = function () {
     locationButtons("china");
 };
