@@ -1,4 +1,4 @@
-Math.floor(Math.random() * 5);
+randomNum = Math.floor(Math.random() * 4) + 1;
 
 if (window.location.pathname === "/index.html") {
     document.getElementsByClassName("card1")[0].onclick = function () {
@@ -14,6 +14,9 @@ if (window.location.pathname === "/index.html") {
     };
 
     document.getElementsByClassName("card4")[0].onclick = function () {
+        window.location.href = "italy.html";
+    };
+    document.getElementsByClassName("random")[0].onclick = function () {
         window.location.href = "italy.html";
     };
 }
