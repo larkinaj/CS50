@@ -1,8 +1,8 @@
-document.getElementsByClassName("card1").onclick = function () {
+document.getElementsByClassName("nav-link").onclick = function () {
     console.log("it clicked!")
     window.location.href = "~/china.html";
 };
-test = document.getElementsByClassName("card1");
+test = document.getElementsByClassName("nav-link");
 
 console.log(test)
 console.log("test")
