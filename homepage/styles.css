@@ -158,15 +158,21 @@ button
     transform: scale(1.1);
 }
 
-#china-page {
+.location-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 1000px;
     margin: auto;
 }
-#row1-china {
+.location-row{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
+/* .location-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
