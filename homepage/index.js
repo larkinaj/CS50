@@ -19,3 +19,7 @@ document.getElementsByClassName("card3")[0].onclick = function () {
 document.getElementsByClassName("card4")[0].onclick = function () {
     window.location.href = "italy.html";
 };
+
+
+console.log(document.getElementsByClassName("nav-link")[0])
+console.log(document.getElementsByClassName("nav-link"))
