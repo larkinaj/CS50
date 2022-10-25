@@ -8,8 +8,6 @@ document.getElementsByClassName("card1")[0].onclick = function () {
     locationButtons("china");
 };
 
-locationButtons("china");
-
 document.getElementsByClassName("card2")[0].onclick = function () {
     console.log("it clicked!")
     window.location.href = "india.html";
