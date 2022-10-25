@@ -105,6 +105,8 @@ button
 
 #home-description {
     color: white;
+    font-size: 22px;
+    line-height: 22px
 }
 
 .card
