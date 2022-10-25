@@ -11,6 +11,8 @@
 }
 
 .menu-content {
+    max-height: 0;
+    overflow: hidden;
     font-family: 'Oswald', sans-serif;
     padding: 0 0 0 50px;
 }
@@ -34,11 +36,13 @@
     font-size: 56px;
     display: block;
     cursor: pointer;
-    background: url(https://assets.stickpng.com/images/588a6507d06f6719692a2d15.png) no-repeat left center;
     padding: 10px 0 10px 50px;
 }
 input#menu {
     display: none;
+}
+input:checked ~ .menu-content {
+    max-height: 100%;
 }
 
 .row
