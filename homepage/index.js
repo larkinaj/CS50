@@ -1,12 +1,10 @@
 
-test = document.getElementsByClassName("card1")[0]
-test1 = document.getElementsByClassName("card1")
-
-
-document.getElementsByClassName("card1")[0].onclick = function () {
-    console.log("it clicked!")
-    window.location.href = "china.html";
+const locationButtons = function(location) {
+    window.location.href = location + ".html"
 };
+
+
+document.getElementsByClassName("card1")[0].onclick = locationButtons("china")
 
 document.getElementsByClassName("card2")[0].onclick = function () {
     console.log("it clicked!")
