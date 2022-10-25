@@ -17,7 +17,8 @@ if (window.location.pathname === "/index.html") {
         window.location.href = "italy.html";
     };
     document.getElementsByClassName("random")[0].onclick = function () {
-        window.location.href = "italy.html";
+        console.log("test")
+        
     };
 }
 
