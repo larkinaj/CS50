@@ -45,3 +45,4 @@ document.getElementsByClassName("nav-link")[4].onclick = function () {
 
 console.log(document.getElementsByClassName("nav-link")[0].innerText.toLowerCase())
 console.log(document.getElementsByClassName("nav-link"))
+console.log(window.location)
