@@ -85,11 +85,17 @@ button
     background-position: center;
     background-size: cover;
 }
+.card1:hover {
+    transform: scale(1.1);
+}
 .card2
 {
     background-image: url(https://cdn.mos.cms.futurecdn.net/3FnczamRyWU6MvRMEXWaGD-970-80.jpg);
     background-position: center;
     background-size: cover;
+}
+.card2:hover {
+    transform: scale(1.1);
 }
 .card3
 {
@@ -97,10 +103,16 @@ button
     background-position: center;
     background-size: cover;
 }
+.card3:hover {
+    transform: scale(1.1);
+}
 .card4
 {
     background-image: url(https://www.sarahdegheselle.com/wp-content/uploads/2020/10/AdobeStock_282381041-1-1024x683.jpeg);
     background-size: cover;
+}
+.card4:hover {
+    transform: scale(1.1);
 }
 
 #china-page {
