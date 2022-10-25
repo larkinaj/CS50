@@ -24,7 +24,7 @@
 
 h1
 {
-    color: #fff;
+    color: black;
     font-size: 100px;
 }
 
@@ -51,6 +51,11 @@ button
     border-radius: 20px;
     outline: none;
     margin-top: 30;
+}
+
+#h1-home {
+    color: white;
+    font-size: 100px;
 }
 
 #home-description {
