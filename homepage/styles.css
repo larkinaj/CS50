@@ -104,12 +104,12 @@ button
     flex-direction: column;
     align-items: center;
     width: 1000px;
-    margin: auto;
+    margin: auto;'
 }
 #row1-china {
     display: flex;
-    /* flex-direction: row; */
-    /* align-items: center; */
-    justify-content: space-around;
-    /* margin: auto; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
 }
