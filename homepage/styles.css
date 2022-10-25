@@ -41,7 +41,7 @@ h5
 
 p
 {
-    color: #fff;
+    color: black;
     font-size: 11px;
     line-height: 15px;
 }
@@ -57,6 +57,10 @@ button
     border-radius: 20px;
     outline: none;
     margin-top: 30;
+}
+
+#home-description {
+    color: white;
 }
 
 .card
