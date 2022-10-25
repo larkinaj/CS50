@@ -1,3 +1,3 @@
-document.getElementById("myButton").onclick = function () {
-    location.href = "www.yoursite.com";
+document.getElementsByClassName("card1").onclick = function () {
+    location.href = "/china.html";
 };
