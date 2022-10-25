@@ -18,7 +18,7 @@ if (window.location.pathname === "/index.html") {
     };
     document.getElementsByClassName("random")[0].onclick = function () {
         console.log("card" + randomNum)
-        document.getElementsByClassName("card" + randomNum).click();
+        document.getElementsByClassName("card" + randomNum)[0].click();
     };
 }
 
