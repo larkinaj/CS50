@@ -44,6 +44,15 @@ a[href="https://traveltriangle.com/blog/reasons-to-visit-india/"]
     );
     color: black;
 }
+a[href="https://www.greenandturquoise.com/10-reasons-why-you-should-visit-japan-right-now/"]
+{
+    font-weight: bold;
+    background: linear-gradient(to right,
+    red,
+    white
+    );
+    color: black;
+}
 
 h1
 {
