@@ -20,6 +20,8 @@ document.getElementsByClassName("card4")[0].onclick = function () {
     window.location.href = "italy.html";
 };
 
-
+document.getElementsByClassName("nav-link")[0].onclick = function () {
+    locationButtons("china");
+};
 console.log(document.getElementsByClassName("nav-link")[0])
 console.log(document.getElementsByClassName("nav-link"))
