@@ -3,6 +3,9 @@ const locationButtons = function(location) {
     window.location.href = location + ".html"
 };
 
+const getInnerText = function(element) {
+    return element.innerText
+}
 
 document.getElementsByClassName("card1")[0].onclick = function () {
     locationButtons("china");
@@ -23,5 +26,5 @@ document.getElementsByClassName("card4")[0].onclick = function () {
 document.getElementsByClassName("nav-link")[0].onclick = function () {
     locationButtons("china");
 };
-console.log(document.getElementsByClassName("nav-link")[0])
+console.log(document.getElementsByClassName("nav-link")[0].innerText.toLowerCase())
 console.log(document.getElementsByClassName("nav-link"))
