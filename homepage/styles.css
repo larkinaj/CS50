@@ -98,8 +98,10 @@ button
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 800px;
 }
-#column1-china {
+#row1-china {
     display: flex;
     align-items: center;
+    margin: auto;
 }
