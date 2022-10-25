@@ -17,7 +17,7 @@ if (window.location.pathname === "/index.html") {
         window.location.href = "italy.html";
     };
     document.getElementsByClassName("random")[0].onclick = function () {
-        console.log("test")
+        console.log("card" + randomNum)
         document.getElementsByClassName("card" + randomNum).click();
     };
 }
@@ -42,4 +42,3 @@ document.getElementsByClassName("nav-link")[4].onclick = function () {
     window.location.href = "italy.html";
 };
 
-console.log(window.location.pathname)
