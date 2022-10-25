@@ -103,6 +103,7 @@ button
 }
 #row1-china {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin: auto;
