@@ -36,6 +36,10 @@ document.getElementsByClassName("nav-link")[2].onclick = function () {
 };
 
 document.getElementsByClassName("nav-link")[3].onclick = function () {
+    locationButtons("japan");
+};
+
+document.getElementsByClassName("nav-link")[3].onclick = function () {
     locationButtons("italy");
 };
 
