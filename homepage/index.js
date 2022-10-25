@@ -1,4 +1,4 @@
-document.getElementsByClassName("nav-link").onclick = function () {
+document.getElementsByClassName("button").onclick = function () {
     console.log("it clicked!")
     window.location.href = "~/china.html";
 };
