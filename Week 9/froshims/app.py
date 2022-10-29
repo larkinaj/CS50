@@ -5,6 +5,7 @@ app = Flask(__name__)
 SPORTS = [
     "Basketball",
     "Soccer",
+    "Football",
     "Ultimate Frisbee"
 ]
 
@@ -16,7 +17,7 @@ def index():
 @app.route("/register", methods=["POST"])
 def register():
     # Validate submission
-    if not request.form.get("name") or request.form.get("sport") not in ["Basketball", "Soccer", "Ultimate Frisbee"]:
+    if not request.form.get("name") or request.form.get("sport") not in SPORTS:
         return render_template("failure.html")
 
     return render_template("success.html")
