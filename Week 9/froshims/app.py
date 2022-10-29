@@ -10,7 +10,7 @@ def index():
 @app.route("/register")
 def greet():
     # Validate submission
-    if request.form.get("name") == undefined or request.form.get("sport") not in ["Basketball", "Soccer", "Ultimate Frisbee"]:
+    if request.form.get("name") == "" or request.form.get("sport") not in ["Basketball", "Soccer", "Ultimate Frisbee"]:
         return render_template("failure.html")
 
     return render_template("success.html")
