@@ -8,9 +8,9 @@ def index():
 
 
 @app.route("/register")
-def greet():
+def register():
     # Validate submission
-    if request.form.get("name") == "" or request.form.get("sport") not in ["Basketball", "Soccer", "Ultimate Frisbee"]:
+    if not request.form.get("name") or request.form.get("sport") not in ["Basketball", "Soccer", "Ultimate Frisbee"]:
         return render_template("failure.html")
 
     return render_template("success.html")
