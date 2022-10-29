@@ -7,7 +7,11 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/greet", methods=["POST"])
+@app.route("/greet")
 def greet():
-    name = request.form.get("name", "world")
-    return render_template("greet.html", name=name)
+    # Validate submission
+    if not request.form.get("name") or request.form.get("sport") not in ["Basketball", "Soccer", "Ultimate Frisbee"]
+        return render_template("failure.html")
+
+    return render_template("success.html")
+
