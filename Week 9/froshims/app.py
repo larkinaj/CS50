@@ -10,7 +10,7 @@ def index():
 @app.route("/register")
 def register():
     # Validate submission
-    if not request.args.get("name") or request.args.get("sport") not in ["Basketball", "Soccer", "Ultimate Frisbee"]:
+    if not request.args.get("name") or request.args.get("sport") == "Select Sport":
         return render_template("failure.html")
 
     return render_template("success.html")
