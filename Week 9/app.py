@@ -8,7 +8,6 @@ from flask import Flask, render_template, request
 #     name = request.args.get("name")
 #     return render_template("index.html", name=name)
 ########################################################
-
 # app = Flask(__name__)
 
 # @app.route("/")
@@ -22,7 +21,6 @@ from flask import Flask, render_template, request
 #     return render_template("greet.html", name=name)
 
 #########################################################
-
 # app = Flask(__name__)
 
 # @app.route("/")
@@ -33,6 +31,20 @@ from flask import Flask, render_template, request
 # def greet():
 #     this didnt work like it was supposed to
 #     name = request.args.get("name", "world")
+#     return render_template("greet.html", name=name)
+
+
+#########################################################
+# app = Flask(__name__)
+
+# @app.route("/")
+# def index():
+#     return render_template("index.html")
+
+
+# @app.route("/greet")
+# def greet():
+#     name = request.args.get("name")
 #     return render_template("greet.html", name=name)
 
 
