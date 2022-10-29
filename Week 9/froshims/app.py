@@ -14,4 +14,3 @@ def register():
         return render_template("failure.html")
 
     return render_template("success.html")
-
