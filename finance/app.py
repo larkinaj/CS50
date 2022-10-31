@@ -238,8 +238,8 @@ def sell():
                         share["price"] = transaction["price"]
                         grandTotal += transaction["price"]
                     elif "total" in share:
-                        share["total"] += transaction["price"]
-                        share["quantity"] += transaction["shares"]
+                        share["total"] -= transaction["price"]
+                        share["quantity"] -= transaction["shares"]
                         grandTotal += transaction["price"]
 
 
