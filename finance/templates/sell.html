@@ -34,18 +34,14 @@
             </table>
         </div>
     </div>
-    <form action="/buy" method="post">
+    <form action="/sell" method="post">
         <div class="mb-3">
-            <!-- <input class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text"> -->
-
-            <select class="form-select mx-auto w-auto" name="cars" id="floatingSelect">
-                <!-- <option value="select">Select Symbol</option> -->
+            <select class="form-select mx-auto w-auto" name="symbol" id="floatingSelect">
                 <option selected>Select Symbol</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
+                {% for share in shares %}
+                    <option>{{share["symbol"]}}</option>
+                {% endfor %}
+            </select>
         </div>
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number" min="0">
