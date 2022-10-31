@@ -51,16 +51,19 @@ def index():
     homeInfo = []
     shares = {}
 
-    for transaction in transactionInfo:
-        if transaction["symbol"] not in shares:
-            homeInfo.append({
-                shares[transaction["symbol"]] = 1
-                shares["price"] = transaction["price"]
-            })
-        elif transaction["symbol"] in shares:
-            shares[transaction["symbol"]] += 1
-            shares["price"] += transaction["price"]
-        homeInfo.append(shares)
+    
+
+
+    # for transaction in transactionInfo:
+    #     if transaction["symbol"] not in shares:
+    #         homeInfo.append({
+    #             shares[transaction["symbol"]] = 1
+    #             shares["price"] = transaction["price"]
+    #         })
+    #     elif transaction["symbol"] in shares:
+    #         shares[transaction["symbol"]] += 1
+    #         shares["price"] += transaction["price"]
+    #     homeInfo.append(shares)
 
     shares = {}
 
