@@ -231,6 +231,8 @@ def sell():
     grandTotal += balance
 
     if request.method == "POST":
-        
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+
 
     return render_template("sell.html", shares=shares, balance=balance, grandTotal=int(grandTotal))
