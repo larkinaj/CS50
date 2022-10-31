@@ -46,7 +46,7 @@ def index():
     """Show portfolio of stocks"""
     userInfo = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
     transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
-    
+
     balance = userInfo["cash"]
     shares = {}
     for transaction in transactionInfo:
