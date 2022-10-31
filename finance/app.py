@@ -267,7 +267,9 @@ def sell():
         sharesToSell = int(request.form.get("shares"))
 
         for share in shares:
-            if symbol not in share or sharesToSell > share["quantity"]:
+            if symbol not in share:
+                return apology("TEST")
+            elif symbol == share["symbol"] and sharesToSell > share["quantity"]:
                 return apology("TEST")
 
         date = datetime.datetime.now()
@@ -283,11 +285,6 @@ def sell():
             return apology("Invalid Share Amount")
         if symbolInfo == None:
             return apology("Could not find that symbol")
-
-        print(shares)
-        for share in shares:
-            if symbol not in share:
-                return apology("TEST")
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date, buy_sell) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], sharesToSell, symbolInfo["price"], date, "Sold")
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
