@@ -61,7 +61,7 @@ def index():
         for share in shares:
             if share["symbol"] == transaction["symbol"]:
                 if "price" not in share:
-                    share["name"] = lookup(share["symbol"])
+                    share["name"] = lookup(share["symbol"])["name"]
                     share["price"] = transaction["price"]
                     share["quantity"] = 1
                 elif "price" in share:
