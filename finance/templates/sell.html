@@ -35,9 +35,9 @@
         </div>
     </div>
     <form action="/buy" method="post">
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
-            <label for="floatingSelect">Works with selects</label>
+        <div class="mb-3 form-floating">
+            <!-- <input class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text"> -->
+
             <select class="form-select mx-auto w-auto" name="cars" id="floatingSelect">
                 <!-- <option value="select">Select Symbol</option> -->
                 <option value="volvo">Volvo</option>
@@ -45,6 +45,7 @@
                 <option value="opel">Opel</option>
                 <option value="audi">Audi</option>
               </select>
+              <label for="floatingSelect">Works with selects</label>
         </div>
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number" min="0">
