@@ -30,7 +30,11 @@
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         {% for bday in bdays %}
-                        <input name="sport" type="checkbox" value="{{ sport }}"> {{ sport }}
+                            <tr>
+                                <td>{{bday}}</td>
+                                <td>{{bday}}</td>
+                            </tr>
+                            <input name="sport" type="checkbox" value="{{ sport }}"> {{ sport }}
                         {% endfor %}
                     </tbody>
                 </table>
