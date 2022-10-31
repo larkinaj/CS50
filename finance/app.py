@@ -60,7 +60,7 @@ def index():
 
 
 
-    return render_template("index.html", shares)
+    return render_template("index.html", shares=shares)
 
 
 @app.route("/buy", methods=["GET", "POST"])
