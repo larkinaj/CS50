@@ -129,6 +129,7 @@ def register():
         hashed = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
 
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hashed)
+        return redirect("/login")
 
     return render_template("register.html")
     # return apology("TODO")
