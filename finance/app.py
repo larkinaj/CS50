@@ -7,6 +7,7 @@ from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from helpers import apology, login_required, lookup, usd
+import datetime
 
 # Configure application
 app = Flask(__name__)
@@ -75,7 +76,11 @@ def buy():
         newCashAmount = cash - transactionPrice
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
 
-        db.execute("UPDATE transactions SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
+        date = datetime.datetime.now()
+        print(date)
+
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", newCashAmount, session["user_id"])
+
 
         return render_template("quoted.html", name=symbolInfo["name"], price=symbolInfo["price"], symbol=symbolInfo["symbol"])
     return render_template("buy.html")
