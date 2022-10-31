@@ -13,6 +13,7 @@
                 <thead>
                     <tr>
                         <th>Symbol</th>
+                        <th>Name</th>
                         <th>Shares</th>
                         <th>Price</th>
                         <th>Total</th>
@@ -23,6 +24,7 @@
                     {% for share in shares %}
                     <tr>
                         <td>{{share["symbol"]}}</td>
+                        <td>{{share["name"]}}</td>
                         <td>{{share["quantity"]}}</td>
                         <td>{{share["price"] | usd}}</td>
                         <td>{{share["total"] | usd}}</td>
