@@ -59,12 +59,13 @@ def index():
 
     for transaction in transactionInfo:
         for share in shares:
-            if "price" not in share:
-                share["price"] = transaction["price"]
-                share["quantity"] = 1
-            elif "price" in share:
-                share["price"] += transaction["price"]
-                share["quantity"] += 1
+            if share["symbol"] == transaction["symbol"]:
+                if "price" not in share:
+                    share["price"] = transaction["price"]
+                    share["quantity"] = 1
+                elif "price" in share:
+                    share["price"] += transaction["price"]
+                    share["quantity"] += 1
 
 
     print(shares)
