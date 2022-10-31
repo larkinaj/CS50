@@ -215,7 +215,7 @@ def sell():
     grandTotal = 0
 
     for transaction in transactionInfo:
-        if transaction["buy_sell"] == "Bought":
+        if transaction["buy_sell"] == "Bought" or transaction["buy_sell"] == None:
             for share in shares:
                 if share["symbol"] == transaction["symbol"]:
                     if "total" not in share:
