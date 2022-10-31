@@ -44,6 +44,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    transactionInfo = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
     return render_template("index.html", )
 
 
