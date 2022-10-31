@@ -234,5 +234,8 @@ def sell():
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
 
+        print(symbol)
+        print(shares)
+
 
     return render_template("sell.html", shares=shares, balance=balance, grandTotal=int(grandTotal))
