@@ -48,11 +48,12 @@ def index():
     transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
 
     balance = userInfo["cash"]
+    
     homeInfo = []
     shares = {}
 
     for transaction in transactionInfo:
-        
+
 
 
     # for transaction in transactionInfo:
