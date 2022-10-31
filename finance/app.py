@@ -59,7 +59,7 @@ def buy():
         if not symbol or not shares:
             return apology("No fields can be blank")
 
-        if shares.isnumeric() == False or shares < 0:
+        if shares < 0:
             return apology("Invalid Share Amount")
 
         if symbolInfo == None:
@@ -81,7 +81,7 @@ def buy():
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], shares, symbolInfo["price"], date)
 
-        flash("Shares Purchased!")
+        flash(str(shares) + " " + symbolInfo["symbol"] + " " + "share(s) purchased! Your account balance is " + str(newCashAmount))
 
         return redirect("/")
     return render_template("buy.html")
