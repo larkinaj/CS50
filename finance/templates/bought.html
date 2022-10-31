@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bought
+{% endblock %}
+
+{% block main %}
+    <span style="font-size: 36px; font-weight: 500;">{{name}}</span>
+    <span style="font-size: 26px;">({{symbol}})</span>
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items:center;">
+        <h1>{{price | usd}}</h1>
+        <span style="font-size: 22px;">USD</span>
+    </div>
+    <span>{{shares}}{{symbol}}{{newCashAmount}}</span>
+{% endblock %}
