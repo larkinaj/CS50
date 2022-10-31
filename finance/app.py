@@ -50,7 +50,8 @@ def index():
 @login_required
 def buy():
     print(session["user_id"])
-    userlist = db.execute("SELECT * FROM users")
+    curr = db.execute("SELECT username AND id FROM users WHERE username = larkin")
+    print(curr)
     """Buy shares of stock"""
     if request.method =="POST":
         symbol = request.form.get("symbol")
