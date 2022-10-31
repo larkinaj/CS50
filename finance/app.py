@@ -125,6 +125,7 @@ def register():
             return apology("No fields can be blank")
         if password != confirm:
             return apology("Passwords do not match")
+        if 
 
         hashed = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
 
