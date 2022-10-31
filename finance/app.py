@@ -102,9 +102,10 @@ def buy():
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], shares, symbolInfo["price"], date)
 
-        # flash(str(shares) + " " + symbolInfo["symbol"] + " " + "share(s) purchased! Your account balance is " + "{:.2f}".format(newCashAmount))
+        flash(str(shares) + " " + symbolInfo["symbol"] + " " + "share(s) purchased for $"+ str(symbolInfo["price"]) +". Your account balance is $" + "{:.2f}".format(newCashAmount))
 
-        return render_template("bought.html", shares=str(shares), symbol=symbolInfo["symbol"], newCash=newCashAmount)
+        # return render_template("bought.html", shares=str(shares), symbol=symbolInfo["symbol"], newCash=newCashAmount)
+        return redirect("/")
     return render_template("buy.html")
 
 
