@@ -137,7 +137,7 @@ def history():
     """Show history of transactions"""
     transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
     print(transactionInfo)
-    return render_template("history.html")
+    return render_template("history.html", transactions=transactionInfo)
 
 
 @app.route("/login", methods=["GET", "POST"])

@@ -12,7 +12,6 @@
                 <thead>
                     <tr>
                         <th>Symbol</th>
-                        <th>Name</th>
                         <th>Shares</th>
                         <th>Price</th>
                         <th>Date</th>
@@ -20,12 +19,11 @@
                 </thead>
                 <tbody>
                     <!-- TODO: Loop through the database entries to display them in this table -->
-                    {% for share in shares %}
+                    {% for transaction in transactions %}
                     <tr>
-                        <td>{{share["symbol"]}}</td>
-                        <td>{{share["name"]}}</td>
-                        <td>{{share["quantity"]}}</td>
-                        <td>{{share["price"] | usd}}</td>
+                        <td>{{transaction["symbol"]}}</td>
+                        <td>{{transaction["quantity"]}}</td>
+                        <td>{{transaction["price"] | usd}}</td>
                         <td>{{transaction["date"]}}</td>
                     </tr>
                     {% endfor %}
