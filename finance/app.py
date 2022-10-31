@@ -51,7 +51,8 @@ def index():
     homeInfo = []
     shares = {}
 
-    
+    for transaction in transactionInfo:
+        
 
 
     # for transaction in transactionInfo:
