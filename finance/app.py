@@ -67,11 +67,11 @@ def index():
 
 
     print(shares)
-    print(total)
+    print("{:.2f}".format(total))
 
 
 
-    return render_template("index.html", shares=shares, balance=balance)
+    return render_template("index.html", shares=shares, balance=balance, total="{:.2f}".format(total))
 
 
 @app.route("/buy", methods=["GET", "POST"])
