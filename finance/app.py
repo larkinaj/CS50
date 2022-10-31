@@ -47,11 +47,18 @@ def index():
     userInfo = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
     balance = userInfo["cash"]
     transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
-    uniqueShares = []
+    uniqueSymbols = {}
     for transaction in transactionInfo:
-        if uniqueShares 
+        if transaction["symbol"] not in uniqueSymbols:
+            uniqueSymbols.append(transaction["symbol"])
 
-    print(transactionInfo)
+    print(uniqueSymbols)
+
+    shares
+    for symbol in uniqueSymbols:
+
+
+
     return render_template("index.html", )
 
 
