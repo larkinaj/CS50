@@ -120,7 +120,7 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        confirm = request.form.get("confirmation")
+        confirm = request.form.get("confirm-password")
         if not username or not password or not confirm:
             return apology("No fields can be blank")
         if password != confirm:
