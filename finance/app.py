@@ -48,14 +48,9 @@ def index():
     transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
 
     shares = db.execute("SELECT DISTINCT symbol FROM transactions WHERE user_id = ?", session["user_id"])
-    print(shares)
 
     balance = userInfo["cash"]
-
-    homeInfo = []
-    # shares = {}
-
-
+    total = 0
 
     for transaction in transactionInfo:
         for share in shares:
@@ -64,17 +59,19 @@ def index():
                     share["name"] = lookup(share["symbol"])["name"]
                     share["price"] = transaction["price"]
                     share["quantity"] = 1
+                    total += transaction["price"]
                 elif "price" in share:
                     share["price"] += transaction["price"]
                     share["quantity"] += 1
+                    total += transaction["price"]
 
 
     print(shares)
-    # total = shares["price"] + balance
+    print(total)
 
 
 
-    return render_template("index.html", shares=shares)
+    return render_template("index.html", shares=shares, balance=balance)
 
 
 @app.route("/buy", methods=["GET", "POST"])
