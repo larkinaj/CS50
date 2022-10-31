@@ -57,6 +57,7 @@ def index():
             shares[transaction["symbol"]] += 1
 
     print(shares)
+    total = shares["price"] + balance
 
 
 
