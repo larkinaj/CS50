@@ -75,9 +75,15 @@ def index():
     grandTotal += balance
 
     if request.method =="POST":
-        fundsToAdd = request.form.get("add_funds")
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", fundsToAdd, session["user_id"])
 
+        if request.form.get("add_funds").isnumeric() == False:
+            return apology("Invalid Amount")
+
+        fundsToAdd = int(request.form.get("add_funds"))
+        updatedBalance = fundsToAdd + balance
+        print(updatedBalance)
+
+        # db.execute("UPDATE users SET cash = ? WHERE id = ?", updatedBalance, session["user_id"])
 
 
     return render_template("index.html", shares=shares, balance=balance, grandTotal=int(grandTotal))
