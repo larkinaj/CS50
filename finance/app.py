@@ -126,8 +126,9 @@ def register():
         if password != confirm:
             return apology("Passwords do not match")
 
-        
-        db.execute("INSERT INTO users (username, password) VALUES(?, ?)", name, month, day)
+        hashed = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
+
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hashed)
 
     return render_template("register.html")
     # return apology("TODO")
