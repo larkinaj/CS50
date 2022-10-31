@@ -228,6 +228,19 @@ def sell():
                         share["total"] += transaction["price"]
                         share["quantity"] += transaction["shares"]
                         grandTotal += transaction["price"]
+        if transaction["buy_sell"] == "Sold":
+            for share in shares:
+                if share["symbol"] == transaction["symbol"]:
+                    if "total" not in share:
+                        share["name"] = lookup(share["symbol"])["name"]
+                        share["total"] = transaction["price"]
+                        share["quantity"] = transaction["shares"]
+                        share["price"] = transaction["price"]
+                        grandTotal += transaction["price"]
+                    elif "total" in share:
+                        share["total"] += transaction["price"]
+                        share["quantity"] += transaction["shares"]
+                        grandTotal += transaction["price"]
 
 
     print(transactionInfo)
