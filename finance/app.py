@@ -232,10 +232,10 @@ def sell():
 
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        sharesToSell = request.form.get("shares")
 
         print(symbol)
-        print(shares)
+        print(sharesToSell)
 
 
     return render_template("sell.html", shares=shares, balance=balance, grandTotal=int(grandTotal))
