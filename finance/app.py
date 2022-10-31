@@ -272,7 +272,7 @@ def sell():
             print(share)
             if symbol == share["symbol"]:
                 validSymbol = True
-            elif symbol == share["symbol"] and sharesToSell > share["quantity"]:
+            if symbol == share["symbol"] and sharesToSell > share["quantity"]:
                 print("2nd if")
                 return apology("TEST")
 
