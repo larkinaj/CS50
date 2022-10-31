@@ -265,14 +265,6 @@ def sell():
 
         symbol = request.form.get("symbol")
         sharesToSell = int(request.form.get("shares"))
-
-        if not symbol or not sharesToSell:
-            return apology("No fields can be blank")
-        if sharesToSell < 0:
-            return apology("Invalid Share Amount")
-        if symbolInfo == None:
-            return apology("Could not find that symbol")
-
         date = datetime.datetime.now()
         currentUser = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
         usersCash = currentUser["cash"]
@@ -280,6 +272,12 @@ def sell():
         transactionPrice = sharesToSell * symbolInfo["price"]
         newCashAmount = usersCash + transactionPrice
 
+        if not symbol or not sharesToSell:
+            return apology("No fields can be blank")
+        if sharesToSell < 0:
+            return apology("Invalid Share Amount")
+        if symbolInfo == None:
+            return apology("Could not find that symbol")
 
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date, buy_sell) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], sharesToSell, symbolInfo["price"], date, "Sold")
