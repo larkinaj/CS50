@@ -73,7 +73,7 @@ def buy():
             return apology("Not Enough Funds For Purchase")
 
         newCashAmount = cash - transactionPrice
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", session["user_id"])
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
 
 
         return render_template("quoted.html", name=symbolInfo["name"], price=symbolInfo["price"], symbol=symbolInfo["symbol"])
