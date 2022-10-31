@@ -49,6 +49,8 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
+    print(session["user_id"])
+    userlist = db.execute("SELECT * FROM users")
     """Buy shares of stock"""
     if request.method =="POST":
         symbol = request.form.get("symbol")
@@ -60,7 +62,7 @@ def buy():
             return apology("Could not find that symbol")
 
         userlist = db.execute("SELECT * FROM users")
-        
+
 
         return render_template("quoted.html", name=symbolInfo["name"], price=symbolInfo["price"], symbol=symbolInfo["symbol"])
     return render_template("buy.html")
