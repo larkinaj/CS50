@@ -47,27 +47,24 @@ def index():
     userInfo = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
     transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
 
-    test = db.execute("SELECT DISTINCT symbol FROM transactions WHERE user_id = ?", session["user_id"])
+    shares = db.execute("SELECT DISTINCT symbol FROM transactions WHERE user_id = ?", session["user_id"])
     print(test)
 
     balance = userInfo["cash"]
 
     homeInfo = []
-    shares = []
+    # shares = {}
 
 
 
-    for company in test:
-        
-        # if compant["symbol"] not in shares:
-        #     homeInfo.append({
-        #         shares[transaction["symbol"]] = 1
-        #         shares["price"] = transaction["price"]
-        #     })
-        # elif transaction["symbol"] in shares:
-        #     shares[transaction["symbol"]] += 1
-        #     shares["price"] += transaction["price"]
-        # homeInfo.append(shares)
+    for transaction in transactionInfo:
+        if transaction["price"] not in shares:
+            shares[transaction["symbol"]] = 1
+            shares["price"] = transaction["price"]
+        elif transaction["symbol"] in shares:
+            shares[transaction["symbol"]] += 1
+            shares["price"] += transaction["price"]
+        homeInfo.append(shares)
 
     shares = {}
 
