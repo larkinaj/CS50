@@ -120,6 +120,8 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+        confirm = request.form.get("confirmation")
+        if no
         db.execute("INSERT INTO users (username, month, day) VALUES(?, ?, ?)", name, month, day)
 
     return render_template("register.html")
