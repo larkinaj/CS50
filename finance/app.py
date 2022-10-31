@@ -49,21 +49,23 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
-    print(session["user_id"])
-    me = session["user_id"]
-    curr = db.execute("SELECT * FROM users WHERE id = ?", me)
-    print(curr)
     """Buy shares of stock"""
     if request.method =="POST":
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
-        if shares < 0:
+        shares = request.form.get("shares")
+
+        if not symbol or not shares:
+            return apology("No fields can be blank")
+
+        if shares < 0 or shares.isnumeric() == False:
             return apology("Invalid Share Amount")
+
         symbolInfo = lookup(symbol)
         if symbolInfo == None:
             return apology("Could not find that symbol")
 
-        userlist = db.execute("SELECT * FROM users")
+        currentUser = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
+        cash = currentUser["cash"]
 
 
         return render_template("quoted.html", name=symbolInfo["name"], price=symbolInfo["price"], symbol=symbolInfo["symbol"])
