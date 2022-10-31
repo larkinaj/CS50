@@ -24,14 +24,12 @@
                     <tr>
                         <td>{{share["symbol"]}}</td>
                         <td>{{share["quantity"]}}</td>
-                        <td>{{share["price"]}}</td>
-                        <td>{{share["total"]}}</td>
+                        <td>{{share["price"] | usd}}</td>
+                        <td>{{share["total"] | usd}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
     </div>
-
-
 {% endblock %}
