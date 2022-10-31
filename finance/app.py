@@ -249,7 +249,7 @@ def sell():
 
         print(symbol)
         print(sharesToSell)
-        return redirect
+        return redirect("/sell")
 
 
 
