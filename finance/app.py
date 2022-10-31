@@ -82,7 +82,6 @@ def buy():
 
         shares = int(request.form.get("shares"))
 
-        # shares = int(request.form.get("shares"))
         symbolInfo = lookup(symbol)
 
         if not symbol or not shares:
