@@ -75,7 +75,8 @@ def index():
     grandTotal += balance
 
     if request.method =="POST":
-        print("test")
+        fundsToAdd = request.form.get("add_funds")
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", fundsToAdd, session["user_id"])
 
 
 
