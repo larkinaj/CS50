@@ -78,10 +78,11 @@ def buy():
 
         if request.form.get("shares").isnumeric() == False:
             return apology("Invalid Share Amount")
-            
+
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
         symbolInfo = lookup(symbol)
+        date = datetime.datetime.now()
 
         if not symbol or not shares:
             return apology("No fields can be blank")
@@ -99,16 +100,13 @@ def buy():
             return apology("Not Enough Funds For Purchase")
 
         newCashAmount = cash - transactionPrice
+
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
-
-        date = datetime.datetime.now()
-
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], shares, symbolInfo["price"], date)
 
         flash(str(shares) + " " + symbolInfo["symbol"] + " " + "share(s) purchased for $"+ "{:.2f}".format(symbolInfo["price"] * shares) +". Your account balance is $" + "{:.2f}".format(newCashAmount))
-
-        # return render_template("bought.html", shares=str(shares), symbol=symbolInfo["symbol"], newCash=newCashAmount, price=symbolInfo["price"])
         return redirect("/")
+
     return render_template("buy.html")
 
 
