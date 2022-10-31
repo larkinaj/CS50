@@ -75,7 +75,7 @@ def index():
     grandTotal += balance
 
     if request.method =="POST":
-        
+        print("test")
 
 
 
