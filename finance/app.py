@@ -55,13 +55,14 @@ def index():
             shares["price"] = transaction["price"]
         elif transaction["symbol"] in shares:
             shares[transaction["symbol"]] += 1
+            shares["price"] += transaction["price"]
 
     print(shares)
     total = shares["price"] + balance
 
 
 
-    return render_template("index.html", shares=shares)
+    return render_template("index.html", shares=shares, total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
