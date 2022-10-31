@@ -15,6 +15,7 @@
                         <th>Shares</th>
                         <th>Price</th>
                         <th>Date</th>
+                        <th>Bought / Sold</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -22,9 +23,10 @@
                     {% for transaction in transactions %}
                     <tr>
                         <td>{{transaction["symbol"]}}</td>
-                        <td>{{transaction["quantity"]}}</td>
+                        <td>{{transaction["shares"]}}</td>
                         <td>{{transaction["price"] | usd}}</td>
                         <td>{{transaction["date"]}}</td>
+                        <td>{{transaction["buy_sell"]}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
