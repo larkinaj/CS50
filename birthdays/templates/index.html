@@ -35,10 +35,12 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
-                        {% for bday in bdays %}
+                        {% for share in shares %}
                             <tr>
-                                <td>{{bday["name"]}}</td>
-                                <td>{{bday["month"]}}/{{bday["day"]}}</td>
+                                <td>{{share["symbol"]}}</td>
+                                <td>{{share["quantity"]}}</td>
+                                <td>{{share["price"]}}</td>
+                                <td>{{share["total"]}}</td>
                             </tr>
                         {% endfor %}
                     </tbody>

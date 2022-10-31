@@ -50,7 +50,7 @@ def index():
     shares = db.execute("SELECT DISTINCT symbol FROM transactions WHERE user_id = ?", session["user_id"])
 
     balance = userInfo["cash"]
-    GrandTotal = 0
+    grandTotal = 0
 
     for transaction in transactionInfo:
         for share in shares:
@@ -60,20 +60,19 @@ def index():
                     share["total"] = transaction["price"]
                     share["quantity"] = 1
                     share["price"] = transaction["price"]
-                    GrandTotal += transaction["price"]
+                    grandTotal += transaction["price"]
                 elif "total" in share:
                     share["total"] += transaction["price"]
                     share["quantity"] += 1
-                    GrandTotal += transaction["price"]
+                    grandTotal += transaction["price"]
 
 
     print(shares)
-    print("{:.2f}".format(GrandTotal))
+    grandTotal += balance
 
 
 
-
-    return render_template("index.html", shares=shares, balance=balance, grandTotal="{:.2f}".format(GrandTotal))
+    return render_template("index.html", shares=shares, balance=balance, grandTotal=int(grandTotal))
 
 
 @app.route("/buy", methods=["GET", "POST"])
