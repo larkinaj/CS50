@@ -112,7 +112,7 @@ def logout():
 def quote():
     """Get stock quote."""
     if request.method =="POST":
-        
+
         return render_template("quoted.html")
 
     return render_template("quote.html")
@@ -124,7 +124,7 @@ def register():
     if request.method == "POST":
         username = request.form.get("username").lower()
         password = request.form.get("password")
-        confirm = request.form.get("confirm-password")
+        confirm = request.form.get("confirmation")
         userlist = db.execute("SELECT * FROM users")
 
         if not username or not password or not confirm:
