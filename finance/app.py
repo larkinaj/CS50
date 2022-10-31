@@ -49,7 +49,8 @@ def index():
 
     balance = userInfo["cash"]
     homeInfo = []
-    # shares = {}
+    shares = {}
+
     for transaction in transactionInfo:
         shares = {}
         if transaction["symbol"] not in shares:
@@ -59,13 +60,14 @@ def index():
             shares[transaction["symbol"]] += 1
             shares["price"] += transaction["price"]
         homeInfo.append(shares)
+        shares = {}
 
     print(homeInfo)
-    total = shares["price"] + balance
+    # total = shares["price"] + balance
 
 
 
-    return render_template("index.html", shares=shares, total=total)
+    return render_template("index.html", shares=shares)
 
 
 @app.route("/buy", methods=["GET", "POST"])
