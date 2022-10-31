@@ -45,17 +45,17 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     userInfo = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
-    balance = userInfo["cash"]
     transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
-    uniqueSymbols = {}
+    
+    balance = userInfo["cash"]
+    shares = {}
     for transaction in transactionInfo:
-        if transaction["symbol"] not in uniqueSymbols:
-            uniqueSymbols.append(transaction["symbol"])
+        if transaction["symbol"] not in shares:
+            shares[transaction["symbol"]] = 1
+        elif transaction["symbol"] in shares:
+            shares[transaction["symbol"]] += 1
 
-    print(uniqueSymbols)
-
-    shares
-    for symbol in uniqueSymbols:
+    print(shares)
 
 
 
