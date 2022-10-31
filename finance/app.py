@@ -102,7 +102,7 @@ def buy():
         newCashAmount = cash - transactionPrice
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date, buy-sell) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], shares, symbolInfo["price"], date, "buy")
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date, buy_sell) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], shares, symbolInfo["price"], date, "buy")
 
         flash(str(shares) + " " + symbolInfo["symbol"] + " " + "share(s) purchased for $"+ "{:.2f}".format(symbolInfo["price"] * shares) +". Your account balance is $" + "{:.2f}".format(newCashAmount))
         return redirect("/")
