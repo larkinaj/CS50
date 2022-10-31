@@ -69,6 +69,7 @@ def index():
 
     print(shares)
     print("{:.2f}".format(GrandTotal))
+    print(balance)
 
 
 
