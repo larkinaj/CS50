@@ -13,7 +13,6 @@
                 <thead>
                     <tr>
                         <th>Symbol</th>
-                        <th>Name</th>
                         <th>Shares</th>
                         <th>Price</th>
                         <th>Total</th>
@@ -21,8 +20,14 @@
                 </thead>
                 <tbody>
                     <!-- TODO: Loop through the database entries to display them in this table -->
-                    {% for bday in bdays %}
-
+                    {% for share in shares %}
+                    <tr>
+                        <td>{{share}}</td>
+                        <td>{{shares["share"]}}</td>
+                        <td>{{bday["name"]}}</td>
+                        <td>{{bday["name"]}}</td>
+                        <td>{{bday["name"]}}</td>
+                    </tr>
                     {% endfor %}
                 </tbody>
             </table>
