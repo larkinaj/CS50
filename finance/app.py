@@ -282,6 +282,7 @@ def sell():
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date, buy_sell) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], sharesToSell, symbolInfo["price"], date, "Sold")
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
 
+        flash(str(sharesToSell) + " " + symbolInfo["symbol"] + " " + "share(s) sold for $"+ "{:.2f}".format(symbolInfo["price"] * sharesToSell) +". Your account balance is $" + "{:.2f}".format(newCashAmount)
         return redirect("/sell")
 
     return render_template("sell.html", shares=shares, balance=balance, grandTotal=int(grandTotal))
