@@ -67,6 +67,8 @@ def buy():
         currentUser = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
         cash = currentUser["cash"]
 
+        transactionPrice = shares * symbolInfo["price"]
+
 
         return render_template("quoted.html", name=symbolInfo["name"], price=symbolInfo["price"], symbol=symbolInfo["symbol"])
     return render_template("buy.html")
