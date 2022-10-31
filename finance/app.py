@@ -53,6 +53,7 @@ def buy():
     if request.method =="POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        symbolInfo = lookup(symbol)
 
         if not symbol or not shares:
             return apology("No fields can be blank")
@@ -60,7 +61,6 @@ def buy():
         if shares < 0 or shares.isnumeric() == False:
             return apology("Invalid Share Amount")
 
-        symbolInfo = lookup(symbol)
         if symbolInfo == None:
             return apology("Could not find that symbol")
 
