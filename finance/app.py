@@ -72,6 +72,8 @@ def buy():
         if transactionPrice > cash:
             return apology("Not Enough Funds For Purchase")
 
+        newCashAmount = cash - transactionPrice
+
 
         return render_template("quoted.html", name=symbolInfo["name"], price=symbolInfo["price"], symbol=symbolInfo["symbol"])
     return render_template("buy.html")
