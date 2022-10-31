@@ -74,7 +74,7 @@ def buy():
         if not symbol or not shares:
             return apology("No fields can be blank")
 
-        if shares < 0 or shares % 1 :
+        if shares < 0 or shares.is_integer() == False:
             return apology("Invalid Share Amount")
 
         if symbolInfo == None:
