@@ -75,21 +75,18 @@ def index():
 def buy():
     """Buy shares of stock"""
     if request.method =="POST":
-        symbol = request.form.get("symbol")
 
         if request.form.get("shares").isnumeric() == False:
             return apology("Invalid Share Amount")
-
+            
+        symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
-
         symbolInfo = lookup(symbol)
 
         if not symbol or not shares:
             return apology("No fields can be blank")
-
         if shares < 0:
             return apology("Invalid Share Amount")
-
         if symbolInfo == None:
             return apology("Could not find that symbol")
 
