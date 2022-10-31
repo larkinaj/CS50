@@ -266,11 +266,11 @@ def sell():
         symbol = request.form.get("symbol")
         sharesToSell = int(request.form.get("shares"))
         print(symbol)
-        print(shares)
 
         for share in shares:
-            if symbol not in share:
-                print("1st if")
+            print(share)
+            if symbol not in share["symbol"]:
+                print(share)
                 return apology("TEST")
             elif symbol == share["symbol"] and sharesToSell > share["quantity"]:
                 print("2nd if")
