@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <span>Cash Balance: {{balance | usd}}</span>
+    <span>Grand Total: {{grandTotal | usd}}</span>
+    <div class="container">
+        <div class="section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- TODO: Loop through the database entries to display them in this table -->
+                    {% for share in shares %}
+                    <tr>
+                        <td>{{share["symbol"]}}</td>
+                        <td>{{share["name"]}}</td>
+                        <td>{{share["quantity"]}}</td>
+                        <td>{{share["price"] | usd}}</td>
+                        <td>{{share["total"] | usd}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
