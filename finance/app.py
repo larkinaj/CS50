@@ -265,6 +265,11 @@ def sell():
 
         symbol = request.form.get("symbol")
         sharesToSell = int(request.form.get("shares"))
+
+        for share in shares:
+            if symbol not in share or sharesToSell > share["quantity"]:
+                return apology("TEST")
+
         date = datetime.datetime.now()
         currentUser = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
         usersCash = currentUser["cash"]
