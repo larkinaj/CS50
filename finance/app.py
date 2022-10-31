@@ -71,6 +71,8 @@ def buy():
 
         if request.form.get("shares").isnumeric() == False:
             return apology("Invalid Share Amount")
+        if request.form.get("shares").is_integer() == False:
+            return apology("Invalid Share Amount")
         else:
             shares = int(request.form.get("shares"))
 
