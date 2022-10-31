@@ -52,7 +52,6 @@ def index():
     shares = {}
 
     for transaction in transactionInfo:
-        shares = {}
         if transaction["symbol"] not in shares:
             shares[transaction["symbol"]] = 1
             shares["price"] = transaction["price"]
@@ -60,7 +59,8 @@ def index():
             shares[transaction["symbol"]] += 1
             shares["price"] += transaction["price"]
         homeInfo.append(shares)
-        shares = {}
+
+    shares = {}
 
     print(homeInfo)
     # total = shares["price"] + balance
