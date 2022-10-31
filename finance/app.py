@@ -56,6 +56,7 @@ def index():
             shares[transaction["symbol"]] += 1
 
     print(shares)
+    print(shares)
 
 
 
