@@ -222,11 +222,13 @@ def sell():
                     share["total"] = transaction["price"]
                     share["quantity"] = transaction["shares"]
                     share["price"] = transaction["price"]
+                    share["buy_sell"] = transaction["buy_sell"]
                     grandTotal += transaction["price"]
                 elif "total" in share:
                     share["total"] += transaction["price"]
                     share["quantity"] += transaction["shares"]
                     grandTotal += transaction["price"]
+                    share["buy_sell"] = transaction["buy_sell"]
 
     grandTotal += balance
 
