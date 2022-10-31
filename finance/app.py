@@ -81,8 +81,9 @@ def buy():
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], shares, symbolInfo["price"], date)
 
+        flash("Shares Purchased!")
 
-        return redirect("quoted.html", name=symbolInfo["name"], price=symbolInfo["price"], symbol=symbolInfo["symbol"])
+        return redirect("/")
     return render_template("buy.html")
 
 
