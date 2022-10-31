@@ -241,10 +241,11 @@ def sell():
     grandTotal += balance
 
     if request.method == "POST":
+
         symbol = request.form.get("symbol")
         sharesToSell = request.form.get("shares")
-
-
+        currentUser = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
+        usersCash = currentUser["cash"]
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date, buy_sell) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], shares, symbolInfo["price"], date, "Sold")
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
@@ -252,11 +253,11 @@ def sell():
         print(symbol)
         print(sharesToSell)
 
-        cash = currentUser["cash"]
+
 
         transactionPrice = shares * symbolInfo["price"]
 
-        newCashAmount = cash - transactionPrice
+        newCashAmount = usersCash - transactionPrice
 
         return redirect("/sell")
 
