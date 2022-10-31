@@ -260,6 +260,9 @@ def sell():
 
     if request.method == "POST":
 
+        if request.form.get("shares").isnumeric() == False:
+            return apology("Invalid Share Amount")
+
         symbol = request.form.get("symbol")
         sharesToSell = int(request.form.get("shares"))
         date = datetime.datetime.now()
