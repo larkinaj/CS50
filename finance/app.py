@@ -265,6 +265,8 @@ def sell():
 
         symbol = request.form.get("symbol")
         sharesToSell = int(request.form.get("shares"))
+        print(symbol)
+        print(shares)
 
         for share in shares:
             if symbol not in share:
