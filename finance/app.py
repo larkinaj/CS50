@@ -48,16 +48,19 @@ def index():
     transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
 
     balance = userInfo["cash"]
-    shares = {}
+    homeInfo = []
+    # shares = {}
     for transaction in transactionInfo:
+        shares = {}
         if transaction["symbol"] not in shares:
             shares[transaction["symbol"]] = 1
             shares["price"] = transaction["price"]
         elif transaction["symbol"] in shares:
             shares[transaction["symbol"]] += 1
             shares["price"] += transaction["price"]
+        homeInfo.append(shares)
 
-    print(shares)
+    print(homeInfo)
     total = shares["price"] + balance
 
 
