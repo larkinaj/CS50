@@ -58,9 +58,9 @@ def index():
 
 
     for transaction in transactionInfo:
-        if transaction["price"] not in shares:
-            shares[transaction["symbol"]] = 1
+        if "price" not in shares:
             shares["price"] = transaction["price"]
+            shares["quantity"] = transaction["price"]
         elif transaction["symbol"] in shares:
             shares[transaction["symbol"]] += 1
             shares["price"] += transaction["price"]
