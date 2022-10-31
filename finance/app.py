@@ -234,6 +234,8 @@ def sell():
         symbol = request.form.get("symbol")
         sharesToSell = request.form.get("shares")
 
+        
+
         print(symbol)
         print(sharesToSell)
 
