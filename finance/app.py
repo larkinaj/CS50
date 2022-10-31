@@ -46,7 +46,6 @@ def index():
     """Show portfolio of stocks"""
     userInfo = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
     transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
-
     shares = db.execute("SELECT DISTINCT symbol FROM transactions WHERE user_id = ?", session["user_id"])
 
     balance = userInfo["cash"]
@@ -66,11 +65,7 @@ def index():
                     share["quantity"] += 1
                     grandTotal += transaction["price"]
 
-
-    print(shares)
     grandTotal += balance
-
-
 
     return render_template("index.html", shares=shares, balance=balance, grandTotal=int(grandTotal))
 
