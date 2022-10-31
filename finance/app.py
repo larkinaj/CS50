@@ -273,9 +273,10 @@ def sell():
             if symbol == share["symbol"]:
                 validSymbol = True
             if symbol == share["symbol"] and sharesToSell > share["quantity"]:
-                print("2nd if")
                 return apology("TEST")
-        validSymbol = True
+
+        if validSymbol == False:
+            return apology("TEST")
 
         date = datetime.datetime.now()
         currentUser = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
