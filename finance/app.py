@@ -268,8 +268,10 @@ def sell():
 
         for share in shares:
             if symbol not in share:
+                print("1st if")
                 return apology("TEST")
             elif symbol == share["symbol"] and sharesToSell > share["quantity"]:
+                print("2nd if")
                 return apology("TEST")
 
         date = datetime.datetime.now()
