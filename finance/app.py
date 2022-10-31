@@ -59,7 +59,9 @@ def buy():
         if symbolInfo == None:
             return apology("Could not find that symbol")
 
+        userlist = db.execute("SELECT * FROM users")
         
+
         return render_template("quoted.html", name=symbolInfo["name"], price=symbolInfo["price"], symbol=symbolInfo["symbol"])
     return render_template("buy.html")
 
