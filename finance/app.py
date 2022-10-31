@@ -244,13 +244,20 @@ def sell():
         symbol = request.form.get("symbol")
         sharesToSell = request.form.get("shares")
 
-        newCashAmount = cash - transactionPrice
+
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date, buy_sell) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], symbolInfo["symbol"], shares, symbolInfo["price"], date, "Sold")
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
 
         print(symbol)
         print(sharesToSell)
+
+        cash = currentUser["cash"]
+
+        transactionPrice = shares * symbolInfo["price"]
+
+        newCashAmount = cash - transactionPrice
+
         return redirect("/sell")
 
 
