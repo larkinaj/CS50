@@ -265,18 +265,16 @@ def sell():
 
         symbol = request.form.get("symbol")
         sharesToSell = int(request.form.get("shares"))
-        print(symbol)
 
         validSymbol = False
         for share in shares:
-            print(share)
             if symbol == share["symbol"]:
                 validSymbol = True
             if symbol == share["symbol"] and sharesToSell > share["quantity"]:
-                return apology("TEST")
+                return apology("Not Enough Shares")
 
         if validSymbol == False:
-            return apology("TEST")
+            return apology("Please Select A Symbol")
 
         date = datetime.datetime.now()
         currentUser = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
