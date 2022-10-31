@@ -80,12 +80,18 @@ def index():
             return apology("Invalid Amount")
 
         fundsToAdd = int(request.form.get("add_funds"))
+
+        if not fundsToAdd:
+            return apology("Please Enter An Amount")
+        if fundsToAdd < 0:
+            return apology("Invalid Amount")
+
         updatedBalance = fundsToAdd + balance
 
         flash("Your new account balance is $" + "{:.2f}".format(updatedBalance))
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updatedBalance, session["user_id"])
-        
+        return redirect("/")
 
     return render_template("index.html", shares=shares, balance=balance, grandTotal=int(grandTotal))
 
