@@ -51,19 +51,40 @@ def index():
     balance = userInfo["cash"]
     grandTotal = 0
 
+    # for transaction in transactionInfo:
+    #     for share in shares:
+    #         if share["symbol"] == transaction["symbol"]:
+    #             if "total" not in share:
+    #                 share["name"] = lookup(share["symbol"])["name"]
+    #                 share["total"] = transaction["price"]
+    #                 share["quantity"] = transaction["shares"]
+    #                 share["price"] = transaction["price"]
+    #                 grandTotal += transaction["price"]
+    #             elif "total" in share:
+    #                 share["total"] += transaction["price"]
+    #                 share["quantity"] += transaction["shares"]
+    #                 grandTotal += transaction["price"]
+
     for transaction in transactionInfo:
-        for share in shares:
-            if share["symbol"] == transaction["symbol"]:
-                if "total" not in share:
-                    share["name"] = lookup(share["symbol"])["name"]
-                    share["total"] = transaction["price"]
-                    share["quantity"] = transaction["shares"]
-                    share["price"] = transaction["price"]
-                    grandTotal += transaction["price"]
-                elif "total" in share:
-                    share["total"] += transaction["price"]
-                    share["quantity"] += transaction["shares"]
-                    grandTotal += transaction["price"]
+        if transaction["buy_sell"] == "Bought":
+            for share in shares:
+                if share["symbol"] == transaction["symbol"]:
+                    if "total" not in share:
+                        share["name"] = lookup(share["symbol"])["name"]
+                        share["total"] = transaction["price"]
+                        share["quantity"] = transaction["shares"]
+                        share["price"] = transaction["price"]
+                        grandTotal += transaction["price"]
+                    elif "total" in share:
+                        share["total"] += transaction["price"]
+                        share["quantity"] += transaction["shares"]
+                        grandTotal += transaction["price"]
+        if transaction["buy_sell"] == "Sold":
+            for share in shares:
+                if share["symbol"] == transaction["symbol"]:
+                        share["total"] -= transaction["price"]
+                        share["quantity"] -= transaction["shares"]
+                        grandTotal -= transaction["price"]
 
     grandTotal += balance
 
@@ -253,7 +274,5 @@ def sell():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newCashAmount, session["user_id"])
 
         return redirect("/sell")
-
-    print(transactionInfo)
 
     return render_template("sell.html", shares=shares, balance=balance, grandTotal=int(grandTotal))
