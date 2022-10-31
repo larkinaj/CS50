@@ -62,7 +62,7 @@ def index():
                     grandTotal += transaction["price"]
                 elif "total" in share:
                     share["total"] += transaction["price"]
-                    share["quantity"] += 1
+                    share["quantity"] += transaction["shares"]
                     grandTotal += transaction["price"]
 
     grandTotal += balance
