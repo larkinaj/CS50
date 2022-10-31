@@ -121,11 +121,15 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirm = request.form.get("confirm-password")
+        userlist = db.execute("SELECT * FROM users")
+
         if not username or not password or not confirm:
             return apology("No fields can be blank")
         if password != confirm:
             return apology("Passwords do not match")
-        if 
+        for user in userlist:
+            if user["username"] == username:
+                return apology("Username already exists")
 
         hashed = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
 
