@@ -46,7 +46,12 @@ def index():
     """Show portfolio of stocks"""
     userInfo = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
     balance = userInfo["cash"]
-    
+    transactionInfo = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
+    uniqueShares = []
+    for transaction in transactionInfo:
+        if uniqueShares 
+
+    print(transactionInfo)
     return render_template("index.html", )
 
 
