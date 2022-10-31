@@ -256,7 +256,6 @@ def sell():
                         share["quantity"] -= transaction["shares"]
                         grandTotal -= transaction["price"]
 
-
     grandTotal += balance
 
     if request.method == "POST":
