@@ -119,6 +119,7 @@ def buy():
 
         currentUser = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]
         cash = currentUser["cash"]
+        print(currentUser)
 
         transactionPrice = shares * symbolInfo["price"]
 
