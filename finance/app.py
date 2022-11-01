@@ -68,9 +68,9 @@ def index():
         if transaction["buy_sell"] == "Sold":
             for share in shares:
                 if share["symbol"] == transaction["symbol"]:
-                        share["total"] -= transaction["price"]
+                        share["total"] -= transaction["price"] * transaction["shares"]
                         share["quantity"] -= transaction["shares"]
-                        grandTotal -= transaction["price"]
+                        grandTotal -= transaction["price"] * transaction["shares"]
 
     grandTotal += balance
     print(shares)
