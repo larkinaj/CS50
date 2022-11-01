@@ -60,11 +60,11 @@ def index():
                         share["total"] = transaction["price"] * transaction["shares"]
                         share["quantity"] = transaction["shares"]
                         share["price"] = transaction["price"]
-                        grandTotal += transaction["price"]
+                        grandTotal += transaction["price"] * transaction["shares"]
                     elif "total" in share:
                         share["total"] += transaction["price"] * transaction["shares"]
                         share["quantity"] += transaction["shares"]
-                        grandTotal += transaction["price"]
+                        grandTotal += transaction["price"] * transaction["shares"]
         if transaction["buy_sell"] == "Sold":
             for share in shares:
                 if share["symbol"] == transaction["symbol"]:
