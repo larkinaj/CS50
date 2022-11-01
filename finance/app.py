@@ -73,7 +73,7 @@ def index():
                         grandTotal -= transaction["price"]
 
     grandTotal += balance
-    print(share)
+    print(shares)
     if request.method =="POST":
 
         if request.form.get("add_funds").isnumeric() == False:
