@@ -50,7 +50,7 @@ def index():
 
     balance = userInfo["cash"]
     grandTotal = 0
-
+    print(transactionInfo)
     for transaction in transactionInfo:
         if transaction["buy_sell"] == "Bought":
             for share in shares:
